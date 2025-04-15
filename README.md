@@ -38,6 +38,30 @@ O argumento `--model` ou `-m` permite especificar o caminho para o arquivo de pe
 
 **NOTA:** Reforçando, se não for fornecido nenhum argumento, o programa irá utilizar o modelo pré-treinado `yolov5su.pt` como padrão e imprimirá apenas os resultados na consola sem qualquer outra informação ou output.
 
+## Exemplo de execução
+Como exemplo, vamos executar o programa utilizando a câmara como imagem de entrada e ativando a saída detalhada:
+```bash
+python main.py --verbose --output /caminho/para/imagem_saida.jpg
+```
+Isto irá processar a imagem especificada, ativar a saída detalhada e guardar a imagem de saída no caminho especificado. O programa irá imprimir os resultados da deteção na consola.
+```txt
+Captured image from camera and saved as 'frame.jpg'.
+Using model: yolov5lu.pt
+Input image: frame.jpg
+Output image: imagem_saida.jpg
+Model loaded from yolov5lu.pt.
+Number of people detected: 9
+Saving output image to 'imagem_saida.jpg'.
+```
+
+Como imagem de entrada, foi esta a imagem capturada:
+![](assets/image.jpg)
+
+E como imagem de saída, foi esta a imagem processada:
+![](assets/image_out.jpg)
+
+Como é possível observar, o programa conseguiu detetar 9 pessoas na imagem capturada. Nem sempre o número de pessoas detetadas corresponde ao número real de pessoas na imagem, uma vez que o modelo YOLOv5 pode ter dificuldades em detetar pessoas em determinadas condições de iluminação ou ângulos de visão. No entanto, o modelo é bastante preciso e consegue detetar a maioria das pessoas presentes na imagem.
+
 ## Compilação para um ficheiro executável
 Para compilar o projeto para um ficheiro executável, é necessário ter o PyInstaller instalado. Para tal, execute o seguinte comando no terminal:
 ```bash
