@@ -1666,7 +1666,7 @@
         {
           "bind": {
             "property": "timestamp",
-            "variableName": "atual_timestamp"
+            "variableName": "last_exec"
           },
           "dataType": "NeaINT",
           "io": "Input",
