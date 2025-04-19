@@ -1,0 +1,94 @@
+<HMIPage Title="Header" Width="Auto" Height="Auto" AllowDrop="True" xmlns="clr-namespace:NeaHMI;assembly=niop HMI" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <av:Grid ShowGridLines="False" Background="#00FFFFFF" AllowDrop="True">
+    <av:Grid.ColumnDefinitions>
+      <av:ColumnDefinition Width="0.5*" />
+    </av:Grid.ColumnDefinitions>
+    <av:Grid.RowDefinitions>
+      <av:RowDefinition Height="0.5*" />
+    </av:Grid.RowDefinitions>
+    <av:Grid ShowGridLines="False" Background="{x:Null}" Tag="GridHeader" Name="GridHeader" MinWidth="40" MinHeight="40" AllowDrop="True" RenderTransformOrigin="0,0" Effect="{x:Null}" av:ToolTipService.InitialShowDelay="400" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0" av:Grid.ColumnSpan="1" av:Grid.RowSpan="1">
+      <av:Grid.ColumnDefinitions>
+        <av:ColumnDefinition Width="200" />
+        <av:ColumnDefinition Width="*" />
+        <av:ColumnDefinition Width="200" />
+      </av:Grid.ColumnDefinitions>
+      <av:Grid.RowDefinitions>
+        <av:RowDefinition Height="*" />
+      </av:Grid.RowDefinitions>
+      <av:Grid.RenderTransform>
+        <av:RotateTransform Angle="0" />
+      </av:Grid.RenderTransform>
+      <av:Image Stretch="Uniform" Tag="uminho_logo.png" Name="ImgLogo" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
+        <av:Image.RenderTransform>
+          <av:RotateTransform Angle="0" />
+        </av:Image.RenderTransform>
+      </av:Image>
+      <av:Label Background="{x:Null}" Foreground="#FF000000" FontSize="24" FontWeight="Bold" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0,0,0,0" Tag="LblTitulo" Name="LblTitulo" HorizontalAlignment="Center" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="0" av:Grid.Column="1" av:Grid.Row="0">
+        <av:Label.Style>
+          <av:Style TargetType="av:Label">
+            <av:Style.Resources>
+              <av:ResourceDictionary />
+            </av:Style.Resources>
+            <av:Setter Property="av:ContentControl.ContentTemplate">
+              <av:Setter.Value>
+                <av:DataTemplate>
+                  <av:TextBlock Text="Projeto DIS - Contagem de Pessoas em Paragens" TextWrapping="NoWrap" />
+                </av:DataTemplate>
+              </av:Setter.Value>
+            </av:Setter>
+          </av:Style>
+        </av:Label.Style>
+        <av:Label.RenderTransform>
+          <av:RotateTransform Angle="0" />
+        </av:Label.RenderTransform>Projeto DIS - Contagem de Pessoas em Paragens</av:Label>
+      <av:Grid ShowGridLines="False" Background="{x:Null}" Tag="GridEstadoDireita" Name="GridEstadoDireita" MinWidth="40" MinHeight="40" AllowDrop="True" Effect="{x:Null}" av:Panel.ZIndex="2" av:Grid.Column="2" av:Grid.Row="0">
+        <av:Grid.ColumnDefinitions>
+          <av:ColumnDefinition Width="*" />
+        </av:Grid.ColumnDefinitions>
+        <av:Grid.RowDefinitions>
+          <av:RowDefinition Height="*" />
+          <av:RowDefinition Height="*" />
+        </av:Grid.RowDefinitions>
+        <av:Grid.RenderTransform>
+          <av:RotateTransform Angle="0" />
+        </av:Grid.RenderTransform>
+        <av:Label Background="{x:Null}" Foreground="#FF000000" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Padding="0,0,0,0" Tag="LblTituloEstadoSistema" Name="LblTituloEstadoSistema" HorizontalAlignment="Center" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="2" av:Grid.Row="0">
+          <av:Label.Style>
+            <av:Style TargetType="av:Label">
+              <av:Style.Resources>
+                <av:ResourceDictionary />
+              </av:Style.Resources>
+              <av:Setter Property="av:ContentControl.ContentTemplate">
+                <av:Setter.Value>
+                  <av:DataTemplate>
+                    <av:TextBlock Text="Estado do sistema" TextWrapping="NoWrap" />
+                  </av:DataTemplate>
+                </av:Setter.Value>
+              </av:Setter>
+            </av:Style>
+          </av:Label.Style>
+          <av:Label.RenderTransform>
+            <av:RotateTransform Angle="0" />
+          </av:Label.RenderTransform>Estado do sistema</av:Label>
+        <av:Label Background="{x:Null}" Foreground="#FF000000" FontSize="26" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Tag="LblEstadoSistema" Name="LblEstadoSistema" HorizontalAlignment="Center" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="0" av:Grid.Column="0" av:Grid.Row="1">
+          <av:Label.Style>
+            <av:Style TargetType="av:Label">
+              <av:Style.Resources>
+                <av:ResourceDictionary />
+              </av:Style.Resources>
+              <av:Setter Property="av:ContentControl.ContentTemplate">
+                <av:Setter.Value>
+                  <av:DataTemplate>
+                    <av:TextBlock Text="OFFLINE" TextWrapping="NoWrap" />
+                  </av:DataTemplate>
+                </av:Setter.Value>
+              </av:Setter>
+            </av:Style>
+          </av:Label.Style>
+          <av:Label.RenderTransform>
+            <av:RotateTransform Angle="0" />
+          </av:Label.RenderTransform>OFFLINE</av:Label>
+      </av:Grid>
+    </av:Grid>
+  </av:Grid>
+</HMIPage>

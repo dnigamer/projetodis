@@ -1,0 +1,928 @@
+{
+  "description": "Main workflow",
+  "id": "744311c6-b7e5-4a09-b541-3ef212097904",
+  "instructions": [
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "313da7db-6dd4-4e7e-85ac-52056b7dc0f7",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-start",
+        "x": -44,
+        "y": -8,
+        "zindex": -1
+      },
+      "id": "df1c43e4-41de-4b59-8f14-65833e28d3ba",
+      "methodId": "538C0860-A726-49FA-A3B9-DE1A73813FE1",
+      "name": "Start",
+      "parameterValues": [],
+      "signature": "662F1C56-744C-4B22-A8B4-ADD9B52CF596"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "dbec889b-c32d-401a-bf18-871f56547655",
+          "name": "error"
+        },
+        {
+          "instructionId": "1ce5668b-b4ae-4306-9507-4890eac27578",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": -47,
+        "y": 111,
+        "zindex": 1000
+      },
+      "id": "91d1417b-4b43-4ba0-996f-ba1bdcca1722",
+      "methodId": "1bf7a26a-5473-44fe-92cd-6a100290d543",
+      "name": "Display Page",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Page Name",
+          "type": "Simple",
+          "value": "HomePage"
+        },
+        {
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "Timeout",
+          "type": "Simple",
+          "value": "1000"
+        },
+        {
+          "bind": {
+            "variableName": "hmierror"
+          },
+          "dataType": "NeaINT",
+          "io": "Output",
+          "name": "Error",
+          "type": "Variable"
+        }
+      ],
+      "signature": "089dbc1f-dc7a-4ccd-8d08-d1e134edd736"
+    },
+    {
+      "active": true,
+      "connections": [],
+      "displayData": {
+        "color": "b-finish",
+        "x": -36,
+        "y": 358,
+        "zindex": 1000
+      },
+      "id": "21c775f8-40d6-441c-b04e-0d230f36211e",
+      "methodId": "5C96DBF5-98A2-47B1-8D38-C9CD3CD187B7",
+      "name": "End",
+      "parameterValues": [],
+      "signature": "15FD0C1B-6C84-456D-BFCC-5A8701B92AFA"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "21c775f8-40d6-441c-b04e-0d230f36211e",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 74,
+        "y": 88,
+        "zindex": 1000
+      },
+      "id": "dbec889b-c32d-401a-bf18-871f56547655",
+      "methodId": "BB1D4B60-D074-44D3-9844-81F38F461F2C",
+      "name": "Log Error",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Message",
+          "type": "Simple",
+          "value": "hmi"
+        }
+      ],
+      "signature": "B0A5DD03-E38E-410C-97CB-1B7A6EAC2DDD"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "91d1417b-4b43-4ba0-996f-ba1bdcca1722",
+          "name": "next"
+        },
+        {
+          "instructionId": "dbec889b-c32d-401a-bf18-871f56547655",
+          "name": "error"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": -43,
+        "y": 64,
+        "zindex": 1000
+      },
+      "id": "313da7db-6dd4-4e7e-85ac-52056b7dc0f7",
+      "methodId": "a32a0ce7-7a2f-49e0-9675-c3a8a01b02a4",
+      "name": "Check HMI",
+      "parameterValues": [
+        {
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "Timeout",
+          "type": "Simple",
+          "value": "1000"
+        },
+        {
+          "bind": {
+            "variableName": "hmierror"
+          },
+          "dataType": "NeaINT",
+          "io": "Output",
+          "name": "Error",
+          "type": "Variable"
+        }
+      ],
+      "signature": "975f70f0-e525-47ad-9c94-b9d1deb24f5b"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "f3b5aa96-6915-4d50-99bc-74b3a90418ec",
+          "name": "next"
+        },
+        {
+          "instructionId": "1aca9479-4288-4a5f-973e-0b321a1d9984",
+          "name": "error"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": -41,
+        "y": 186,
+        "zindex": 1001
+      },
+      "id": "1ce5668b-b4ae-4306-9507-4890eac27578",
+      "methodId": "e0ed6fa1-143a-490d-83ee-7c974f5f3aae",
+      "name": "Wait Action",
+      "parameterValues": [
+        {
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "Timeout",
+          "type": "Simple",
+          "value": "1000"
+        },
+        {
+          "bind": {
+            "variableName": "userout"
+          },
+          "dataType": "NeaSTRING",
+          "io": "Output",
+          "name": "User Output",
+          "type": "Variable"
+        },
+        {
+          "bind": {
+            "variableName": "actionerr"
+          },
+          "dataType": "NeaINT",
+          "io": "Output",
+          "name": "Error",
+          "type": "Variable"
+        }
+      ],
+      "signature": "4537f96b-590e-459b-9b1f-ca607c1a11e0"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "dbec889b-c32d-401a-bf18-871f56547655",
+          "name": "error"
+        },
+        {
+          "instructionId": "1ce5668b-b4ae-4306-9507-4890eac27578",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 288,
+        "y": 60,
+        "zindex": 1001
+      },
+      "id": "ad76388c-da21-4700-b569-24aafc3ed272",
+      "methodId": "1bf7a26a-5473-44fe-92cd-6a100290d543",
+      "name": "Display Page",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Page Name",
+          "type": "Simple",
+          "value": "CamarasPage"
+        },
+        {
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "Timeout",
+          "type": "Simple",
+          "value": "1000"
+        },
+        {
+          "bind": {
+            "variableName": "hmierror"
+          },
+          "dataType": "NeaINT",
+          "io": "Output",
+          "name": "Error",
+          "type": "Variable"
+        }
+      ],
+      "signature": "089dbc1f-dc7a-4ccd-8d08-d1e134edd736"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "5d10b19e-35a1-4e54-a908-edd9063b58b0",
+          "name": "false"
+        },
+        {
+          "instructionId": "ad76388c-da21-4700-b569-24aafc3ed272",
+          "name": "true"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 292,
+        "y": -23,
+        "zindex": 1001
+      },
+      "id": "f3b5aa96-6915-4d50-99bc-74b3a90418ec",
+      "methodId": "c5f091b1-c0d1-4d01-bacc-72bc87be9947",
+      "name": "If",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Operator",
+          "type": "Simple",
+          "value": "=="
+        },
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Value 2",
+          "type": "Simple",
+          "value": "BtnCameras"
+        },
+        {
+          "bind": {
+            "variableName": "userout"
+          },
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Value 1",
+          "type": "Variable"
+        }
+      ],
+      "signature": "7585deb3-c2dd-4381-a2fc-48ad39077d49"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "03f0aaef-90a6-42c1-9a27-31b1b614ebec",
+          "name": "false"
+        },
+        {
+          "instructionId": "c3bdf9c6-a1e8-4aff-b76a-4e2b7630d1ce",
+          "name": "true"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 378,
+        "y": 16,
+        "zindex": 1001
+      },
+      "id": "5d10b19e-35a1-4e54-a908-edd9063b58b0",
+      "methodId": "c5f091b1-c0d1-4d01-bacc-72bc87be9947",
+      "name": "If",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Operator",
+          "type": "Simple",
+          "value": "=="
+        },
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Value 2",
+          "type": "Simple",
+          "value": "BtnParagens"
+        },
+        {
+          "bind": {
+            "variableName": "userout"
+          },
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Value 1",
+          "type": "Variable"
+        }
+      ],
+      "signature": "7585deb3-c2dd-4381-a2fc-48ad39077d49"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "0627b10d-141d-43dd-b6f6-3ee00dde2a18",
+          "name": "false"
+        },
+        {
+          "instructionId": "c97051e2-777a-4af4-bd78-de0f4be3a6ed",
+          "name": "true"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 475,
+        "y": 52,
+        "zindex": 1001
+      },
+      "id": "03f0aaef-90a6-42c1-9a27-31b1b614ebec",
+      "methodId": "c5f091b1-c0d1-4d01-bacc-72bc87be9947",
+      "name": "If",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Operator",
+          "type": "Simple",
+          "value": "=="
+        },
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Value 2",
+          "type": "Simple",
+          "value": "BtnAlertas"
+        },
+        {
+          "bind": {
+            "variableName": "userout"
+          },
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Value 1",
+          "type": "Variable"
+        }
+      ],
+      "signature": "7585deb3-c2dd-4381-a2fc-48ad39077d49"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "41ec8db7-b71e-44da-a110-c04620a6a7c9",
+          "name": "false"
+        },
+        {
+          "instructionId": "9bc6c3c7-5a40-462a-aad9-3c04d2cf9e0a",
+          "name": "true"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 570,
+        "y": 97,
+        "zindex": 1001
+      },
+      "id": "0627b10d-141d-43dd-b6f6-3ee00dde2a18",
+      "methodId": "c5f091b1-c0d1-4d01-bacc-72bc87be9947",
+      "name": "If",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Operator",
+          "type": "Simple",
+          "value": "=="
+        },
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Value 2",
+          "type": "Simple",
+          "value": "BtnRelatorios"
+        },
+        {
+          "bind": {
+            "variableName": "userout"
+          },
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Value 1",
+          "type": "Variable"
+        }
+      ],
+      "signature": "7585deb3-c2dd-4381-a2fc-48ad39077d49"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "1ce5668b-b4ae-4306-9507-4890eac27578",
+          "name": "false"
+        },
+        {
+          "instructionId": "bdadec28-62d4-4a13-b820-5a2b69588205",
+          "name": "true"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 655,
+        "y": 144,
+        "zindex": 1001
+      },
+      "id": "41ec8db7-b71e-44da-a110-c04620a6a7c9",
+      "methodId": "c5f091b1-c0d1-4d01-bacc-72bc87be9947",
+      "name": "If",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Operator",
+          "type": "Simple",
+          "value": "=="
+        },
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Value 2",
+          "type": "Simple",
+          "value": "BtnSettings"
+        },
+        {
+          "bind": {
+            "variableName": "userout"
+          },
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Value 1",
+          "type": "Variable"
+        }
+      ],
+      "signature": "7585deb3-c2dd-4381-a2fc-48ad39077d49"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "1ce5668b-b4ae-4306-9507-4890eac27578",
+          "name": "next"
+        },
+        {
+          "instructionId": "dbec889b-c32d-401a-bf18-871f56547655",
+          "name": "error"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 374,
+        "y": 101,
+        "zindex": 1002
+      },
+      "id": "c3bdf9c6-a1e8-4aff-b76a-4e2b7630d1ce",
+      "methodId": "1bf7a26a-5473-44fe-92cd-6a100290d543",
+      "name": "Display Page",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Page Name",
+          "type": "Simple",
+          "value": "ParagensPage"
+        },
+        {
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "Timeout",
+          "type": "Simple",
+          "value": "1000"
+        },
+        {
+          "bind": {
+            "variableName": "hmierror"
+          },
+          "dataType": "NeaINT",
+          "io": "Output",
+          "name": "Error",
+          "type": "Variable"
+        }
+      ],
+      "signature": "089dbc1f-dc7a-4ccd-8d08-d1e134edd736"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "1ce5668b-b4ae-4306-9507-4890eac27578",
+          "name": "next"
+        },
+        {
+          "instructionId": "dbec889b-c32d-401a-bf18-871f56547655",
+          "name": "error"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 565,
+        "y": 182,
+        "zindex": 1003
+      },
+      "id": "9bc6c3c7-5a40-462a-aad9-3c04d2cf9e0a",
+      "methodId": "1bf7a26a-5473-44fe-92cd-6a100290d543",
+      "name": "Display Page",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Page Name",
+          "type": "Simple",
+          "value": "RelatoriosPage"
+        },
+        {
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "Timeout",
+          "type": "Simple",
+          "value": "1000"
+        },
+        {
+          "bind": {
+            "variableName": "hmierror"
+          },
+          "dataType": "NeaINT",
+          "io": "Output",
+          "name": "Error",
+          "type": "Variable"
+        }
+      ],
+      "signature": "089dbc1f-dc7a-4ccd-8d08-d1e134edd736"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "dbec889b-c32d-401a-bf18-871f56547655",
+          "name": "error"
+        },
+        {
+          "instructionId": "1ce5668b-b4ae-4306-9507-4890eac27578",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 649,
+        "y": 234,
+        "zindex": 1004
+      },
+      "id": "bdadec28-62d4-4a13-b820-5a2b69588205",
+      "methodId": "1bf7a26a-5473-44fe-92cd-6a100290d543",
+      "name": "Display Page",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Page Name",
+          "type": "Simple",
+          "value": "ConfigPage"
+        },
+        {
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "Timeout",
+          "type": "Simple",
+          "value": "1000"
+        },
+        {
+          "bind": {
+            "variableName": "hmierror"
+          },
+          "dataType": "NeaINT",
+          "io": "Output",
+          "name": "Error",
+          "type": "Variable"
+        }
+      ],
+      "signature": "089dbc1f-dc7a-4ccd-8d08-d1e134edd736"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "1ce5668b-b4ae-4306-9507-4890eac27578",
+          "name": "next"
+        },
+        {
+          "instructionId": "dbec889b-c32d-401a-bf18-871f56547655",
+          "name": "error"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 471,
+        "y": 139,
+        "zindex": 1005
+      },
+      "id": "c97051e2-777a-4af4-bd78-de0f4be3a6ed",
+      "methodId": "1bf7a26a-5473-44fe-92cd-6a100290d543",
+      "name": "Display Page",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Page Name",
+          "type": "Simple",
+          "value": "AlertasPage"
+        },
+        {
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "Timeout",
+          "type": "Simple",
+          "value": "1000"
+        },
+        {
+          "bind": {
+            "variableName": "hmierror"
+          },
+          "dataType": "NeaINT",
+          "io": "Output",
+          "name": "Error",
+          "type": "Variable"
+        }
+      ],
+      "signature": "089dbc1f-dc7a-4ccd-8d08-d1e134edd736"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "c5ef9c23-96f0-4d25-89ed-7e14ed909790",
+          "name": "false"
+        },
+        {
+          "instructionId": "1ce5668b-b4ae-4306-9507-4890eac27578",
+          "name": "true"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": -38,
+        "y": 265,
+        "zindex": 1005
+      },
+      "id": "1aca9479-4288-4a5f-973e-0b321a1d9984",
+      "methodId": "c5f091b1-c0d1-4d01-bacc-72bc87be9947",
+      "name": "If",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Operator",
+          "type": "Simple",
+          "value": "=="
+        },
+        {
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "Value 2",
+          "type": "Simple",
+          "value": "0"
+        },
+        {
+          "bind": {
+            "variableName": "actionerr"
+          },
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "Value 1",
+          "type": "Variable"
+        }
+      ],
+      "signature": "7585deb3-c2dd-4381-a2fc-48ad39077d49"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "8474b6f3-2ecf-486e-a249-9f2ef1fd975b",
+          "name": "false"
+        },
+        {
+          "instructionId": "380b1a19-276a-4d1b-84d9-31741b02638a",
+          "name": "true"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 73,
+        "y": 294,
+        "zindex": 1005
+      },
+      "id": "c5ef9c23-96f0-4d25-89ed-7e14ed909790",
+      "methodId": "c5f091b1-c0d1-4d01-bacc-72bc87be9947",
+      "name": "If",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Operator",
+          "type": "Simple",
+          "value": "=="
+        },
+        {
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "Value 2",
+          "type": "Simple",
+          "value": "-1"
+        },
+        {
+          "bind": {
+            "variableName": "actionerr"
+          },
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "Value 1",
+          "type": "Variable"
+        }
+      ],
+      "signature": "7585deb3-c2dd-4381-a2fc-48ad39077d49"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "d4713a20-2da4-4c54-891f-8afdf2a3930a",
+          "name": "false"
+        },
+        {
+          "instructionId": "1ce5668b-b4ae-4306-9507-4890eac27578",
+          "name": "true"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 172,
+        "y": 329,
+        "zindex": 1005
+      },
+      "id": "8474b6f3-2ecf-486e-a249-9f2ef1fd975b",
+      "methodId": "c5f091b1-c0d1-4d01-bacc-72bc87be9947",
+      "name": "If",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Operator",
+          "type": "Simple",
+          "value": "=="
+        },
+        {
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "Value 2",
+          "type": "Simple",
+          "value": "-2"
+        },
+        {
+          "bind": {
+            "variableName": "actionerr"
+          },
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "Value 1",
+          "type": "Variable"
+        }
+      ],
+      "signature": "7585deb3-c2dd-4381-a2fc-48ad39077d49"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "21c775f8-40d6-441c-b04e-0d230f36211e",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 172,
+        "y": 395,
+        "zindex": 1006
+      },
+      "id": "d4713a20-2da4-4c54-891f-8afdf2a3930a",
+      "methodId": "BB1D4B60-D074-44D3-9844-81F38F461F2C",
+      "name": "Log Error",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Message",
+          "type": "Simple",
+          "value": "hmi"
+        }
+      ],
+      "signature": "B0A5DD03-E38E-410C-97CB-1B7A6EAC2DDD"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "21c775f8-40d6-441c-b04e-0d230f36211e",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 74,
+        "y": 359,
+        "zindex": 1008
+      },
+      "id": "380b1a19-276a-4d1b-84d9-31741b02638a",
+      "methodId": "BB1D4B60-D074-44D3-9844-81F38F461F2C",
+      "name": "Log Error",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Message",
+          "type": "Simple",
+          "value": "ERR_HMI_DISCONNECTED"
+        }
+      ],
+      "signature": "B0A5DD03-E38E-410C-97CB-1B7A6EAC2DDD"
+    }
+  ],
+  "parameters": [],
+  "userVersion": "0.0.1",
+  "variables": [
+    {
+      "dataType": "NeaINT",
+      "description": "",
+      "name": "actionerr"
+    },
+    {
+      "dataType": "NeaINT",
+      "description": "",
+      "name": "hmierror"
+    },
+    {
+      "dataType": "NeaSTRING",
+      "description": "",
+      "name": "itemLista"
+    },
+    {
+      "dataType": "NeaVECTOR<NeaSTRING>",
+      "description": "",
+      "name": "listactions"
+    },
+    {
+      "dataType": "NeaINT",
+      "description": "",
+      "name": "numactions"
+    },
+    {
+      "dataType": "NeaJSON",
+      "description": "",
+      "name": "outjson"
+    },
+    {
+      "dataType": "NeaSTRING",
+      "description": "",
+      "name": "userout"
+    }
+  ],
+  "version": "1.3.2"
+}

@@ -1,0 +1,48 @@
+<HMIPage Title="Left Sidebar" Width="Auto" Height="Auto" AllowDrop="True" xmlns="clr-namespace:NeaHMI;assembly=niop HMI" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <av:Grid ShowGridLines="False" Background="#00FFFFFF" AllowDrop="True">
+    <av:Grid.ColumnDefinitions>
+      <av:ColumnDefinition Width="0.5*" />
+    </av:Grid.ColumnDefinitions>
+    <av:Grid.RowDefinitions>
+      <av:RowDefinition Height="0.5*" />
+    </av:Grid.RowDefinitions>
+    <av:Grid ShowGridLines="False" Background="{x:Null}" MinWidth="40" MinHeight="40" AllowDrop="True" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
+      <av:Grid.ColumnDefinitions>
+        <av:ColumnDefinition Width="*" />
+      </av:Grid.ColumnDefinitions>
+      <av:Grid.RowDefinitions>
+        <av:RowDefinition Height="40*" />
+        <av:RowDefinition Height="100*" />
+        <av:RowDefinition Height="100*" />
+        <av:RowDefinition Height="100*" />
+        <av:RowDefinition Height="100*" />
+        <av:RowDefinition Height="400*" />
+        <av:RowDefinition Height="100*" />
+        <av:RowDefinition Height="40*" />
+      </av:Grid.RowDefinitions>
+      <av:Grid.RenderTransform>
+        <av:RotateTransform Angle="0" />
+      </av:Grid.RenderTransform>
+      <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Tag="Action" Name="BtnParagens" Width="Auto" Height="50" MinHeight="50" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="2">
+        <av:Button.RenderTransform>
+          <av:RotateTransform Angle="0" />
+        </av:Button.RenderTransform>Paragens</av:Button>
+      <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Tag="Action" Name="BtnCameras" Width="Auto" Height="50" MinHeight="50" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="1">
+        <av:Button.RenderTransform>
+          <av:RotateTransform Angle="0" />
+        </av:Button.RenderTransform>Câmaras</av:Button>
+      <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnAlertas" Width="Auto" Height="50" MinHeight="50" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="3">
+        <av:Button.RenderTransform>
+          <av:RotateTransform Angle="0" />
+        </av:Button.RenderTransform>Alertas</av:Button>
+      <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnRelatorios" Width="Auto" Height="50" MinHeight="50" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="4">
+        <av:Button.RenderTransform>
+          <av:RotateTransform Angle="0" />
+        </av:Button.RenderTransform>Relatórios</av:Button>
+      <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnSettings" Width="Auto" Height="50" MinHeight="50" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="6">
+        <av:Button.RenderTransform>
+          <av:RotateTransform Angle="0" />
+        </av:Button.RenderTransform>Configurações</av:Button>
+    </av:Grid>
+  </av:Grid>
+</HMIPage>
