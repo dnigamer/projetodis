@@ -1,4 +1,4 @@
-<HMIPage Title="AlertasPage" Width="Auto" Height="Auto" AllowDrop="True" xmlns="clr-namespace:NeaHMI;assembly=niop HMI" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<HMIPage Title="AlertasPage" Width="Auto" Height="Auto" AllowDrop="True" xmlns="clr-namespace:NeaHMI;assembly=niop HMI" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:cuc="clr-namespace:Common.UserControls;assembly=Common">
   <av:Grid ShowGridLines="False" Background="#00FFFFFF" AllowDrop="True">
     <av:Grid.ColumnDefinitions>
       <av:ColumnDefinition Width="0.5*" />
@@ -6,34 +6,264 @@
     <av:Grid.RowDefinitions>
       <av:RowDefinition Height="0.5*" />
     </av:Grid.RowDefinitions>
-    <av:Grid ShowGridLines="False" Background="{x:Null}" MinWidth="40" MinHeight="40" AllowDrop="True" Effect="{x:Null}" av:TextElement.Foreground="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
+    <av:Grid ShowGridLines="False" Background="#00FFFFFF" Name="ListaAlertas" AllowDrop="True" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
       <av:Grid.ColumnDefinitions>
-        <av:ColumnDefinition Width="*" />
+        <av:ColumnDefinition Width="0.5*" />
       </av:Grid.ColumnDefinitions>
       <av:Grid.RowDefinitions>
-        <av:RowDefinition Height="*" />
+        <av:RowDefinition Height="0.5*" />
       </av:Grid.RowDefinitions>
       <av:Grid.RenderTransform>
         <av:RotateTransform Angle="0" />
       </av:Grid.RenderTransform>
-      <av:Label Background="{x:Null}" Foreground="#FF000000" HorizontalAlignment="Left" VerticalAlignment="Top" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
-        <av:Label.Style>
-          <av:Style TargetType="av:Label">
-            <av:Style.Resources>
-              <av:ResourceDictionary />
-            </av:Style.Resources>
-            <av:Setter Property="av:ContentControl.ContentTemplate">
-              <av:Setter.Value>
-                <av:DataTemplate>
-                  <av:TextBlock Text="Alertas" TextWrapping="NoWrap" />
-                </av:DataTemplate>
-              </av:Setter.Value>
-            </av:Setter>
-          </av:Style>
-        </av:Label.Style>
-        <av:Label.RenderTransform>
+      <av:Grid ShowGridLines="False" Background="{x:Null}" MinWidth="40" MinHeight="40" AllowDrop="True" RenderTransformOrigin="0,0" Effect="{x:Null}" av:TextElement.Foreground="{x:Null}" av:ToolTipService.InitialShowDelay="400" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0" av:Grid.ColumnSpan="1" av:Grid.RowSpan="1">
+        <av:Grid.ColumnDefinitions>
+          <av:ColumnDefinition Width="*" />
+        </av:Grid.ColumnDefinitions>
+        <av:Grid.RowDefinitions>
+          <av:RowDefinition Height="2*" />
+          <av:RowDefinition Height="20*" />
+        </av:Grid.RowDefinitions>
+        <av:Grid.RenderTransform>
           <av:RotateTransform Angle="0" />
-        </av:Label.RenderTransform>Alertas</av:Label>
+        </av:Grid.RenderTransform>
+        <av:Label Background="{x:Null}" Foreground="#FF000000" FontSize="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="LblTituloAlertas" HorizontalAlignment="Center" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
+          <av:Label.Style>
+            <av:Style TargetType="av:Label">
+              <av:Style.Resources>
+                <av:ResourceDictionary />
+              </av:Style.Resources>
+              <av:Setter Property="av:ContentControl.ContentTemplate">
+                <av:Setter.Value>
+                  <av:DataTemplate>
+                    <av:TextBlock Text="Gerir Alertas" TextWrapping="NoWrap" />
+                  </av:DataTemplate>
+                </av:Setter.Value>
+              </av:Setter>
+            </av:Style>
+          </av:Label.Style>
+          <av:Label.RenderTransform>
+            <av:RotateTransform Angle="0" />
+          </av:Label.RenderTransform>Gerir Alertas</av:Label>
+        <av:Grid ShowGridLines="False" Background="{x:Null}" MinWidth="40" MinHeight="40" AllowDrop="True" Effect="{x:Null}" av:TextElement.Foreground="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="1">
+          <av:Grid.ColumnDefinitions>
+            <av:ColumnDefinition Width="*" />
+            <av:ColumnDefinition Width="4*" />
+          </av:Grid.ColumnDefinitions>
+          <av:Grid.RowDefinitions>
+            <av:RowDefinition Height="*" />
+          </av:Grid.RowDefinitions>
+          <av:Grid.RenderTransform>
+            <av:RotateTransform Angle="0" />
+          </av:Grid.RenderTransform>
+          <av:Grid ShowGridLines="False" Background="{x:Null}" MinWidth="40" MinHeight="40" AllowDrop="True" RenderTransformOrigin="0,0" Effect="{x:Null}" av:TextElement.Foreground="{x:Null}" av:ToolTipService.InitialShowDelay="400" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0" av:Grid.ColumnSpan="1" av:Grid.RowSpan="1">
+            <av:Grid.ColumnDefinitions>
+              <av:ColumnDefinition Width="*" />
+            </av:Grid.ColumnDefinitions>
+            <av:Grid.RowDefinitions>
+              <av:RowDefinition Height="*" />
+              <av:RowDefinition Height="*" />
+              <av:RowDefinition Height="*" />
+              <av:RowDefinition Height="*" />
+              <av:RowDefinition Height="*" />
+              <av:RowDefinition Height="5*" />
+            </av:Grid.RowDefinitions>
+            <av:Grid.RenderTransform>
+              <av:RotateTransform Angle="0" />
+            </av:Grid.RenderTransform>
+            <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnAddAlerta" Width="Auto" Height="50" MinHeight="50" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
+              <av:Button.RenderTransform>
+                <av:RotateTransform Angle="0" />
+              </av:Button.RenderTransform>Adicionar Alerta</av:Button>
+            <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnEditarAlerta" Width="Auto" Height="50" MinHeight="50" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="1">
+              <av:Button.RenderTransform>
+                <av:RotateTransform Angle="0" />
+              </av:Button.RenderTransform>Editar Alerta</av:Button>
+            <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnRemoverAlerta" Width="Auto" Height="50" MinHeight="50" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="2">
+              <av:Button.RenderTransform>
+                <av:RotateTransform Angle="0" />
+              </av:Button.RenderTransform>Remover Alerta</av:Button>
+            <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnEnviarAlerta" Width="Auto" Height="50" MinHeight="50" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="3">
+              <av:Button.RenderTransform>
+                <av:RotateTransform Angle="0" />
+              </av:Button.RenderTransform>Enviar Alerta</av:Button>
+            <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnDesativarAlerta" Width="Auto" Height="50" MinHeight="50" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="2" av:Grid.Column="0" av:Grid.Row="4">
+              <av:Button.RenderTransform>
+                <av:RotateTransform Angle="0" />
+              </av:Button.RenderTransform>Desativar Alerta</av:Button>
+          </av:Grid>
+          <av:Grid ShowGridLines="False" Background="{x:Null}" MinWidth="40" MinHeight="40" AllowDrop="True" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="1" av:Grid.Row="0">
+            <av:Grid.ColumnDefinitions>
+              <av:ColumnDefinition Width="*" />
+            </av:Grid.ColumnDefinitions>
+            <av:Grid.RowDefinitions>
+              <av:RowDefinition Height="*" />
+              <av:RowDefinition Height="9*" />
+            </av:Grid.RowDefinitions>
+            <av:Grid.RenderTransform>
+              <av:RotateTransform Angle="0" />
+            </av:Grid.RenderTransform>
+            <av:Label BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="LblListaAlertas" HorizontalAlignment="Center" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
+              <av:Label.Style>
+                <av:Style TargetType="av:Label">
+                  <av:Style.Resources>
+                    <av:ResourceDictionary />
+                  </av:Style.Resources>
+                  <av:Setter Property="av:ContentControl.ContentTemplate">
+                    <av:Setter.Value>
+                      <av:DataTemplate>
+                        <av:TextBlock Text="Lista de Alertas" TextWrapping="NoWrap" />
+                      </av:DataTemplate>
+                    </av:Setter.Value>
+                  </av:Setter>
+                </av:Style>
+              </av:Label.Style>
+              <av:Label.RenderTransform>
+                <av:RotateTransform Angle="0" />
+              </av:Label.RenderTransform>Lista de Alertas</av:Label>
+            <cuc:DataGridWrapper CanUserAddRows2="False" CanUserDeleteRows2="False" CanUserResizeColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserSortColumns="False" AutoGenerateColumns="False" BorderBrush="#FF000000" Name="DGListaAlertas" Width="Auto" Height="Auto" Margin="50,10,50,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Effect="{x:Null}" av:Panel.ZIndex="2" av:Grid.Column="0" av:Grid.Row="1">
+              <cuc:DataGridWrapper.ColumnsWrapper>
+                <av:DataGridTemplateColumn Width="Auto" DisplayIndex="0" ClipboardContentBinding="{x:Null}">
+                  <av:DataGridTemplateColumn.CellTemplate>
+                    <av:DataTemplate>
+                      <av:TextBlock />
+                    </av:DataTemplate>
+                  </av:DataGridTemplateColumn.CellTemplate>
+                  <av:DataGridTemplateColumn.Header>
+                    <av:TextBlock Text="ID" FontSize="16" Foreground="#FF000000" RenderTransformOrigin="0,0" av:ToolTipService.InitialShowDelay="400">
+                      <av:TextBlock.RenderTransform>
+                        <av:RotateTransform Angle="0" />
+                      </av:TextBlock.RenderTransform>
+                    </av:TextBlock>
+                  </av:DataGridTemplateColumn.Header>
+                  <av:DataGridTemplateColumn.HeaderStyle>
+                    <av:Style TargetType="av:DataGridColumnHeader">
+                      <av:Style.Resources>
+                        <av:ResourceDictionary />
+                      </av:Style.Resources>
+                      <av:Setter Property="av:Control.HorizontalContentAlignment">
+                        <av:Setter.Value>
+                          <x:Static Member="av:HorizontalAlignment.Left" />
+                        </av:Setter.Value>
+                      </av:Setter>
+                    </av:Style>
+                  </av:DataGridTemplateColumn.HeaderStyle>
+                </av:DataGridTemplateColumn>
+                <av:DataGridTemplateColumn Width="Auto" DisplayIndex="1" ClipboardContentBinding="{x:Null}">
+                  <av:DataGridTemplateColumn.CellTemplate>
+                    <av:DataTemplate>
+                      <av:TextBlock />
+                    </av:DataTemplate>
+                  </av:DataGridTemplateColumn.CellTemplate>
+                  <av:DataGridTemplateColumn.Header>
+                    <av:TextBlock Text="Tipo" FontSize="16" Foreground="#FF000000" RenderTransformOrigin="0,0" av:ToolTipService.InitialShowDelay="400">
+                      <av:TextBlock.RenderTransform>
+                        <av:RotateTransform Angle="0" />
+                      </av:TextBlock.RenderTransform>
+                    </av:TextBlock>
+                  </av:DataGridTemplateColumn.Header>
+                  <av:DataGridTemplateColumn.HeaderStyle>
+                    <av:Style TargetType="av:DataGridColumnHeader">
+                      <av:Style.Resources>
+                        <av:ResourceDictionary />
+                      </av:Style.Resources>
+                      <av:Setter Property="av:Control.HorizontalContentAlignment">
+                        <av:Setter.Value>
+                          <x:Static Member="av:HorizontalAlignment.Left" />
+                        </av:Setter.Value>
+                      </av:Setter>
+                    </av:Style>
+                  </av:DataGridTemplateColumn.HeaderStyle>
+                </av:DataGridTemplateColumn>
+                <av:DataGridTemplateColumn Width="Auto" DisplayIndex="2" ClipboardContentBinding="{x:Null}">
+                  <av:DataGridTemplateColumn.CellTemplate>
+                    <av:DataTemplate>
+                      <av:TextBlock />
+                    </av:DataTemplate>
+                  </av:DataGridTemplateColumn.CellTemplate>
+                  <av:DataGridTemplateColumn.Header>
+                    <av:TextBlock Text="Descrição" FontSize="16" Foreground="#FF000000">
+                      <av:TextBlock.RenderTransform>
+                        <av:RotateTransform Angle="0" />
+                      </av:TextBlock.RenderTransform>
+                    </av:TextBlock>
+                  </av:DataGridTemplateColumn.Header>
+                  <av:DataGridTemplateColumn.HeaderStyle>
+                    <av:Style TargetType="av:DataGridColumnHeader">
+                      <av:Style.Resources>
+                        <av:ResourceDictionary />
+                      </av:Style.Resources>
+                      <av:Setter Property="av:Control.HorizontalContentAlignment">
+                        <av:Setter.Value>
+                          <x:Static Member="av:HorizontalAlignment.Left" />
+                        </av:Setter.Value>
+                      </av:Setter>
+                    </av:Style>
+                  </av:DataGridTemplateColumn.HeaderStyle>
+                </av:DataGridTemplateColumn>
+                <av:DataGridTemplateColumn Width="Auto" DisplayIndex="3" ClipboardContentBinding="{x:Null}">
+                  <av:DataGridTemplateColumn.CellTemplate>
+                    <av:DataTemplate>
+                      <av:TextBlock />
+                    </av:DataTemplate>
+                  </av:DataGridTemplateColumn.CellTemplate>
+                  <av:DataGridTemplateColumn.Header>
+                    <av:TextBlock Text="Gravidade" FontSize="16" Foreground="#FF000000" RenderTransformOrigin="0,0" av:ToolTipService.InitialShowDelay="400">
+                      <av:TextBlock.RenderTransform>
+                        <av:RotateTransform Angle="0" />
+                      </av:TextBlock.RenderTransform>
+                    </av:TextBlock>
+                  </av:DataGridTemplateColumn.Header>
+                  <av:DataGridTemplateColumn.HeaderStyle>
+                    <av:Style TargetType="av:DataGridColumnHeader">
+                      <av:Style.Resources>
+                        <av:ResourceDictionary />
+                      </av:Style.Resources>
+                      <av:Setter Property="av:Control.HorizontalContentAlignment">
+                        <av:Setter.Value>
+                          <x:Static Member="av:HorizontalAlignment.Left" />
+                        </av:Setter.Value>
+                      </av:Setter>
+                    </av:Style>
+                  </av:DataGridTemplateColumn.HeaderStyle>
+                </av:DataGridTemplateColumn>
+                <av:DataGridTemplateColumn Width="Auto" DisplayIndex="4" ClipboardContentBinding="{x:Null}">
+                  <av:DataGridTemplateColumn.CellTemplate>
+                    <av:DataTemplate>
+                      <av:TextBlock />
+                    </av:DataTemplate>
+                  </av:DataGridTemplateColumn.CellTemplate>
+                  <av:DataGridTemplateColumn.Header>
+                    <av:TextBlock Text="Estado" FontSize="16" Foreground="#FF000000">
+                      <av:TextBlock.RenderTransform>
+                        <av:RotateTransform Angle="0" />
+                      </av:TextBlock.RenderTransform>
+                    </av:TextBlock>
+                  </av:DataGridTemplateColumn.Header>
+                  <av:DataGridTemplateColumn.HeaderStyle>
+                    <av:Style TargetType="av:DataGridColumnHeader">
+                      <av:Style.Resources>
+                        <av:ResourceDictionary />
+                      </av:Style.Resources>
+                      <av:Setter Property="av:Control.HorizontalContentAlignment">
+                        <av:Setter.Value>
+                          <x:Static Member="av:HorizontalAlignment.Left" />
+                        </av:Setter.Value>
+                      </av:Setter>
+                    </av:Style>
+                  </av:DataGridTemplateColumn.HeaderStyle>
+                </av:DataGridTemplateColumn>
+              </cuc:DataGridWrapper.ColumnsWrapper>
+              <cuc:DataGridWrapper.ItemBindingGroup>
+                <av:BindingGroup Name="{x:Null}" NotifyOnValidationError="False" ValidatesOnNotifyDataError="True" SharesProposedValues="True" />
+              </cuc:DataGridWrapper.ItemBindingGroup>
+              <cuc:DataGridWrapper.RenderTransform>
+                <av:RotateTransform Angle="0" />
+              </cuc:DataGridWrapper.RenderTransform>
+            </cuc:DataGridWrapper>
+          </av:Grid>
+        </av:Grid>
+      </av:Grid>
     </av:Grid>
   </av:Grid>
 </HMIPage>
