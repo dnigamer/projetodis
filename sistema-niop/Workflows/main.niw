@@ -30,7 +30,7 @@
           "name": "error"
         },
         {
-          "instructionId": "1ce5668b-b4ae-4306-9507-4890eac27578",
+          "instructionId": "a8b25914-8026-40ef-8ff8-4910eec3ef10",
           "name": "next"
         }
       ],
@@ -76,7 +76,7 @@
       "displayData": {
         "color": "b-finish",
         "x": -36,
-        "y": 358,
+        "y": 468,
         "zindex": 1000
       },
       "id": "21c775f8-40d6-441c-b04e-0d230f36211e",
@@ -168,8 +168,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": -41,
-        "y": 186,
+        "x": -39,
+        "y": 274,
         "zindex": 1001
       },
       "id": "1ce5668b-b4ae-4306-9507-4890eac27578",
@@ -699,7 +699,7 @@
       "displayData": {
         "color": "b-system",
         "x": -38,
-        "y": 265,
+        "y": 375,
         "zindex": 1005
       },
       "id": "1aca9479-4288-4a5f-973e-0b321a1d9984",
@@ -747,7 +747,7 @@
       "displayData": {
         "color": "b-system",
         "x": 73,
-        "y": 294,
+        "y": 404,
         "zindex": 1005
       },
       "id": "c5ef9c23-96f0-4d25-89ed-7e14ed909790",
@@ -788,14 +788,14 @@
           "name": "false"
         },
         {
-          "instructionId": "1ce5668b-b4ae-4306-9507-4890eac27578",
+          "instructionId": "60926060-a150-4769-b1ad-9e7d26681de5",
           "name": "true"
         }
       ],
       "displayData": {
         "color": "b-system",
         "x": 172,
-        "y": 329,
+        "y": 439,
         "zindex": 1005
       },
       "id": "8474b6f3-2ecf-486e-a249-9f2ef1fd975b",
@@ -839,7 +839,7 @@
       "displayData": {
         "color": "b-system",
         "x": 172,
-        "y": 395,
+        "y": 505,
         "zindex": 1006
       },
       "id": "d4713a20-2da4-4c54-891f-8afdf2a3930a",
@@ -867,7 +867,7 @@
       "displayData": {
         "color": "b-system",
         "x": 74,
-        "y": 359,
+        "y": 469,
         "zindex": 1008
       },
       "id": "380b1a19-276a-4d1b-84d9-31741b02638a",
@@ -883,6 +883,246 @@
         }
       ],
       "signature": "B0A5DD03-E38E-410C-97CB-1B7A6EAC2DDD"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "1ce5668b-b4ae-4306-9507-4890eac27578",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": -48,
+        "y": 176,
+        "zindex": 1000
+      },
+      "id": "a8b25914-8026-40ef-8ff8-4910eec3ef10",
+      "methodId": "bb9a39e6-319b-4df1-884e-0a65f74b86c2",
+      "name": "Display Value",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Binding",
+          "type": "Simple",
+          "value": "Header:LblEstadoSistema"
+        },
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Value",
+          "type": "Simple",
+          "value": "OFFLINE"
+        }
+      ],
+      "signature": "b6205626-d7e6-419f-b80f-64ca2ff3c048"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "1ce5668b-b4ae-4306-9507-4890eac27578",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 398,
+        "y": 478,
+        "zindex": 1000
+      },
+      "id": "1f1b5fbb-422b-42eb-8ae2-3ba00d5de071",
+      "methodId": "bb9a39e6-319b-4df1-884e-0a65f74b86c2",
+      "name": "Display Value",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Binding",
+          "type": "Simple",
+          "value": "HomePage:TblParagensFavoritas"
+        },
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Value",
+          "type": "Simple",
+          "value": "t,e,x,t"
+        }
+      ],
+      "signature": "b6205626-d7e6-419f-b80f-64ca2ff3c048"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "30dd9386-252a-4531-83f0-f6b8129231f9",
+          "name": "error"
+        },
+        {
+          "instructionId": "28131dbe-43eb-4015-b42e-b4f76487e4ca",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-file",
+        "x": 587,
+        "y": 422,
+        "zindex": 1000
+      },
+      "id": "2c16d17c-897a-464b-a628-994fa96be2c6",
+      "methodId": "7B6A2BAB-805A-4B7C-874C-11E70064F9A1",
+      "name": "Get Values",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Field Name",
+          "type": "Simple",
+          "value": "alertas"
+        },
+        {
+          "bind": {
+            "variableName": "AlertasRecentesJSON"
+          },
+          "dataType": "NeaJSON",
+          "io": "Input",
+          "name": "JSON",
+          "type": "Variable"
+        },
+        {
+          "bind": {
+            "variableName": "AlertasRecentes"
+          },
+          "dataType": "NeaVECTOR<NeaSTRING>",
+          "io": "Output",
+          "name": "Vector of data",
+          "type": "Variable"
+        }
+      ],
+      "signature": "F95F58E1-B0AC-4258-81C3-768C726435E3"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "2c16d17c-897a-464b-a628-994fa96be2c6",
+          "name": "next"
+        },
+        {
+          "instructionId": "30dd9386-252a-4531-83f0-f6b8129231f9",
+          "name": "error"
+        }
+      ],
+      "displayData": {
+        "color": "b-file",
+        "x": 587,
+        "y": 337,
+        "zindex": 1000
+      },
+      "id": "60926060-a150-4769-b1ad-9e7d26681de5",
+      "methodId": "9E4ACE44-276E-4EB6-991E-8AD7555223C0",
+      "name": "Read File",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Filename",
+          "type": "Simple",
+          "value": "table.json"
+        },
+        {
+          "bind": {
+            "variableName": "AlertasRecentesJSON"
+          },
+          "dataType": "NeaJSON",
+          "io": "Output",
+          "name": "JSON",
+          "type": "Variable"
+        }
+      ],
+      "signature": "689A4067-1DF1-42E9-8215-7B7AA5DDAB2A"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "21c775f8-40d6-441c-b04e-0d230f36211e",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 722,
+        "y": 363,
+        "zindex": 1000
+      },
+      "id": "30dd9386-252a-4531-83f0-f6b8129231f9",
+      "methodId": "BB1D4B60-D074-44D3-9844-81F38F461F2C",
+      "name": "Log Error",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Message",
+          "type": "Simple",
+          "value": "JSON"
+        }
+      ],
+      "signature": "B0A5DD03-E38E-410C-97CB-1B7A6EAC2DDD"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "30dd9386-252a-4531-83f0-f6b8129231f9",
+          "name": "error"
+        },
+        {
+          "instructionId": "1f1b5fbb-422b-42eb-8ae2-3ba00d5de071",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-file",
+        "x": 579,
+        "y": 514,
+        "zindex": 1000
+      },
+      "id": "28131dbe-43eb-4015-b42e-b4f76487e4ca",
+      "methodId": "ABED6A4A-BDB1-45D8-A894-161C0DFCB2EA",
+      "name": "Write File",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Path",
+          "type": "Simple",
+          "value": "test.json"
+        },
+        {
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "Write Type",
+          "type": "Simple",
+          "value": "0"
+        },
+        {
+          "bind": {
+            "indexArray": [
+              0
+            ],
+            "variableName": "AlertasRecentes"
+          },
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "String",
+          "type": "Array Item"
+        }
+      ],
+      "signature": "4238AE5B-59A7-42B6-9AE3-4E88852942FE"
     }
   ],
   "parameters": [],
@@ -892,6 +1132,16 @@
       "dataType": "NeaINT",
       "description": "",
       "name": "actionerr"
+    },
+    {
+      "dataType": "NeaVECTOR<NeaSTRING>",
+      "description": "",
+      "name": "AlertasRecentes"
+    },
+    {
+      "dataType": "NeaJSON",
+      "description": "",
+      "name": "AlertasRecentesJSON"
     },
     {
       "dataType": "NeaINT",

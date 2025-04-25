@@ -1,4 +1,4 @@
-<HMIPage Title="HomePage" Width="Auto" Height="Auto" AllowDrop="True" xmlns="clr-namespace:NeaHMI;assembly=niop HMI" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:cuc="clr-namespace:Common.UserControls;assembly=Common">
+<HMIPage Title="HomePage" Width="Auto" Height="Auto" AllowDrop="True" xmlns="clr-namespace:NeaHMI;assembly=niop HMI" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:cuc="clr-namespace:Common.UserControls;assembly=Common" xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls">
   <av:Grid ShowGridLines="False" Background="#00FFFFFF" AllowDrop="True">
     <av:Grid.ColumnDefinitions>
       <av:ColumnDefinition Width="0.5*" />
@@ -6,7 +6,7 @@
     <av:Grid.RowDefinitions>
       <av:RowDefinition Height="0.5*" />
     </av:Grid.RowDefinitions>
-    <av:Grid ShowGridLines="False" Background="{x:Null}" MinWidth="40" MinHeight="40" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" AllowDrop="True" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
+    <av:Grid ShowGridLines="False" Background="{x:Null}" MinWidth="40" MinHeight="40" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" AllowDrop="True" RenderTransformOrigin="0,0" Effect="{x:Null}" av:ToolTipService.InitialShowDelay="400" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0" av:Grid.ColumnSpan="1" av:Grid.RowSpan="1">
       <av:Grid.ColumnDefinitions>
         <av:ColumnDefinition Width="*" />
       </av:Grid.ColumnDefinitions>
@@ -57,7 +57,7 @@
         <av:Label.Effect>
           <av:DropShadowEffect ShadowDepth="0" Color="#FFFFFFFF" BlurRadius="10" />
         </av:Label.Effect>Projeto realizado por Grupo 3</av:Label>
-      <av:Grid ShowGridLines="False" Background="{x:Null}" Name="GridHomepage" MinWidth="40" MinHeight="40" AllowDrop="True" av:TextElement.Foreground="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="1">
+      <av:Grid ShowGridLines="False" Background="{x:Null}" Name="GridHomepage" MinWidth="40" MinHeight="40" AllowDrop="True" Effect="{x:Null}" av:TextElement.Foreground="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="1">
         <av:Grid.ColumnDefinitions>
           <av:ColumnDefinition Width="*" />
           <av:ColumnDefinition Width="10*" />
@@ -70,10 +70,7 @@
         <av:Grid.RenderTransform>
           <av:RotateTransform Angle="0" />
         </av:Grid.RenderTransform>
-        <av:Grid.Effect>
-          <av:DropShadowEffect ShadowDepth="0" Color="#FFFFFFFF" BlurRadius="10" />
-        </av:Grid.Effect>
-        <av:Grid ShowGridLines="False" Background="{x:Null}" Name="GridHPLeft" MinWidth="40" MinHeight="40" AllowDrop="True" av:Panel.ZIndex="1" av:Grid.Column="1" av:Grid.Row="0">
+        <av:Grid ShowGridLines="False" Background="{x:Null}" Name="GridHPLeft" MinWidth="40" MinHeight="40" AllowDrop="True" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="1" av:Grid.Row="0">
           <av:Grid.ColumnDefinitions>
             <av:ColumnDefinition Width="*" />
           </av:Grid.ColumnDefinitions>
@@ -84,10 +81,7 @@
           <av:Grid.RenderTransform>
             <av:RotateTransform Angle="0" />
           </av:Grid.RenderTransform>
-          <av:Grid.Effect>
-            <av:DropShadowEffect ShadowDepth="0" Color="#FFFFFFFF" BlurRadius="10" />
-          </av:Grid.Effect>
-          <av:Label Background="{x:Null}" Foreground="#FF000000" FontSize="20" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="LblAlertasRecentes" HorizontalAlignment="Center" VerticalAlignment="Center" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
+          <av:Label Background="{x:Null}" Foreground="#FF000000" FontSize="20" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="LblAlertasRecentes" HorizontalAlignment="Center" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
             <av:Label.Style>
               <av:Style TargetType="av:Label">
                 <av:Style.Resources>
@@ -104,20 +98,21 @@
             </av:Label.Style>
             <av:Label.RenderTransform>
               <av:RotateTransform Angle="0" />
-            </av:Label.RenderTransform>
-            <av:Label.Effect>
-              <av:DropShadowEffect ShadowDepth="0" Color="#FFFFFFFF" BlurRadius="10" />
-            </av:Label.Effect>Alertas Recentes</av:Label>
-          <cuc:DataGridWrapper ItemsSource2="{av:Binding Path=TblAlertasRecentes, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" CanUserAddRows2="False" CanUserDeleteRows2="False" CanUserResizeColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserSortColumns="False" AutoGenerateColumns="True" BorderBrush="#FF000000" Background="{x:Null}" Foreground="{x:Null}" FontSize="14" Width="Auto" Height="Auto" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="1">
+            </av:Label.RenderTransform>Alertas Recentes</av:Label>
+          <cuc:DataGridWrapper ItemsSource2="{av:Binding Path=TblAlertasRecentes, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" CanUserAddRows2="False" CanUserDeleteRows2="False" CanUserResizeColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserSortColumns="False" AutoGenerateColumns="False" BorderBrush="#FF000000" Background="#FFFFFFFF" Foreground="#FF000000" FontSize="14" Width="Auto" Height="Auto" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="1">
             <cuc:DataGridWrapper.ColumnsWrapper>
               <av:DataGridTemplateColumn Width="Auto" DisplayIndex="0" ClipboardContentBinding="{x:Null}">
                 <av:DataGridTemplateColumn.CellTemplate>
                   <av:DataTemplate>
-                    <av:TextBlock />
+                    <av:TextBlock Tag="paragem">
+                      <av:TextBlock.RenderTransform>
+                        <av:RotateTransform Angle="0" />
+                      </av:TextBlock.RenderTransform>
+                    </av:TextBlock>
                   </av:DataTemplate>
                 </av:DataGridTemplateColumn.CellTemplate>
                 <av:DataGridTemplateColumn.Header>
-                  <av:TextBlock Text="Paragem" FontSize="13" Foreground="#FF000000" TextAlignment="Center" Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0,0" av:ToolTipService.InitialShowDelay="400">
+                  <av:TextBlock Text="Paragem" FontSize="14" RenderTransformOrigin="0,0" av:ToolTipService.InitialShowDelay="400">
                     <av:TextBlock.RenderTransform>
                       <av:RotateTransform Angle="0" />
                     </av:TextBlock.RenderTransform>
@@ -130,7 +125,7 @@
                     </av:Style.Resources>
                     <av:Setter Property="av:Control.HorizontalContentAlignment">
                       <av:Setter.Value>
-                        <x:Static Member="av:HorizontalAlignment.Center" />
+                        <x:Static Member="av:HorizontalAlignment.Left" />
                       </av:Setter.Value>
                     </av:Setter>
                   </av:Style>
@@ -139,11 +134,15 @@
               <av:DataGridTemplateColumn Width="Auto" DisplayIndex="1" ClipboardContentBinding="{x:Null}">
                 <av:DataGridTemplateColumn.CellTemplate>
                   <av:DataTemplate>
-                    <av:TextBlock />
+                    <av:TextBlock Tag="alerta">
+                      <av:TextBlock.RenderTransform>
+                        <av:RotateTransform Angle="0" />
+                      </av:TextBlock.RenderTransform>
+                    </av:TextBlock>
                   </av:DataTemplate>
                 </av:DataGridTemplateColumn.CellTemplate>
                 <av:DataGridTemplateColumn.Header>
-                  <av:TextBlock Text="Alerta" FontSize="13" Foreground="#FF000000" HorizontalAlignment="Stretch" VerticalAlignment="Center" RenderTransformOrigin="0,0" av:ToolTipService.InitialShowDelay="400">
+                  <av:TextBlock Text="Alerta" FontSize="14">
                     <av:TextBlock.RenderTransform>
                       <av:RotateTransform Angle="0" />
                     </av:TextBlock.RenderTransform>
@@ -171,7 +170,7 @@
             </cuc:DataGridWrapper.RenderTransform>
           </cuc:DataGridWrapper>
         </av:Grid>
-        <av:Grid ShowGridLines="False" Background="{x:Null}" Name="GridHPRight" MinWidth="40" MinHeight="40" AllowDrop="True" av:Panel.ZIndex="2" av:Grid.Column="2" av:Grid.Row="0">
+        <av:Grid ShowGridLines="False" Background="{x:Null}" Name="GridHPRight" MinWidth="40" MinHeight="40" AllowDrop="True" Effect="{x:Null}" av:Panel.ZIndex="2" av:Grid.Column="2" av:Grid.Row="0">
           <av:Grid.ColumnDefinitions>
             <av:ColumnDefinition Width="*" />
           </av:Grid.ColumnDefinitions>
@@ -182,10 +181,7 @@
           <av:Grid.RenderTransform>
             <av:RotateTransform Angle="0" />
           </av:Grid.RenderTransform>
-          <av:Grid.Effect>
-            <av:DropShadowEffect ShadowDepth="0" Color="#FFFFFFFF" BlurRadius="10" />
-          </av:Grid.Effect>
-          <av:Label Background="{x:Null}" Foreground="#FF000000" FontSize="20" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="LblParagensFavoritas" HorizontalAlignment="Center" VerticalAlignment="Center" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
+          <av:Label Background="{x:Null}" Foreground="#FF000000" FontSize="20" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="LblParagensFavoritas" HorizontalAlignment="Center" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
             <av:Label.Style>
               <av:Style TargetType="av:Label">
                 <av:Style.Resources>
@@ -202,16 +198,13 @@
             </av:Label.Style>
             <av:Label.RenderTransform>
               <av:RotateTransform Angle="0" />
-            </av:Label.RenderTransform>
-            <av:Label.Effect>
-              <av:DropShadowEffect ShadowDepth="0" Color="#FFFFFFFF" BlurRadius="10" />
-            </av:Label.Effect>Paragens Favoritas</av:Label>
-          <cuc:DataGridWrapper CanUserAddRows2="False" CanUserDeleteRows2="False" CanUserResizeColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserSortColumns="False" AutoGenerateColumns="True" BorderBrush="#FF000000" Background="{x:Null}" Foreground="{x:Null}" Width="Auto" Height="Auto" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="1">
+            </av:Label.RenderTransform>Paragens Favoritas</av:Label>
+          <cuc:DataGridWrapper ItemsSource2="{av:Binding Path=TblParagensFavoritas, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" CanUserAddRows2="False" CanUserDeleteRows2="False" CanUserResizeColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserSortColumns="False" AutoGenerateColumns="False" BorderBrush="#FF000000" Background="#FFFFFFFF" Foreground="#FF000000" Width="Auto" Height="Auto" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="1">
             <cuc:DataGridWrapper.ColumnsWrapper>
               <av:DataGridTemplateColumn Width="Auto" DisplayIndex="0" ClipboardContentBinding="{x:Null}">
                 <av:DataGridTemplateColumn.CellTemplate>
                   <av:DataTemplate>
-                    <av:TextBlock />
+                    <av:TextBox mah:TextBoxHelper.HasText="False" xml:space="preserve"></av:TextBox>
                   </av:DataTemplate>
                 </av:DataGridTemplateColumn.CellTemplate>
                 <av:DataGridTemplateColumn.Header>
@@ -237,7 +230,7 @@
               <av:DataGridTemplateColumn Width="Auto" DisplayIndex="1" ClipboardContentBinding="{x:Null}">
                 <av:DataGridTemplateColumn.CellTemplate>
                   <av:DataTemplate>
-                    <av:TextBlock />
+                    <av:TextBox mah:TextBoxHelper.HasText="False" xml:space="preserve"></av:TextBox>
                   </av:DataTemplate>
                 </av:DataGridTemplateColumn.CellTemplate>
                 <av:DataGridTemplateColumn.Header>

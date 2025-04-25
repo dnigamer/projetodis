@@ -121,7 +121,7 @@
               <av:Label.RenderTransform>
                 <av:RotateTransform Angle="0" />
               </av:Label.RenderTransform>Lista de Paragens</av:Label>
-            <cuc:DataGridWrapper CanUserAddRows2="False" CanUserDeleteRows2="False" CanUserResizeColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserSortColumns="False" AutoGenerateColumns="False" BorderBrush="#FF000000" Name="DGListaParagensRelatorios" Width="Auto" Height="Auto" Margin="50,10,50,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Effect="{x:Null}" av:Panel.ZIndex="2" av:Grid.Column="0" av:Grid.Row="1">
+            <cuc:DataGridWrapper ItemsSource2="{av:Binding Path=TblListaParagensRelatorios, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" CanUserAddRows2="False" CanUserDeleteRows2="False" CanUserResizeColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserSortColumns="False" AutoGenerateColumns="False" BorderBrush="#FF000000" Name="DGListaParagensRelatorios" Width="Auto" Height="Auto" Margin="50,10,50,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Effect="{x:Null}" av:Panel.ZIndex="2" av:Grid.Column="0" av:Grid.Row="1">
               <cuc:DataGridWrapper.ColumnsWrapper>
                 <av:DataGridTemplateColumn Width="Auto" DisplayIndex="0" ClipboardContentBinding="{x:Null}">
                   <av:DataGridTemplateColumn.CellTemplate>
