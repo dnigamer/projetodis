@@ -1,4 +1,4 @@
-<HMIPage Title="ConfigPage" Width="Auto" Height="Auto" AllowDrop="True" xmlns="clr-namespace:NeaHMI;assembly=niop HMI" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:cuc="clr-namespace:Common.UserControls;assembly=Common">
+<HMIPage Title="ConfigPage" Width="Auto" Height="Auto" AllowDrop="True" xmlns="clr-namespace:NeaHMI;assembly=niop HMI" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <av:Grid ShowGridLines="False" Background="#00FFFFFF" AllowDrop="True">
     <av:Grid.ColumnDefinitions>
       <av:ColumnDefinition Width="0.5*" />
@@ -6,7 +6,7 @@
     <av:Grid.RowDefinitions>
       <av:RowDefinition Height="0.5*" />
     </av:Grid.RowDefinitions>
-    <av:Grid ShowGridLines="False" Background="{x:Null}" MinWidth="40" MinHeight="40" AllowDrop="True" Effect="{x:Null}" av:TextElement.Foreground="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
+    <av:Grid ShowGridLines="False" Background="{x:Null}" MinWidth="40" MinHeight="40" AllowDrop="True" Effect="{x:Null}" av:TextElement.Foreground="#FF000000" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
       <av:Grid.ColumnDefinitions>
         <av:ColumnDefinition Width="*" />
       </av:Grid.ColumnDefinitions>
@@ -17,13 +17,5 @@
         <av:RotateTransform Angle="0" />
       </av:Grid.RenderTransform>
     </av:Grid>
-    <cuc:MultiSelectCombobox IsDropDownOpen="False" SelectedValues="{x:Null}" BorderBrush="#FF000000" Background="#01FFFFFF" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Hand" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
-      <cuc:MultiSelectCombobox.DisplayedSelectedItems>
-        <x:Null />
-      </cuc:MultiSelectCombobox.DisplayedSelectedItems>
-      <cuc:MultiSelectCombobox.RenderTransform>
-        <av:RotateTransform Angle="0" />
-      </cuc:MultiSelectCombobox.RenderTransform>
-    </cuc:MultiSelectCombobox>
   </av:Grid>
 </HMIPage>

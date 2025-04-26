@@ -942,17 +942,19 @@
           "io": "Input",
           "name": "Binding",
           "type": "Simple",
-          "value": "HomePage:TblParagensFavoritas"
+          "value": "HomePage:TblAlertasRecentes"
         },
         {
-          "dataType": "NeaSTRING",
+          "bind": {
+            "variableName": "AlertasRecentes"
+          },
+          "dataType": "NeaVECTOR<NeaSTRING>",
           "io": "Input",
           "name": "Value",
-          "type": "Simple",
-          "value": "t,e,x,t"
+          "type": "Variable"
         }
       ],
-      "signature": "b6205626-d7e6-419f-b80f-64ca2ff3c048"
+      "signature": "8b0950aa-19b9-4312-8d6c-aacd5acab25c"
     },
     {
       "active": true,
