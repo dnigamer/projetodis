@@ -98,143 +98,20 @@
             </av:Grid.ColumnDefinitions>
             <av:Grid.RowDefinitions>
               <av:RowDefinition Height="*" />
-              <av:RowDefinition Height="9*" />
             </av:Grid.RowDefinitions>
             <av:Grid.RenderTransform>
               <av:RotateTransform Angle="0" />
             </av:Grid.RenderTransform>
-            <av:Label BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="LblListaAlertas" HorizontalAlignment="Center" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
-              <av:Label.Style>
-                <av:Style TargetType="av:Label">
-                  <av:Style.Resources>
-                    <av:ResourceDictionary />
-                  </av:Style.Resources>
-                  <av:Setter Property="av:ContentControl.ContentTemplate">
-                    <av:Setter.Value>
-                      <av:DataTemplate>
-                        <av:TextBlock Text="Lista de Paragens" TextWrapping="NoWrap" />
-                      </av:DataTemplate>
-                    </av:Setter.Value>
-                  </av:Setter>
-                </av:Style>
-              </av:Label.Style>
-              <av:Label.RenderTransform>
+            <cuc:WebBrowserWrapper Url="http://localhost/paragens/lista.php" Background="{av:DynamicResource SidebarBackground}" Width="Auto" Height="Auto" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="2" av:Grid.Column="0" av:Grid.Row="0">
+              <cuc:WebBrowserWrapper.CommandBindings>
+                <av:CommandBinding Command="BrowseBack" />
+                <av:CommandBinding Command="BrowseForward" />
+                <av:CommandBinding Command="GoToPage" />
+              </cuc:WebBrowserWrapper.CommandBindings>
+              <cuc:WebBrowserWrapper.RenderTransform>
                 <av:RotateTransform Angle="0" />
-              </av:Label.RenderTransform>Lista de Paragens</av:Label>
-            <cuc:DataGridWrapper ItemsSource2="{av:Binding Path=TblListaParagensRelatorios, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" CanUserAddRows2="False" CanUserDeleteRows2="False" CanUserResizeColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserSortColumns="False" AutoGenerateColumns="False" BorderBrush="#FF000000" Name="DGListaParagensRelatorios" Width="Auto" Height="Auto" Margin="50,10,50,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Effect="{x:Null}" av:Panel.ZIndex="2" av:Grid.Column="0" av:Grid.Row="1">
-              <cuc:DataGridWrapper.ColumnsWrapper>
-                <av:DataGridTemplateColumn Width="Auto" DisplayIndex="0" ClipboardContentBinding="{x:Null}">
-                  <av:DataGridTemplateColumn.CellTemplate>
-                    <av:DataTemplate>
-                      <av:TextBlock />
-                    </av:DataTemplate>
-                  </av:DataGridTemplateColumn.CellTemplate>
-                  <av:DataGridTemplateColumn.Header>
-                    <av:TextBlock Text="ID" FontSize="16" Foreground="#FF000000" RenderTransformOrigin="0,0" av:ToolTipService.InitialShowDelay="400">
-                      <av:TextBlock.RenderTransform>
-                        <av:RotateTransform Angle="0" />
-                      </av:TextBlock.RenderTransform>
-                    </av:TextBlock>
-                  </av:DataGridTemplateColumn.Header>
-                  <av:DataGridTemplateColumn.HeaderStyle>
-                    <av:Style TargetType="av:DataGridColumnHeader">
-                      <av:Style.Resources>
-                        <av:ResourceDictionary />
-                      </av:Style.Resources>
-                      <av:Setter Property="av:Control.HorizontalContentAlignment">
-                        <av:Setter.Value>
-                          <x:Static Member="av:HorizontalAlignment.Left" />
-                        </av:Setter.Value>
-                      </av:Setter>
-                    </av:Style>
-                  </av:DataGridTemplateColumn.HeaderStyle>
-                </av:DataGridTemplateColumn>
-                <av:DataGridTemplateColumn Width="Auto" DisplayIndex="1" ClipboardContentBinding="{x:Null}">
-                  <av:DataGridTemplateColumn.CellTemplate>
-                    <av:DataTemplate>
-                      <av:TextBlock />
-                    </av:DataTemplate>
-                  </av:DataGridTemplateColumn.CellTemplate>
-                  <av:DataGridTemplateColumn.Header>
-                    <av:TextBlock Text="Localização" FontSize="16" Foreground="#FF000000">
-                      <av:TextBlock.RenderTransform>
-                        <av:RotateTransform Angle="0" />
-                      </av:TextBlock.RenderTransform>
-                    </av:TextBlock>
-                  </av:DataGridTemplateColumn.Header>
-                  <av:DataGridTemplateColumn.HeaderStyle>
-                    <av:Style TargetType="av:DataGridColumnHeader">
-                      <av:Style.Resources>
-                        <av:ResourceDictionary />
-                      </av:Style.Resources>
-                      <av:Setter Property="av:Control.HorizontalContentAlignment">
-                        <av:Setter.Value>
-                          <x:Static Member="av:HorizontalAlignment.Left" />
-                        </av:Setter.Value>
-                      </av:Setter>
-                    </av:Style>
-                  </av:DataGridTemplateColumn.HeaderStyle>
-                </av:DataGridTemplateColumn>
-                <av:DataGridTemplateColumn Width="Auto" DisplayIndex="2" ClipboardContentBinding="{x:Null}">
-                  <av:DataGridTemplateColumn.CellTemplate>
-                    <av:DataTemplate>
-                      <av:TextBlock />
-                    </av:DataTemplate>
-                  </av:DataGridTemplateColumn.CellTemplate>
-                  <av:DataGridTemplateColumn.Header>
-                    <av:TextBlock Text="Estado" FontSize="16" Foreground="#FF000000">
-                      <av:TextBlock.RenderTransform>
-                        <av:RotateTransform Angle="0" />
-                      </av:TextBlock.RenderTransform>
-                    </av:TextBlock>
-                  </av:DataGridTemplateColumn.Header>
-                  <av:DataGridTemplateColumn.HeaderStyle>
-                    <av:Style TargetType="av:DataGridColumnHeader">
-                      <av:Style.Resources>
-                        <av:ResourceDictionary />
-                      </av:Style.Resources>
-                      <av:Setter Property="av:Control.HorizontalContentAlignment">
-                        <av:Setter.Value>
-                          <x:Static Member="av:HorizontalAlignment.Left" />
-                        </av:Setter.Value>
-                      </av:Setter>
-                    </av:Style>
-                  </av:DataGridTemplateColumn.HeaderStyle>
-                </av:DataGridTemplateColumn>
-                <av:DataGridTemplateColumn Width="Auto" DisplayIndex="3" ClipboardContentBinding="{x:Null}">
-                  <av:DataGridTemplateColumn.CellTemplate>
-                    <av:DataTemplate>
-                      <av:TextBlock />
-                    </av:DataTemplate>
-                  </av:DataGridTemplateColumn.CellTemplate>
-                  <av:DataGridTemplateColumn.Header>
-                    <av:TextBlock Text="Lotação atual" FontSize="16" Foreground="#FF000000" RenderTransformOrigin="0,0" av:ToolTipService.InitialShowDelay="400">
-                      <av:TextBlock.RenderTransform>
-                        <av:RotateTransform Angle="0" />
-                      </av:TextBlock.RenderTransform>
-                    </av:TextBlock>
-                  </av:DataGridTemplateColumn.Header>
-                  <av:DataGridTemplateColumn.HeaderStyle>
-                    <av:Style TargetType="av:DataGridColumnHeader">
-                      <av:Style.Resources>
-                        <av:ResourceDictionary />
-                      </av:Style.Resources>
-                      <av:Setter Property="av:Control.HorizontalContentAlignment">
-                        <av:Setter.Value>
-                          <x:Static Member="av:HorizontalAlignment.Left" />
-                        </av:Setter.Value>
-                      </av:Setter>
-                    </av:Style>
-                  </av:DataGridTemplateColumn.HeaderStyle>
-                </av:DataGridTemplateColumn>
-              </cuc:DataGridWrapper.ColumnsWrapper>
-              <cuc:DataGridWrapper.ItemBindingGroup>
-                <av:BindingGroup Name="{x:Null}" NotifyOnValidationError="False" ValidatesOnNotifyDataError="True" SharesProposedValues="True" />
-              </cuc:DataGridWrapper.ItemBindingGroup>
-              <cuc:DataGridWrapper.RenderTransform>
-                <av:RotateTransform Angle="0" />
-              </cuc:DataGridWrapper.RenderTransform>
-            </cuc:DataGridWrapper>
+              </cuc:WebBrowserWrapper.RenderTransform>
+            </cuc:WebBrowserWrapper>
           </av:Grid>
         </av:Grid>
       </av:Grid>
