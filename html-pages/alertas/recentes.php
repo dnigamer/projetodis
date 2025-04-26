@@ -1,27 +1,25 @@
-<!-- ID, Localizacao, Estado, Lotacao atual-->
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lista de Paragens</title>
+    <title>Alertas Recentes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <meta name="description" content="Lista de paragens com informações detalhadas.">
-    <link rel="stylesheet" href="/static/css/style.css">
+    <meta name="description" content="Lista de alertas recentes.">
+    <link rel="stylesheet" href="/static/css/style-small.css">
 </head>
 <body>
-    <h2>Lista de Paragens</h2>
+    <h2>Alertas Recentes</h2>
     <table>
         <thead>
             <tr>
-                <th class="ID-column">ID</th>
-                <th>Nome</th>
-                <th>Localização</th>
-                <th>Estado</th>
-                <th>Lotação</th>
+                <th class="id-column">ID</th>
+                <th>Data Alerta</th>
+                <th>Alerta</th>
+                <th>Gravidade</th>
             </tr>
         </thead>
         <tbody>
-            <?php
+        <?php
                 // Database connection
                 $host = '192.168.1.4';
                 $dbname = 'uniuser_sistema-niop';
@@ -33,25 +31,24 @@
                     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                     // Query to fetch data
-                    $stmt = $pdo->query("SELECT id, nome, localizacao, estado, lotacao FROM paragens");
+                    $stmt = $pdo->query("SELECT id, data_alerta, descricao, gravidade FROM alertas_recentes ORDER BY data_alerta DESC LIMIT 10");
 
                     $count = $stmt->rowCount();
                     if ($count == 0) {
-                        echo "<tr><td colspan='5'>Não foram encontradas paragens</td></tr>";
+                        echo "<tr><td colspan='4'>Não foram encontrados alertas</td></tr>";
                     }
 
                     // Fetch and display data
                     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                         echo "<tr>";
                         echo "<td>" . htmlspecialchars($row['id']) . "</td>";
-                        echo "<td>" . htmlspecialchars($row['nome']) . "</td>";
-                        echo "<td>" . htmlspecialchars($row['localizacao']) . "</td>";
-                        echo "<td>" . htmlspecialchars($row['estado']) . "</td>";
-                        echo "<td>" . htmlspecialchars($row['lotacao']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['data_alerta']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['descricao']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['gravidade']) . "</td>";
                         echo "</tr>";
                     }
                 } catch (PDOException $e) {
-                    echo "<tr><td colspan='5'>Error connecting to database: " . htmlspecialchars($e->getMessage()) . "</td></tr>";
+                    echo "<tr><td colspan='4'>Error connecting to database: " . htmlspecialchars($e->getMessage()) . "</td></tr>";
                 }
             ?>
         </tbody>

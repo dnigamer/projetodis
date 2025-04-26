@@ -13,7 +13,7 @@ table {
 }
 th, td {
     border: 1px solid black;
-    padding: 8px;
+    padding: 4px;
     text-align: left;
     word-wrap: break-word;
 }
@@ -25,7 +25,4 @@ th {
 }
 .paragem-column {
     width: 5%;
-}
-.h1 {
-    text-align: center;
 }

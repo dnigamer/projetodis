@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/static/css/style-small.css">
 </head>
 <body>
-    <h1>Paragens Favoritas</h1>
+    <h2>Paragens Favoritas</h2>
     <table>
         <thead>
             <tr>
