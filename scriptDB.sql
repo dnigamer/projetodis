@@ -13,8 +13,8 @@ CREATE TABLE IF NOT EXISTS `paragens` (
 CREATE TABLE IF NOT EXISTS `camaras` (
   `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `paragem_id` int(11) NOT NULL,
-  `modelo` varchar(10) DEFAULT NULL,
-  `fabricante` varchar(10) DEFAULT NULL,
+  `modelo` varchar(30) DEFAULT NULL,
+  `fabricante` varchar(30) DEFAULT NULL,
   `data_instalacao` date DEFAULT NULL,
   `estado` varchar(10) DEFAULT NULL,
   FOREIGN KEY (`paragem_id`) REFERENCES `paragens`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -47,6 +47,7 @@ CREATE TABLE IF NOT EXISTS `registo_lotacao` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 -- Create view for recent alerts
+-- Mostra alertas recentes (7 dias) com detalhes da paragem e câmara
 CREATE OR REPLACE VIEW `alertas_recentes` AS
 SELECT a.id, a.paragem_id, a.camera_id, a.data_alerta, a.data_resolucao, a.tipo_alerta, a.descricao, a.gravidade, a.estado,
        p.nome AS paragem_nome, c.modelo AS camera_modelo
@@ -85,3 +86,34 @@ LEFT JOIN alertas a ON p.id = a.paragem_id
 GROUP BY p.id
 HAVING total_alertas > 0
 ORDER BY total_alertas DESC;
+
+--
+-- Dados aleatórios para teste exemplo
+--
+
+-- Adicionar paragens de autocarro de teste em Braga da TUB
+INSERT INTO `paragens` (`nome`, `localizacao`, `estado`, `lotacao`, `favorita`) VALUES
+('Avenida I', 'Avenida da Liberdade, Braga', 'Ativo', 0, 'N'),
+('Avenida II', 'Avenida da Liberdade, Braga', 'Ativo', 0, 'N'),
+('Congregados', 'Praça dos Congregados, Braga', 'Ativo', 0, 'N'),
+('Estação', 'Estação de Comboios, Braga', 'Ativo', 0, 'N'),
+('Universidade', 'Universidade do Minho, Braga', 'Ativo', 0, 'N'),
+('Hospital', 'Hospital de Braga, Braga', 'Ativo', 0, 'N'),
+('Centro Comercial', 'Centro Comercial Braga Parque, Braga', 'Ativo', 0, 'N'),
+('Parque da Cidade', 'Parque da Cidade, Braga', 'Ativo', 0, 'N');
+
+-- Adicionar câmaras de teste
+INSERT INTO `camaras` (`paragem_id`, `modelo`, `fabricante`, `data_instalacao`, `estado`) VALUES
+(1, 'Canon EOS', 'Canon', '2025-04-20', 'Ativo'),
+(2, 'Nikon D3500', 'Nikon', '2025-04-20', 'Ativo'),
+(3, 'Sony Alpha', 'Sony', '2025-04-20', 'Ativo'),
+(4, 'Fujifilm X-T4', 'Fujifilm', '2025-04-20', 'Ativo'),
+(5, 'Panasonic Lumix', 'Panasonic', '2025-04-20', 'Ativo'),
+(6, 'Olympus OM-D', 'Olympus', '2025-04-20', 'Ativo'),
+(7, 'GoPro Hero9', 'GoPro', '2025-04-20', 'Ativo'),
+(8, 'DJI Osmo Action', 'DJI', '2025-04-20', 'Ativo');
+
+-- Adicionar alertas de teste
+INSERT INTO `alertas` (`paragem_id`, `camera_id`, `data_alerta`, `data_resolucao`, `tipo_alerta`, `descricao`, `gravidade`, `estado`) VALUES
+(1, 1, '2025-04-20 10:00:00', NULL, 'Serviço', 'Câmara fora de serviço', 2, 'Pendente'),
+(2, 2, '2025-04-20 11:00:00', NULL, 'Serviço', 'Câmara fora de serviço', 2, 'Pendente');
