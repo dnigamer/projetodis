@@ -60,8 +60,8 @@
       <av:Grid ShowGridLines="False" Background="{x:Null}" Name="GridHomepage" MinWidth="40" MinHeight="40" AllowDrop="True" Effect="{x:Null}" av:TextElement.Foreground="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="1">
         <av:Grid.ColumnDefinitions>
           <av:ColumnDefinition Width="*" />
-          <av:ColumnDefinition Width="10*" />
-          <av:ColumnDefinition Width="10*" />
+          <av:ColumnDefinition Width="15*" />
+          <av:ColumnDefinition Width="15*" />
           <av:ColumnDefinition Width="*" />
         </av:Grid.ColumnDefinitions>
         <av:Grid.RowDefinitions>
@@ -75,31 +75,12 @@
             <av:ColumnDefinition Width="*" />
           </av:Grid.ColumnDefinitions>
           <av:Grid.RowDefinitions>
-            <av:RowDefinition Height="*" />
             <av:RowDefinition Height="9*" />
           </av:Grid.RowDefinitions>
           <av:Grid.RenderTransform>
             <av:RotateTransform Angle="0" />
           </av:Grid.RenderTransform>
-          <av:Label Background="{x:Null}" Foreground="#FF000000" FontSize="20" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="LblAlertasRecentes" HorizontalAlignment="Center" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
-            <av:Label.Style>
-              <av:Style TargetType="av:Label">
-                <av:Style.Resources>
-                  <av:ResourceDictionary />
-                </av:Style.Resources>
-                <av:Setter Property="av:ContentControl.ContentTemplate">
-                  <av:Setter.Value>
-                    <av:DataTemplate>
-                      <av:TextBlock Text="Alertas Recentes" TextWrapping="NoWrap" />
-                    </av:DataTemplate>
-                  </av:Setter.Value>
-                </av:Setter>
-              </av:Style>
-            </av:Label.Style>
-            <av:Label.RenderTransform>
-              <av:RotateTransform Angle="0" />
-            </av:Label.RenderTransform>Alertas Recentes</av:Label>
-          <cuc:WebBrowserWrapper Url="http://localhost/alertas/recentes.html" Background="{av:DynamicResource SidebarBackground}" Width="Auto" Height="Auto" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="1">
+          <cuc:WebBrowserWrapper Url="http://localhost/alertas/recentes.php" Background="{av:DynamicResource SidebarBackground}" Width="Auto" Height="Auto" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
             <cuc:WebBrowserWrapper.CommandBindings>
               <av:CommandBinding Command="BrowseBack" />
               <av:CommandBinding Command="BrowseForward" />
@@ -115,31 +96,12 @@
             <av:ColumnDefinition Width="*" />
           </av:Grid.ColumnDefinitions>
           <av:Grid.RowDefinitions>
-            <av:RowDefinition Height="*" />
             <av:RowDefinition Height="9*" />
           </av:Grid.RowDefinitions>
           <av:Grid.RenderTransform>
             <av:RotateTransform Angle="0" />
           </av:Grid.RenderTransform>
-          <av:Label Background="{x:Null}" Foreground="#FF000000" FontSize="20" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="LblParagensFavoritas" HorizontalAlignment="Center" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
-            <av:Label.Style>
-              <av:Style TargetType="av:Label">
-                <av:Style.Resources>
-                  <av:ResourceDictionary />
-                </av:Style.Resources>
-                <av:Setter Property="av:ContentControl.ContentTemplate">
-                  <av:Setter.Value>
-                    <av:DataTemplate>
-                      <av:TextBlock Text="Paragens Favoritas" TextWrapping="NoWrap" />
-                    </av:DataTemplate>
-                  </av:Setter.Value>
-                </av:Setter>
-              </av:Style>
-            </av:Label.Style>
-            <av:Label.RenderTransform>
-              <av:RotateTransform Angle="0" />
-            </av:Label.RenderTransform>Paragens Favoritas</av:Label>
-          <cuc:WebBrowserWrapper Url="http://localhost/paragens/favoritas.html" Background="{av:DynamicResource SidebarBackground}" Width="Auto" Height="Auto" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="1">
+          <cuc:WebBrowserWrapper Url="http://localhost/paragens/favoritas.php" Background="{av:DynamicResource SidebarBackground}" Width="Auto" Height="Auto" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
             <cuc:WebBrowserWrapper.CommandBindings>
               <av:CommandBinding Command="BrowseBack" />
               <av:CommandBinding Command="BrowseForward" />
