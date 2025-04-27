@@ -21,11 +21,16 @@
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $id = $_POST['id'];
 
-            $stmt = $pdo->prepare("SELECT * FROM paragens WHERE id = :id");
+            if (!is_numeric($id)) {
+                echo "<p>ID inválido. Por favor, insira um número.</p>";
+                exit;
+            }
+
+            $stmt = $pdo->prepare("SELECT COUNT(*) FROM paragens WHERE id = :id");
             $stmt->bindParam(':id', $id, PDO::PARAM_STR);
             $stmt->execute();
-
-            if ($stmt->rowCount() == 0) {
+            $count = $stmt->fetchColumn();
+            if ($count == 0) {
                 echo "<p>Paragem com ID <strong>" . htmlspecialchars($id) . "</strong> não encontrada.</p>";
                 exit;
             }

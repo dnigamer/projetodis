@@ -21,6 +21,11 @@
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $id = $_POST['id'];
 
+            if (!is_numeric($id)) {
+                echo "<p>ID inválido. Por favor, insira um número.</p>";
+                exit;
+            }
+
             $stmt = $pdo->prepare("SELECT * FROM camaras WHERE id = :id");
             $stmt->bindParam(':id', $id, PDO::PARAM_STR);
             $stmt->execute();

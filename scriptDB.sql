@@ -49,14 +49,15 @@ CREATE TABLE IF NOT EXISTS `registo_lotacao` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 -- Create view for recent alerts
--- Mostra alertas recentes (7 dias) com detalhes da paragem e câmara
+-- Mostra alertas recentes (7 dias) ou ativos atualmente com detalhes como alerta e gravidade
 CREATE OR REPLACE VIEW `alertas_recentes` AS
-SELECT a.id, a.paragem_id, a.camera_id, a.data_alerta, a.data_resolucao, a.tipo_alerta, a.descricao, a.gravidade, a.estado,
+SELECT a.id, a.paragem_id, a.camera_id, a.data_alerta, a.data_resolucao,
+       a.tipo_alerta, a.descricao, a.gravidade, a.estado,
        p.nome AS paragem_nome, c.modelo AS camera_modelo
 FROM alertas a
 JOIN paragens p ON a.paragem_id = p.id
 JOIN camaras c ON a.camera_id = c.id
-WHERE a.data_alerta >= DATE_SUB(NOW(), INTERVAL 7 DAY)
+WHERE (a.data_alerta >= NOW() - INTERVAL 7 DAY OR a.estado = 'Ativo' OR a.estado = 'Pendente')
 ORDER BY a.data_alerta DESC;
 
 -- Create view for average lotacao
