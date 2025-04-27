@@ -12,8 +12,8 @@
       ],
       "displayData": {
         "color": "b-start",
-        "x": -44,
-        "y": -8,
+        "x": -43,
+        "y": -62,
         "zindex": -1
       },
       "id": "df1c43e4-41de-4b59-8f14-65833e28d3ba",
@@ -36,8 +36,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": -47,
-        "y": 111,
+        "x": -43,
+        "y": 172,
         "zindex": 1000
       },
       "id": "91d1417b-4b43-4ba0-996f-ba1bdcca1722",
@@ -75,8 +75,8 @@
       "connections": [],
       "displayData": {
         "color": "b-finish",
-        "x": -36,
-        "y": 468,
+        "x": -147,
+        "y": 426,
         "zindex": 1000
       },
       "id": "21c775f8-40d6-441c-b04e-0d230f36211e",
@@ -117,18 +117,18 @@
       "active": true,
       "connections": [
         {
-          "instructionId": "91d1417b-4b43-4ba0-996f-ba1bdcca1722",
-          "name": "next"
-        },
-        {
           "instructionId": "dbec889b-c32d-401a-bf18-871f56547655",
           "name": "error"
+        },
+        {
+          "instructionId": "d893cf32-9405-4a80-b2a3-55c447981c69",
+          "name": "next"
         }
       ],
       "displayData": {
         "color": "b-system",
         "x": -43,
-        "y": 64,
+        "y": -4,
         "zindex": 1000
       },
       "id": "313da7db-6dd4-4e7e-85ac-52056b7dc0f7",
@@ -169,7 +169,7 @@
       "displayData": {
         "color": "b-system",
         "x": -39,
-        "y": 274,
+        "y": 305,
         "zindex": 1001
       },
       "id": "1ce5668b-b4ae-4306-9507-4890eac27578",
@@ -218,8 +218,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": 288,
-        "y": 60,
+        "x": 204,
+        "y": 57,
         "zindex": 1001
       },
       "id": "ad76388c-da21-4700-b569-24aafc3ed272",
@@ -260,14 +260,14 @@
           "name": "false"
         },
         {
-          "instructionId": "ad76388c-da21-4700-b569-24aafc3ed272",
+          "instructionId": "1e766b7e-45eb-4a38-a206-e2c304ea65e5",
           "name": "true"
         }
       ],
       "displayData": {
         "color": "b-system",
-        "x": 292,
-        "y": -23,
+        "x": 208,
+        "y": -56,
         "zindex": 1001
       },
       "id": "f3b5aa96-6915-4d50-99bc-74b3a90418ec",
@@ -308,14 +308,14 @@
           "name": "false"
         },
         {
-          "instructionId": "c3bdf9c6-a1e8-4aff-b76a-4e2b7630d1ce",
+          "instructionId": "5f414732-a8dd-4005-9c86-3498a06116fc",
           "name": "true"
         }
       ],
       "displayData": {
         "color": "b-system",
-        "x": 378,
-        "y": 16,
+        "x": 327,
+        "y": -14,
         "zindex": 1001
       },
       "id": "5d10b19e-35a1-4e54-a908-edd9063b58b0",
@@ -356,14 +356,14 @@
           "name": "false"
         },
         {
-          "instructionId": "c97051e2-777a-4af4-bd78-de0f4be3a6ed",
+          "instructionId": "1684adae-9cb7-4a50-8b36-529eeac11223",
           "name": "true"
         }
       ],
       "displayData": {
         "color": "b-system",
-        "x": 475,
-        "y": 52,
+        "x": 440,
+        "y": 22,
         "zindex": 1001
       },
       "id": "03f0aaef-90a6-42c1-9a27-31b1b614ebec",
@@ -404,14 +404,14 @@
           "name": "false"
         },
         {
-          "instructionId": "9bc6c3c7-5a40-462a-aad9-3c04d2cf9e0a",
+          "instructionId": "309c0a06-be4a-4e31-92fb-0a4890987a1b",
           "name": "true"
         }
       ],
       "displayData": {
         "color": "b-system",
-        "x": 570,
-        "y": 97,
+        "x": 546,
+        "y": 62,
         "zindex": 1001
       },
       "id": "0627b10d-141d-43dd-b6f6-3ee00dde2a18",
@@ -459,7 +459,7 @@
       "displayData": {
         "color": "b-system",
         "x": 655,
-        "y": 144,
+        "y": 104,
         "zindex": 1001
       },
       "id": "41ec8db7-b71e-44da-a110-c04620a6a7c9",
@@ -506,8 +506,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": 374,
-        "y": 101,
+        "x": 322,
+        "y": 93,
         "zindex": 1002
       },
       "id": "c3bdf9c6-a1e8-4aff-b76a-4e2b7630d1ce",
@@ -554,8 +554,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": 565,
-        "y": 182,
+        "x": 540,
+        "y": 170,
         "zindex": 1003
       },
       "id": "9bc6c3c7-5a40-462a-aad9-3c04d2cf9e0a",
@@ -602,8 +602,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": 649,
-        "y": 234,
+        "x": 650,
+        "y": 222,
         "zindex": 1004
       },
       "id": "bdadec28-62d4-4a13-b820-5a2b69588205",
@@ -650,8 +650,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": 471,
-        "y": 139,
+        "x": 435,
+        "y": 132,
         "zindex": 1005
       },
       "id": "c97051e2-777a-4af4-bd78-de0f4be3a6ed",
@@ -698,8 +698,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": -38,
-        "y": 375,
+        "x": -149,
+        "y": 333,
         "zindex": 1005
       },
       "id": "1aca9479-4288-4a5f-973e-0b321a1d9984",
@@ -746,8 +746,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": 73,
-        "y": 404,
+        "x": -38,
+        "y": 362,
         "zindex": 1005
       },
       "id": "c5ef9c23-96f0-4d25-89ed-7e14ed909790",
@@ -794,8 +794,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": 172,
-        "y": 439,
+        "x": 60,
+        "y": 397,
         "zindex": 1005
       },
       "id": "8474b6f3-2ecf-486e-a249-9f2ef1fd975b",
@@ -838,8 +838,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": 172,
-        "y": 505,
+        "x": 60,
+        "y": 463,
         "zindex": 1006
       },
       "id": "d4713a20-2da4-4c54-891f-8afdf2a3930a",
@@ -866,8 +866,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": 74,
-        "y": 469,
+        "x": -37,
+        "y": 427,
         "zindex": 1008
       },
       "id": "380b1a19-276a-4d1b-84d9-31741b02638a",
@@ -894,8 +894,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": -48,
-        "y": 176,
+        "x": -43,
+        "y": 238,
         "zindex": 1000
       },
       "id": "a8b25914-8026-40ef-8ff8-4910eec3ef10",
@@ -918,6 +918,216 @@
         }
       ],
       "signature": "b6205626-d7e6-419f-b80f-64ca2ff3c048"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "91d1417b-4b43-4ba0-996f-ba1bdcca1722",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": -46,
+        "y": 112,
+        "zindex": 1003
+      },
+      "id": "041ba6c1-c97f-4d4b-8567-785c13171891",
+      "methodId": "bb9a39e6-319b-4df1-884e-0a65f74b86c2",
+      "name": "Display Value",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Value",
+          "type": "Simple",
+          "value": "http://localhost/paragens/favoritas.php"
+        },
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Binding",
+          "type": "Simple",
+          "value": "HomePage:WbwParagensFavoritas"
+        }
+      ],
+      "signature": "b6205626-d7e6-419f-b80f-64ca2ff3c048"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "9bc6c3c7-5a40-462a-aad9-3c04d2cf9e0a",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 539,
+        "y": 116,
+        "zindex": 1004
+      },
+      "id": "309c0a06-be4a-4e31-92fb-0a4890987a1b",
+      "methodId": "bb9a39e6-319b-4df1-884e-0a65f74b86c2",
+      "name": "Display Value",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Value",
+          "type": "Simple",
+          "value": "http://localhost/paragens/lista.php"
+        },
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Binding",
+          "type": "Simple",
+          "value": "RelatoriosPage:WbwRelatorios"
+        }
+      ],
+      "signature": "b6205626-d7e6-419f-b80f-64ca2ff3c048"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "c3bdf9c6-a1e8-4aff-b76a-4e2b7630d1ce",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 322,
+        "y": 42,
+        "zindex": 1005
+      },
+      "id": "5f414732-a8dd-4005-9c86-3498a06116fc",
+      "methodId": "bb9a39e6-319b-4df1-884e-0a65f74b86c2",
+      "name": "Display Value",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Value",
+          "type": "Simple",
+          "value": "http://localhost/paragens/lista.php"
+        },
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Binding",
+          "type": "Simple",
+          "value": "ParagensPage:WbwParagens"
+        }
+      ],
+      "signature": "b6205626-d7e6-419f-b80f-64ca2ff3c048"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "c97051e2-777a-4af4-bd78-de0f4be3a6ed",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 433,
+        "y": 73,
+        "zindex": 1006
+      },
+      "id": "1684adae-9cb7-4a50-8b36-529eeac11223",
+      "methodId": "bb9a39e6-319b-4df1-884e-0a65f74b86c2",
+      "name": "Display Value",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Value",
+          "type": "Simple",
+          "value": "http://localhost/alertas/lista.php"
+        },
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Binding",
+          "type": "Simple",
+          "value": "AlertasPage:WbwAlertas"
+        }
+      ],
+      "signature": "b6205626-d7e6-419f-b80f-64ca2ff3c048"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "ad76388c-da21-4700-b569-24aafc3ed272",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 203,
+        "y": 0,
+        "zindex": 1007
+      },
+      "id": "1e766b7e-45eb-4a38-a206-e2c304ea65e5",
+      "methodId": "bb9a39e6-319b-4df1-884e-0a65f74b86c2",
+      "name": "Display Value",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Binding",
+          "type": "Simple",
+          "value": "CamarasPage:WbwCamaras"
+        },
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Value",
+          "type": "Simple",
+          "value": "http://localhost/camaras/lista.php"
+        }
+      ],
+      "signature": "b6205626-d7e6-419f-b80f-64ca2ff3c048"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "041ba6c1-c97f-4d4b-8567-785c13171891",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": -43,
+        "y": 51,
+        "zindex": 1007
+      },
+      "id": "d893cf32-9405-4a80-b2a3-55c447981c69",
+      "methodId": "f0d365c0-e287-46aa-b5a7-910d4843e805",
+      "name": "Display Text",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Text",
+          "type": "Simple",
+          "value": "http://localhost/alertas/recentes.php"
+        },
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Binding",
+          "type": "Simple",
+          "value": "HomePage:WbwAlertasRecentes"
+        }
+      ],
+      "signature": "5c152ae9-8091-42fd-95b2-8e64a9b6925e"
     }
   ],
   "parameters": [],
