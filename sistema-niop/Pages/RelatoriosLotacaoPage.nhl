@@ -1,0 +1,120 @@
+<HMIPage Title="RelatoriosLotacaoPage" Width="Auto" Height="Auto" AllowDrop="True" xmlns="clr-namespace:NeaHMI;assembly=niop HMI" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:cuc="clr-namespace:Common.UserControls;assembly=Common">
+  <av:Grid ShowGridLines="False" Background="#00FFFFFF" AllowDrop="True">
+    <av:Grid.ColumnDefinitions>
+      <av:ColumnDefinition Width="0.5*" />
+    </av:Grid.ColumnDefinitions>
+    <av:Grid.RowDefinitions>
+      <av:RowDefinition Height="0.5*" />
+    </av:Grid.RowDefinitions>
+    <av:Grid ShowGridLines="False" Background="#00FFFFFF" Name="GerirRelatorios" AllowDrop="True" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
+      <av:Grid.ColumnDefinitions>
+        <av:ColumnDefinition Width="0.5*" />
+      </av:Grid.ColumnDefinitions>
+      <av:Grid.RowDefinitions>
+        <av:RowDefinition Height="0.5*" />
+      </av:Grid.RowDefinitions>
+      <av:Grid.RenderTransform>
+        <av:RotateTransform Angle="0" />
+      </av:Grid.RenderTransform>
+      <av:Grid ShowGridLines="False" Background="{x:Null}" MinWidth="40" MinHeight="40" AllowDrop="True" RenderTransformOrigin="0,0" Effect="{x:Null}" av:TextElement.Foreground="{x:Null}" av:ToolTipService.InitialShowDelay="400" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0" av:Grid.ColumnSpan="1" av:Grid.RowSpan="1">
+        <av:Grid.ColumnDefinitions>
+          <av:ColumnDefinition Width="*" />
+        </av:Grid.ColumnDefinitions>
+        <av:Grid.RowDefinitions>
+          <av:RowDefinition Height="2*" />
+          <av:RowDefinition Height="20*" />
+        </av:Grid.RowDefinitions>
+        <av:Grid.RenderTransform>
+          <av:RotateTransform Angle="0" />
+        </av:Grid.RenderTransform>
+        <av:Label Background="{x:Null}" Foreground="#FF000000" FontSize="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="LblTituloRelatorios" HorizontalAlignment="Center" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
+          <av:Label.Style>
+            <av:Style TargetType="av:Label">
+              <av:Style.Resources>
+                <av:ResourceDictionary />
+              </av:Style.Resources>
+              <av:Setter Property="av:ContentControl.ContentTemplate">
+                <av:Setter.Value>
+                  <av:DataTemplate>
+                    <av:TextBlock Text="Relatórios - Lotação Média" TextWrapping="NoWrap" />
+                  </av:DataTemplate>
+                </av:Setter.Value>
+              </av:Setter>
+            </av:Style>
+          </av:Label.Style>
+          <av:Label.RenderTransform>
+            <av:RotateTransform Angle="0" />
+          </av:Label.RenderTransform>Relatórios - Lotação Média</av:Label>
+        <av:Grid ShowGridLines="False" Background="{x:Null}" MinWidth="40" MinHeight="40" AllowDrop="True" Effect="{x:Null}" av:TextElement.Foreground="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="1">
+          <av:Grid.ColumnDefinitions>
+            <av:ColumnDefinition Width="*" />
+            <av:ColumnDefinition Width="4*" />
+          </av:Grid.ColumnDefinitions>
+          <av:Grid.RowDefinitions>
+            <av:RowDefinition Height="*" />
+          </av:Grid.RowDefinitions>
+          <av:Grid.RenderTransform>
+            <av:RotateTransform Angle="0" />
+          </av:Grid.RenderTransform>
+          <av:Grid ShowGridLines="False" Background="{x:Null}" MinWidth="40" MinHeight="40" AllowDrop="True" RenderTransformOrigin="0,0" Effect="{x:Null}" av:TextElement.Foreground="{x:Null}" av:ToolTipService.InitialShowDelay="400" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0" av:Grid.ColumnSpan="1" av:Grid.RowSpan="1">
+            <av:Grid.ColumnDefinitions>
+              <av:ColumnDefinition Width="*" />
+            </av:Grid.ColumnDefinitions>
+            <av:Grid.RowDefinitions>
+              <av:RowDefinition Height="*" />
+              <av:RowDefinition Height="*" />
+              <av:RowDefinition Height="*" />
+              <av:RowDefinition Height="*" />
+              <av:RowDefinition Height="*" />
+              <av:RowDefinition Height="5*" />
+            </av:Grid.RowDefinitions>
+            <av:Grid.RenderTransform>
+              <av:RotateTransform Angle="0" />
+            </av:Grid.RenderTransform>
+            <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnLotacaoMedia" Width="Auto" Height="50" MinHeight="50" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
+              <av:Button.RenderTransform>
+                <av:RotateTransform Angle="0" />
+              </av:Button.RenderTransform>Obter Lotação Média</av:Button>
+            <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnPicoLotacao" Width="Auto" Height="50" MinHeight="50" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="1">
+              <av:Button.RenderTransform>
+                <av:RotateTransform Angle="0" />
+              </av:Button.RenderTransform>Obter Pico Lotação</av:Button>
+            <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnFluxoPassageiros" Width="Auto" Height="50" MinHeight="50" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="2">
+              <av:Button.RenderTransform>
+                <av:RotateTransform Angle="0" />
+              </av:Button.RenderTransform>Obter Fluxo Passageiros</av:Button>
+            <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnTaxaAlertas" Width="Auto" Height="50" MinHeight="50" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="3">
+              <av:Button.RenderTransform>
+                <av:RotateTransform Angle="0" />
+              </av:Button.RenderTransform>Obter Taxa de Alertas</av:Button>
+            <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnGerarRelatorio" Width="Auto" Height="50" MinHeight="50" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="2" av:Grid.Column="0" av:Grid.Row="4">
+              <av:Button.RenderTransform>
+                <av:RotateTransform Angle="0" />
+              </av:Button.RenderTransform>Gerar Relatório</av:Button>
+          </av:Grid>
+          <av:Grid ShowGridLines="False" Background="{x:Null}" MinWidth="40" MinHeight="40" AllowDrop="True" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="1" av:Grid.Row="0">
+            <av:Grid.ColumnDefinitions>
+              <av:ColumnDefinition Width="*" />
+            </av:Grid.ColumnDefinitions>
+            <av:Grid.RowDefinitions>
+              <av:RowDefinition Height="*" />
+            </av:Grid.RowDefinitions>
+            <av:Grid.RenderTransform>
+              <av:RotateTransform Angle="0" />
+            </av:Grid.RenderTransform>
+            <cuc:WebBrowserWrapper Url="http://localhost/paragens/lista.php" Background="{av:DynamicResource SidebarBackground}" Name="WbwRelatorios" Width="Auto" Height="Auto" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="2" av:Grid.Column="0" av:Grid.Row="0">
+              <cuc:WebBrowserWrapper.CommandBindings>
+                <av:CommandBinding Command="BrowseBack" />
+                <av:CommandBinding Command="BrowseForward" />
+                <av:CommandBinding Command="GoToPage" />
+              </cuc:WebBrowserWrapper.CommandBindings>
+              <cuc:WebBrowserWrapper.RenderTransform>
+                <av:RotateTransform Angle="0" />
+              </cuc:WebBrowserWrapper.RenderTransform>
+            </cuc:WebBrowserWrapper>
+          </av:Grid>
+        </av:Grid>
+      </av:Grid>
+    </av:Grid>
+  </av:Grid>
+</HMIPage>
