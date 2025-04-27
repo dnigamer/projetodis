@@ -90,6 +90,16 @@ GROUP BY p.id
 HAVING total_alertas > 0
 ORDER BY total_alertas DESC;
 
+-- Create view for fluxo de lotacao
+CREATE OR REPLACE VIEW `fluxo_lotacao` AS
+SELECT r.paragem_id, r.camera_id, r.data_registo, r.lotacao,
+       p.nome AS paragem_nome, c.modelo AS camera_modelo
+FROM registo_lotacao r
+JOIN paragens p ON r.paragem_id = p.id
+JOIN camaras c ON r.camera_id = c.id
+WHERE r.data_registo >= NOW() - INTERVAL 7 DAY
+ORDER BY r.data_registo DESC;
+
 -- Creates a trigger to update the lotacao in paragens table from a last record in registo_lotacao
 DELIMITER //
 
