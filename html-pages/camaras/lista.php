@@ -1,6 +1,6 @@
 <!-- ID, Localizacao, Estado -->
 <!DOCTYPE html>
-<html>
+<html lang="pt-PT">
 <head>
     <title>Lista de Câmaras</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
