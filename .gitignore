@@ -1,5 +1,6 @@
 *.exe
-*.json
 *.pt
 *.jpg
 *.log
+info.json
+output.json
