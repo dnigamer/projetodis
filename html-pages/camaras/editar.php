@@ -18,7 +18,33 @@
         $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        if (!isset($_POST['id'])) {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'], $_POST['paragem'], $_POST['modelo'], $_POST['fabricante'], $_POST['latitude'], $_POST['longitude'], $_POST['data_instalacao'], $_POST['estado'])) {
+            // Step 3: Update the camera in the database
+            $id = $_POST['id'];
+            $paragem = $_POST['paragem'];
+            $modelo = $_POST['modelo'];
+            $fabricante = $_POST['fabricante'];
+            $latitude = $_POST['latitude'];
+            $longitude = $_POST['longitude'];
+            $data_instalacao = DateTime::createFromFormat('d/m/Y', $_POST['data_instalacao'])->format('Y-m-d');
+            $estado = $_POST['estado'];
+
+            $stmt = $pdo->prepare("UPDATE camaras SET paragem_id = :paragem, modelo = :modelo, fabricante = :fabricante, latitude = :latitude, longitude = :longitude, data_instalacao = :data_instalacao, estado = :estado WHERE id = :id");
+            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+            $stmt->bindParam(':paragem', $paragem, PDO::PARAM_STR);
+            $stmt->bindParam(':modelo', $modelo, PDO::PARAM_STR);
+            $stmt->bindParam(':fabricante', $fabricante, PDO::PARAM_STR);
+            $stmt->bindParam(':latitude', $latitude, PDO::PARAM_STR);
+            $stmt->bindParam(':longitude', $longitude, PDO::PARAM_STR);
+            $stmt->bindParam(':data_instalacao', $data_instalacao, PDO::PARAM_STR);
+            $stmt->bindParam(':estado', $estado, PDO::PARAM_STR);
+
+            if ($stmt->execute()) {
+                echo '<p style="color: green;">Câmara atualizada com sucesso!</p>';
+            } else {
+                echo '<p style="color: red;">Erro ao atualizar a câmara.</p>';
+            }
+        } elseif (!isset($_POST['id'])) {
             echo '<form action="/camaras/editar.php" method="POST">';
             echo '<table>';
             echo '<thead>';

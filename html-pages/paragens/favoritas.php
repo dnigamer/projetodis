@@ -13,6 +13,7 @@
         <thead>
             <tr>
                 <th class="paragem-column">Paragem</th>
+                <th>Nome</th>
                 <th>Contagem</th>
             </tr>
         </thead>
@@ -29,7 +30,7 @@
                     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                     // Query to fetch data
-                    $stmt = $pdo->query("SELECT id, lotacao FROM paragens WHERE favorita = 'S'");
+                    $stmt = $pdo->query("SELECT id, nome, lotacao FROM paragens WHERE favorita = 'S'");
                     $count = $stmt->rowCount();
                     if ($count == 0) {
                         echo "<tr><td colspan='2'>Não foram encontradas paragens favoritas</td></tr>";
@@ -39,6 +40,7 @@
                     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                         echo "<tr>";
                         echo "<td>" . htmlspecialchars($row['id']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['nome']) . "</td>";
                         echo "<td>" . htmlspecialchars($row['lotacao']) . "</td>";
                         echo "</tr>";
                     }
