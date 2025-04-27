@@ -15,6 +15,8 @@ CREATE TABLE IF NOT EXISTS `camaras` (
   `paragem_id` int(11) NOT NULL,
   `modelo` varchar(30) DEFAULT NULL,
   `fabricante` varchar(30) DEFAULT NULL,
+  `latitude` decimal(10,8) DEFAULT NULL,
+  `longitude` decimal(11,8) DEFAULT NULL,
   `data_instalacao` date DEFAULT NULL,
   `estado` varchar(10) DEFAULT NULL,
   FOREIGN KEY (`paragem_id`) REFERENCES `paragens`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -87,6 +89,20 @@ GROUP BY p.id
 HAVING total_alertas > 0
 ORDER BY total_alertas DESC;
 
+-- Creates a trigger to update the lotacao in paragens table from a last record in registo_lotacao
+DELIMITER //
+
+CREATE TRIGGER `atualiza_lotacao` AFTER INSERT ON `registo_lotacao`
+FOR EACH ROW
+BEGIN
+  DECLARE v_lotacao INT;
+  SELECT lotacao INTO v_lotacao FROM registo_lotacao WHERE id = NEW.id;
+  UPDATE paragens SET lotacao = v_lotacao WHERE id = NEW.paragem_id;
+END;
+//
+
+DELIMITER ;
+
 --
 -- Dados aleatórios para teste exemplo
 --
@@ -103,17 +119,52 @@ INSERT INTO `paragens` (`nome`, `localizacao`, `estado`, `lotacao`, `favorita`) 
 ('Parque da Cidade', 'Parque da Cidade, Braga', 'Ativo', 0, 'N');
 
 -- Adicionar câmaras de teste
-INSERT INTO `camaras` (`paragem_id`, `modelo`, `fabricante`, `data_instalacao`, `estado`) VALUES
-(1, 'Canon EOS', 'Canon', '2025-04-20', 'Ativo'),
-(2, 'Nikon D3500', 'Nikon', '2025-04-20', 'Ativo'),
-(3, 'Sony Alpha', 'Sony', '2025-04-20', 'Ativo'),
-(4, 'Fujifilm X-T4', 'Fujifilm', '2025-04-20', 'Ativo'),
-(5, 'Panasonic Lumix', 'Panasonic', '2025-04-20', 'Ativo'),
-(6, 'Olympus OM-D', 'Olympus', '2025-04-20', 'Ativo'),
-(7, 'GoPro Hero9', 'GoPro', '2025-04-20', 'Ativo'),
-(8, 'DJI Osmo Action', 'DJI', '2025-04-20', 'Ativo');
+INSERT INTO `camaras` (`paragem_id`, `modelo`, `fabricante`, `latitude`, `longitude`, `data_instalacao`, `estado`) VALUES
+(1, 'Canon EOS', 'Canon', 41.545678, -8.426123, '2025-04-20', 'Ativo'),
+(2, 'Nikon D3500', 'Nikon', 41.546789, -8.427234, '2025-04-20', 'Ativo'),
+(3, 'Sony Alpha', 'Sony', 41.547890, -8.428345, '2025-04-20', 'Ativo'),
+(4, 'Fujifilm X-T4', 'Fujifilm', 41.548901, -8.429456, '2025-04-20', 'Ativo'),
+(5, 'Panasonic Lumix', 'Panasonic', 41.549012, -8.430567, '2025-04-20', 'Ativo'),
+(6, 'Olympus OM-D', 'Olympus', 41.550123, -8.431678, '2025-04-20', 'Ativo'),
+(7, 'GoPro Hero9', 'GoPro', 41.551234, -8.432789, '2025-04-20', 'Ativo'),
+(8, 'DJI Osmo Action', 'DJI', 41.552345, -8.433890, '2025-04-20', 'Ativo');
 
 -- Adicionar alertas de teste
 INSERT INTO `alertas` (`paragem_id`, `camera_id`, `data_alerta`, `data_resolucao`, `tipo_alerta`, `descricao`, `gravidade`, `estado`) VALUES
 (1, 1, '2025-04-20 10:00:00', NULL, 'Serviço', 'Câmara fora de serviço', 2, 'Pendente'),
 (2, 2, '2025-04-20 11:00:00', NULL, 'Serviço', 'Câmara fora de serviço', 2, 'Pendente');
+
+-- Adicionar registo de lotação de teste
+INSERT INTO `registo_lotacao` (`paragem_id`, `camera_id`, `data_registo`, `lotacao`) VALUES
+(1, 1, '2025-04-20 08:00:00', 3),
+(1, 1, '2025-04-20 09:00:00', 4),
+(1, 1, '2025-04-20 10:00:00', 5),
+(1, 1, '2025-04-20 11:00:00', 6),
+(2, 2, '2025-04-20 08:30:00', 8),
+(2, 2, '2025-04-20 09:30:00', 9),
+(2, 2, '2025-04-20 10:30:00', 10),
+(2, 2, '2025-04-20 11:30:00', 12),
+(3, 3, '2025-04-20 12:00:00', 15),
+(3, 3, '2025-04-20 13:00:00', 16),
+(3, 3, '2025-04-20 14:00:00', 17),
+(3, 3, '2025-04-20 15:00:00', 18),
+(4, 4, '2025-04-20 13:00:00', 20),
+(4, 4, '2025-04-20 14:00:00', 22),
+(4, 4, '2025-04-20 15:00:00', 23),
+(4, 4, '2025-04-20 16:00:00', 24),
+(5, 5, '2025-04-20 14:00:00', 25),
+(5, 5, '2025-04-20 15:00:00', 26),
+(5, 5, '2025-04-20 16:00:00', 27),
+(5, 5, '2025-04-20 17:00:00', 28),
+(6, 6, '2025-04-20 15:00:00', 30),
+(6, 6, '2025-04-20 16:00:00', 31),
+(6, 6, '2025-04-20 17:00:00', 32),
+(6, 6, '2025-04-20 18:00:00', 33),
+(7, 7, '2025-04-20 16:00:00', 35),
+(7, 7, '2025-04-20 17:00:00', 36),
+(7, 7, '2025-04-20 18:00:00', 37),
+(7, 7, '2025-04-20 19:00:00', 38),
+(8, 8, '2025-04-20 17:00:00', 40),
+(8, 8, '2025-04-20 18:00:00', 41),
+(8, 8, '2025-04-20 19:00:00', 42),
+(8, 8, '2025-04-20 20:00:00', 43);
