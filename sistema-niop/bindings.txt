@@ -1,26 +1,47 @@
-CAMARAS
-BtnAddCamera
-BtnEditarCamera
-BtnRemoverCamera
-BtnContagemCamera
+Bindings de botoes para cada uma das paginas do sistema-niop
 
-PARAGENS
-BtnAddParagem
-BtnEditarParagem
-BtnRemoverParagem
-BtnEstadoParagem
-BtnUpdLotacaoParagem
+CAMARAS - http://localhost/camaras/lista.php
+BtnAddCamera - CamarasAdicionarPage
+- http://localhost/camaras/adicionar.php
+BtnEditarCamera - CamarasEditarPage
+- http://localhost/camaras/editar.php
+BtnRemoverCamera - CamarasRemoverPage
+- http://localhost/camaras/remover.php
+BtnContagemCamera - CamarasContagemPage
+- http://localhost/camaras/contagem.php
 
-ALERTAS
-BtnAddAlerta
-BtnEditarAlerta
-BtnRemoverAlerta
-BtnEnviarAlerta
-BtnDesativarAlerta
+PARAGENS - http://localhost/paragens/lista.php
+BtnAddParagem - ParagensAdicionarPage
+- http://localhost/paragens/adicionar.php
+BtnEditarParagem - ParagensEditarPage
+- http://localhost/paragens/editar.php
+BtnRemoverParagem - ParagensRemoverPage
+- http://localhost/paragens/remover.php
+BtnEstadoParagem - ParagensEstadoPage
+- http://localhost/paragens/estado.php
+BtnUpdLotacaoParagem - ParagensLotacaoPage
+- http://localhost/paragens/lotacao.php
 
-RELATORIOS
-BtnLotacaoMedia
-BtnPicoLotacao
-BtnFluxoPassageiros
-BtnTaxaAlertas
-BtnGerarRelatorio
+ALERTAS - http://localhost/alertas/lista.php
+BtnAddAlerta - AlertasAdicionarPage
+- http://localhost/alertas/adicionar.php
+BtnEditarAlerta - AlertasEditarPage
+- http://localhost/alertas/editar.php
+BtnRemoverAlerta - AlertasRemoverPage
+- http://localhost/alertas/remover.php
+BtnEnviarAlerta - AlertasEnviarPage
+- http://localhost/alertas/enviar.php
+BtnDesativarAlerta - AlertasDesativarPage
+- http://localhost/alertas/desativar.php
+
+RELATORIOS - http://localhost/relatorios/geral.php
+BtnLotacaoMedia - RelatoriosLotacaoPage
+- http://localhost/relatorios/lotacao_media.php
+BtnPicoLotacao - RelatoriosPicoPage
+- http://localhost/relatorios/pico_lotacao.php
+BtnFluxoPassageiros - RelatoriosFluxoPage
+- http://localhost/relatorios/fluxo_passageiros.php
+BtnTaxaAlertas - RelatoriosTaxaPage
+- http://localhost/relatorios/taxa_alertas.php
+BtnGerarRelatorio - RelatoriosRelatorioPage
+- http://localhost/relatorios/gerar_relatorio.php

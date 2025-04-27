@@ -102,7 +102,7 @@
             <av:Grid.RenderTransform>
               <av:RotateTransform Angle="0" />
             </av:Grid.RenderTransform>
-            <cuc:WebBrowserWrapper Url="http://localhost/paragens/lista.php" Background="{av:DynamicResource SidebarBackground}" Name="WbwRelatorios" Width="Auto" Height="Auto" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="2" av:Grid.Column="0" av:Grid.Row="0">
+            <cuc:WebBrowserWrapper Url="http://localhost/relatorios/lotacao_media.php" Background="{av:DynamicResource SidebarBackground}" Name="WbwRelatorios" Width="Auto" Height="Auto" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="2" av:Grid.Column="0" av:Grid.Row="0">
               <cuc:WebBrowserWrapper.CommandBindings>
                 <av:CommandBinding Command="BrowseBack" />
                 <av:CommandBinding Command="BrowseForward" />
