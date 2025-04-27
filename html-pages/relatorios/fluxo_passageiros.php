@@ -9,15 +9,9 @@
 </head>
 <body>
     <?php
-    $host = '192.168.1.4';
-    $dbname = 'uniuser_sistema-niop';
-    $username = 'uniuser';
-    $password = 'uL[*P87G.UkYY_X7';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 
     try {
-        $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
         if (!isset($_POST['paragem_id'])) {
             echo '<form action="/relatorios/fluxo_passageiros.php" method="POST">';
             echo '<table>';
@@ -26,7 +20,7 @@
             echo '</thead>';
             echo '<tbody>';
             echo '<tr>';
-            echo '<td><label for="paragem_id">ID da Paragem:</label></td>';
+            echo '<td><label for="paragem_id">ID da Paragem</label></td>';
             echo '<td><input type="text" id="paragem_id" name="paragem_id" required></td>';
             echo '</tr>';
             echo '</table>';

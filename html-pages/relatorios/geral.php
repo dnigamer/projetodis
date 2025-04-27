@@ -21,34 +21,28 @@
         </thead>
         <tbody>
             <?php
-                $host = '192.168.1.4';
-                $dbname = 'uniuser_sistema-niop';
-                $username = 'uniuser';
-                $password = 'uL[*P87G.UkYY_X7';
+            require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 
-                try {
-                    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-                    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            try {
+                $stmt = $pdo->query("SELECT id, nome, localizacao, estado, lotacao FROM paragens");
 
-                    $stmt = $pdo->query("SELECT id, nome, localizacao, estado, lotacao FROM paragens");
-
-                    $count = $stmt->rowCount();
-                    if ($count == 0) {
-                        echo "<tr><td colspan='5'>Não foram encontradas paragens</td></tr>";
-                    }
-
-                    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                        echo "<tr>";
-                        echo "<td>" . htmlspecialchars($row['id']) . "</td>";
-                        echo "<td>" . htmlspecialchars($row['nome']) . "</td>";
-                        echo "<td>" . htmlspecialchars($row['localizacao']) . "</td>";
-                        echo "<td>" . htmlspecialchars($row['estado']) . "</td>";
-                        echo "<td>" . htmlspecialchars($row['lotacao']) . "</td>";
-                        echo "</tr>";
-                    }
-                } catch (PDOException $e) {
-                    echo "<tr><td colspan='5'>Error connecting to database: " . htmlspecialchars($e->getMessage()) . "</td></tr>";
+                $count = $stmt->rowCount();
+                if ($count == 0) {
+                    echo "<tr><td colspan='5'>Não foram encontradas paragens</td></tr>";
                 }
+
+                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                    echo "<tr>";
+                    echo "<td>" . htmlspecialchars($row['id']) . "</td>";
+                    echo "<td>" . htmlspecialchars($row['nome']) . "</td>";
+                    echo "<td>" . htmlspecialchars($row['localizacao']) . "</td>";
+                    echo "<td>" . htmlspecialchars($row['estado']) . "</td>";
+                    echo "<td>" . htmlspecialchars($row['lotacao']) . "</td>";
+                    echo "</tr>";
+                }
+            } catch (PDOException $e) {
+                echo "<tr><td colspan='5'>Error connecting to database: " . htmlspecialchars($e->getMessage()) . "</td></tr>";
+            }
             ?>
         </tbody>
     </table>

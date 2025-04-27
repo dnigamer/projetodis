@@ -1,14 +1,8 @@
 <?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $host = '192.168.1.4';
-    $dbname = 'uniuser_sistema-niop';
-    $username = 'uniuser';
-    $password = 'uL[*P87G.UkYY_X7';
-
     try {
-        $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
         // Validate required fields
         if (empty($_POST['paragem_id']) && empty($_POST['camera_id'])) {
             echo "<head><link rel='stylesheet' href='/static/css/style.css'></head>";

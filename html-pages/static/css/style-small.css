@@ -26,3 +26,19 @@ th {
 .paragem-column {
     width: 5%;
 }
+.styled-button {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.styled-button:hover {
+    background-color: black;
+    color: white;
+}

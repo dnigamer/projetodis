@@ -9,16 +9,9 @@
 </head>
 <body>
     <?php
-    $host = '192.168.1.4';
-    $dbname = 'uniuser_sistema-niop';
-    $username = 'uniuser';
-    $password = 'uL[*P87G.UkYY_X7';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 
     try {
-        $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-        // Query the `lotacao_media` view to get the average lotação for each paragem
         $stmt = $pdo->query("
             SELECT paragem_id, media_lotacao
             FROM lotacao_media

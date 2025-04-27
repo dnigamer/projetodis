@@ -9,18 +9,10 @@
 </head>
 <body>
     <?php
-    $host = '192.168.1.4';
-    $dbname = 'uniuser_sistema-niop';
-    $username = 'uniuser';
-    $password = 'uL[*P87G.UkYY_X7';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 
     try {
-        $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-        // Step 1: Check if the ID has been submitted
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'], $_POST['nome'], $_POST['localizacao'], $_POST['estado'])) {
-            // Step 3: Update the paragem in the database
             $id = $_POST['id'];
             $nome = $_POST['nome'];
             $localizacao = $_POST['localizacao'];
@@ -48,7 +40,7 @@
             echo '</thead>';
             echo '<tbody>';
             echo '<tr>';
-            echo '<td><label for="id">ID da Paragem:</label></td>';
+            echo '<td><label for="id">ID da Paragem</label></td>';
             echo '<td><input type="text" id="id" name="id" required></td>';
             echo '</tr>';
             echo '</table>';
@@ -57,17 +49,14 @@
             echo '</div>';
             echo '</form>';
         } else {
-            // Step 2: Fetch and display the form to edit the paragem
             $id = $_POST['id'];
 
-            // Query to fetch data for the given ID
             $stmt = $pdo->prepare("SELECT * FROM paragens WHERE id = :id");
             $stmt->bindParam(':id', $id, PDO::PARAM_STR);
             $stmt->execute();
 
             // Fetch the data
             if ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                // Display the form with existing data
                 echo '<form action="/paragens/editar.php" method="POST">';
                 echo '<table>';
                 echo '<thead>';

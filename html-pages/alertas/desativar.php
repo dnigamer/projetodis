@@ -62,7 +62,7 @@
             echo '</thead>';
             echo '<tbody>';
             echo '<tr>';
-            echo '<td><label for="id">ID do Alerta:</label></td>';
+            echo '<td><label for="id">ID do Alerta</label></td>';
             echo '<td><input type="text" id="id" name="id" required></td>';
             echo '</tr>';
             echo '</table>';
