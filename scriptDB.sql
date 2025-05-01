@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS `paragens` (
   `estado` varchar(10) DEFAULT NULL,
   `lotacao` int(11) NOT NULL DEFAULT 0,
   `favorita` char(1) NOT NULL DEFAULT 'N'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Tabela de camaras
 CREATE TABLE IF NOT EXISTS `camaras` (
@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS `camaras` (
   `data_instalacao` date DEFAULT NULL,
   `estado` varchar(10) DEFAULT NULL,
   FOREIGN KEY (`paragem_id`) REFERENCES `paragens`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Tabela de alertas
 CREATE TABLE IF NOT EXISTS `alertas` (
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `alertas` (
   `estado` varchar(10) DEFAULT NULL,
   FOREIGN KEY (`paragem_id`) REFERENCES `paragens`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   FOREIGN KEY (`camera_id`) REFERENCES `camaras`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Tabela de registo de lotação
 CREATE TABLE IF NOT EXISTS `registo_lotacao` (
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `registo_lotacao` (
   `lotacao` int(11) DEFAULT NULL,
   FOREIGN KEY (`paragem_id`) REFERENCES `paragens`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   FOREIGN KEY (`camera_id`) REFERENCES `camaras`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Create view for recent alerts
 -- Mostra alertas recentes (7 dias) ou ativos atualmente com detalhes como alerta e gravidade
