@@ -5,7 +5,7 @@ Engenharia de Telecomunicações e Informática at Universidade do Minho.
 
 License: MIT License
 
-Copyright (c) 2023 Gonçalo Miranda (@dnigamer at GitHub)
+Copyright (c) 2025 Gonçalo Miranda (@dnigamer at GitHub)
 """
 
 import argparse
