@@ -5,7 +5,6 @@ import json
 import time
 
 # Save JSON data to the database
-# Save JSON data to the database
 def save_to_database(data):
     conn = mysql.connector.connect(
         host="192.168.1.4",
@@ -48,7 +47,7 @@ def save_to_database(data):
             "INSERT INTO registo_lotacao (paragem_id, camera_id, data_registo, lotacao) VALUES (%s, %s, %s, %s)",
             (paragem_id, camera_id, data_registo, lotacao)
         )
-        print(f"Data saved to database: paragem_id={paragem_id}, camera_id={camera_id}, data_registo={data_registo}, lotacao={lotacao}")
+        print(f"Data saved to database from camera camera_id={camera_id}, data_registo={data_registo}, lotacao={lotacao}")
         conn.commit()
     except mysql.connector.Error as e:
         print(f"Database error: {e}")
