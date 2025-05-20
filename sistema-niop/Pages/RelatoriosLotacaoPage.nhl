@@ -87,10 +87,6 @@
               <av:Button.RenderTransform>
                 <av:RotateTransform Angle="0" />
               </av:Button.RenderTransform>Obter Taxa de Alertas</av:Button>
-            <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnGerarRelatorio" Width="Auto" Height="70" MinHeight="70" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="2" av:Grid.Column="0" av:Grid.Row="4">
-              <av:Button.RenderTransform>
-                <av:RotateTransform Angle="0" />
-              </av:Button.RenderTransform>Gerar Relatório</av:Button>
           </av:Grid>
           <av:Grid ShowGridLines="False" Background="{x:Null}" MinWidth="40" MinHeight="40" AllowDrop="True" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="1" av:Grid.Row="0">
             <av:Grid.ColumnDefinitions>
