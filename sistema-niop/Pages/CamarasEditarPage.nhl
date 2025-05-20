@@ -60,19 +60,19 @@
           <av:Grid.RenderTransform>
             <av:RotateTransform Angle="0" />
           </av:Grid.RenderTransform>
-          <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnAddCamera" Width="Auto" Height="50" MinHeight="50" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
+          <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnAddCamera" Width="Auto" Height="70" MinHeight="70" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
             <av:Button.RenderTransform>
               <av:RotateTransform Angle="0" />
             </av:Button.RenderTransform>Adicionar Câmara</av:Button>
-          <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnEditarCamera" Width="Auto" Height="50" MinHeight="50" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="1">
+          <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnEditarCamera" Width="Auto" Height="70" MinHeight="70" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="1">
             <av:Button.RenderTransform>
               <av:RotateTransform Angle="0" />
             </av:Button.RenderTransform>Editar Câmara</av:Button>
-          <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnRemoverCamera" Width="Auto" Height="50" MinHeight="50" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="2">
+          <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnRemoverCamera" Width="Auto" Height="70" MinHeight="70" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="2">
             <av:Button.RenderTransform>
               <av:RotateTransform Angle="0" />
             </av:Button.RenderTransform>Remover Câmara</av:Button>
-          <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnContagemCamera" Width="Auto" Height="50" MinHeight="50" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="3">
+          <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnContagemCamera" Width="Auto" Height="70" MinHeight="70" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="3">
             <av:Button.RenderTransform>
               <av:RotateTransform Angle="0" />
             </av:Button.RenderTransform>Obter Contagem</av:Button>

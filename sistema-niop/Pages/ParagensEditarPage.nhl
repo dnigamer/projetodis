@@ -71,23 +71,23 @@
             <av:Grid.RenderTransform>
               <av:RotateTransform Angle="0" />
             </av:Grid.RenderTransform>
-            <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnAddParagem" Width="Auto" Height="50" MinHeight="50" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
+            <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnAddParagem" Width="Auto" Height="70" MinHeight="70" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
               <av:Button.RenderTransform>
                 <av:RotateTransform Angle="0" />
               </av:Button.RenderTransform>Adicionar Paragem</av:Button>
-            <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnEditarParagem" Width="Auto" Height="50" MinHeight="50" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="1">
+            <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnEditarParagem" Width="Auto" Height="70" MinHeight="70" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="1">
               <av:Button.RenderTransform>
                 <av:RotateTransform Angle="0" />
               </av:Button.RenderTransform>Editar Paragem</av:Button>
-            <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnRemoverParagem" Width="Auto" Height="50" MinHeight="50" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="2">
+            <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnRemoverParagem" Width="Auto" Height="70" MinHeight="70" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="2">
               <av:Button.RenderTransform>
                 <av:RotateTransform Angle="0" />
               </av:Button.RenderTransform>Remover Paragem</av:Button>
-            <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnEstadoParagem" Width="Auto" Height="50" MinHeight="50" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="3">
+            <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnEstadoParagem" Width="Auto" Height="70" MinHeight="70" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="3">
               <av:Button.RenderTransform>
                 <av:RotateTransform Angle="0" />
               </av:Button.RenderTransform>Obter Estado</av:Button>
-            <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnUpdLotacaoParagem" Width="Auto" Height="50" MinHeight="50" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="2" av:Grid.Column="0" av:Grid.Row="4">
+            <av:Button BorderBrush="#FF000000" Background="{x:Null}" Foreground="#FF000000" FontSize="20" Tag="Action" Name="BtnUpdLotacaoParagem" Width="Auto" Height="70" MinHeight="70" Margin="5,5,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="2" av:Grid.Column="0" av:Grid.Row="4">
               <av:Button.RenderTransform>
                 <av:RotateTransform Angle="0" />
               </av:Button.RenderTransform>Atualizar Lotação</av:Button>

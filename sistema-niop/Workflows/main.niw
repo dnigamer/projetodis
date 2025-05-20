@@ -478,7 +478,7 @@
           "io": "Input",
           "name": "Value 2",
           "type": "Simple",
-          "value": "BtnSettings"
+          "value": "BtnHome"
         },
         {
           "bind": {
@@ -615,7 +615,7 @@
           "io": "Input",
           "name": "Page Name",
           "type": "Simple",
-          "value": "ConfigPage"
+          "value": "HomePage"
         },
         {
           "dataType": "NeaINT",
