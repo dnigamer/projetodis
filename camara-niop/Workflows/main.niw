@@ -6,14 +6,14 @@
       "active": true,
       "connections": [
         {
-          "instructionId": "20438207-6f7d-473e-bf18-e446e1ef6e01",
+          "instructionId": "e2e85f7f-b7ce-4d0c-8da9-cfe021540627",
           "name": "next"
         }
       ],
       "displayData": {
         "color": "b-start",
-        "x": 326,
-        "y": -46,
+        "x": 332,
+        "y": -148,
         "zindex": -1
       },
       "id": "6d431142-d1e9-4789-bfcd-429c80ba3b1d",
@@ -546,7 +546,7 @@
       "active": true,
       "connections": [
         {
-          "instructionId": "f96a0c92-e6b1-4660-8489-5b20dc51bcfd",
+          "instructionId": "83b4db95-8272-43ca-a02d-c2536c9844bf",
           "name": "next"
         }
       ],
@@ -2402,12 +2402,12 @@
       "active": true,
       "connections": [
         {
-          "instructionId": "a0b01e97-8fb1-44c4-aea5-0b28682f36ec",
-          "name": "next"
-        },
-        {
           "instructionId": "cd6257a0-d5a8-43fc-88df-a31f9097b434",
           "name": "error"
+        },
+        {
+          "instructionId": "2929ae5a-67ee-4bde-b379-3cc71755fbb6",
+          "name": "next"
         }
       ],
       "displayData": {
@@ -2585,6 +2585,508 @@
         }
       ],
       "signature": "dcad1ea6-dd19-4c96-85aa-e794d643640c"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "72d24204-53e2-4ad2-bef4-d1fc4990f77a",
+          "name": "error"
+        },
+        {
+          "instructionId": "621c4c9b-13cb-48c7-8631-5b8508a30451",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 328,
+        "y": -47,
+        "zindex": 1001
+      },
+      "id": "eaf0409a-4a7b-4c5a-90d8-94eab0b8ef42",
+      "methodId": "1bf7a26a-5473-44fe-92cd-6a100290d543",
+      "name": "Display Page",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Page Name",
+          "type": "Simple",
+          "value": "HomePage"
+        },
+        {
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "Timeout",
+          "type": "Simple",
+          "value": "1000"
+        },
+        {
+          "bind": {
+            "variableName": "HMIErr"
+          },
+          "dataType": "NeaINT",
+          "io": "Output",
+          "name": "Error",
+          "type": "Variable"
+        }
+      ],
+      "signature": "089dbc1f-dc7a-4ccd-8d08-d1e134edd736"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "eaf0409a-4a7b-4c5a-90d8-94eab0b8ef42",
+          "name": "next"
+        },
+        {
+          "instructionId": "72d24204-53e2-4ad2-bef4-d1fc4990f77a",
+          "name": "error"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 334,
+        "y": -96,
+        "zindex": 1002
+      },
+      "id": "e2e85f7f-b7ce-4d0c-8da9-cfe021540627",
+      "methodId": "a32a0ce7-7a2f-49e0-9675-c3a8a01b02a4",
+      "name": "Check HMI",
+      "parameterValues": [
+        {
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "Timeout",
+          "type": "Simple",
+          "value": "1000"
+        },
+        {
+          "bind": {
+            "variableName": "HMIErr"
+          },
+          "dataType": "NeaINT",
+          "io": "Output",
+          "name": "Error",
+          "type": "Variable"
+        }
+      ],
+      "signature": "975f70f0-e525-47ad-9c94-b9d1deb24f5b"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "ff714a5b-3c5d-44b4-90d0-661267fb0700",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 453,
+        "y": -38,
+        "zindex": 1003
+      },
+      "id": "72d24204-53e2-4ad2-bef4-d1fc4990f77a",
+      "methodId": "BB1D4B60-D074-44D3-9844-81F38F461F2C",
+      "name": "Log Error",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Message",
+          "type": "Simple",
+          "value": "HMI"
+        }
+      ],
+      "signature": "B0A5DD03-E38E-410C-97CB-1B7A6EAC2DDD"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "a0b01e97-8fb1-44c4-aea5-0b28682f36ec",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 105,
+        "y": 618,
+        "zindex": 1000
+      },
+      "id": "2929ae5a-67ee-4bde-b379-3cc71755fbb6",
+      "methodId": "f0d365c0-e287-46aa-b5a7-910d4843e805",
+      "name": "Display Text",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Binding",
+          "type": "Simple",
+          "value": "HomePage:LblIDCamara"
+        },
+        {
+          "bind": {
+            "variableName": "ident_camera"
+          },
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "Text",
+          "type": "Variable"
+        }
+      ],
+      "signature": "5c152ae9-8091-42fd-95b2-8e64a9b6925e"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "cf3757cb-12f0-45c4-80a2-d2bddb494571",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 44,
+        "y": 813,
+        "zindex": 1000
+      },
+      "id": "83b4db95-8272-43ca-a02d-c2536c9844bf",
+      "methodId": "f0d365c0-e287-46aa-b5a7-910d4843e805",
+      "name": "Display Text",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Binding",
+          "type": "Simple",
+          "value": "HomePage:LblPessoasContadas"
+        },
+        {
+          "bind": {
+            "variableName": "campy_out_parsed"
+          },
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "Text",
+          "type": "Variable"
+        }
+      ],
+      "signature": "5c152ae9-8091-42fd-95b2-8e64a9b6925e"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "fd6f909f-86f9-4bf0-bc3c-7a4517cf819a",
+          "name": "next"
+        },
+        {
+          "instructionId": "ba05a74b-d7da-4df1-883f-3a2e0632361f",
+          "name": "error"
+        }
+      ],
+      "displayData": {
+        "color": "b-file",
+        "x": 45,
+        "y": 887,
+        "zindex": 1000
+      },
+      "id": "cf3757cb-12f0-45c4-80a2-d2bddb494571",
+      "methodId": "9E4ACE44-276E-4EB6-991E-8AD7555223C0",
+      "name": "Read File",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Filename",
+          "type": "Simple",
+          "value": "output.png"
+        },
+        {
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "Space color flags",
+          "type": "Simple",
+          "value": "1"
+        },
+        {
+          "bind": {
+            "variableName": "imgProcessada"
+          },
+          "dataType": "NeaIMAGE",
+          "io": "Output",
+          "name": "Image",
+          "type": "Variable"
+        }
+      ],
+      "signature": "19D06B95-365F-4771-9A19-F3F2E5A782DB"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "e9f69d95-571b-40a1-8754-440fb67eccbc",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 37,
+        "y": 960,
+        "zindex": 1000
+      },
+      "id": "fd6f909f-86f9-4bf0-bc3c-7a4517cf819a",
+      "methodId": "b47e2e20-4dcb-440b-bc33-6ce7e0a74a28",
+      "name": "Display Image",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Control",
+          "type": "Simple",
+          "value": "HomePage:ImgCamera"
+        },
+        {
+          "bind": {
+            "variableName": "imgProcessada"
+          },
+          "dataType": "NeaIMAGE",
+          "io": "Input",
+          "name": "Image",
+          "type": "Variable"
+        },
+        {
+          "bind": {
+            "property": "size",
+            "variableName": "imgProcessada"
+          },
+          "dataType": "NeaSIZE",
+          "io": "Input",
+          "name": "Size",
+          "type": "Property"
+        }
+      ],
+      "signature": "fbcf5e97-841a-4a2f-b99a-5c828d270da0"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "ff714a5b-3c5d-44b4-90d0-661267fb0700",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": -100,
+        "y": 887,
+        "zindex": 1000
+      },
+      "id": "ba05a74b-d7da-4df1-883f-3a2e0632361f",
+      "methodId": "BB1D4B60-D074-44D3-9844-81F38F461F2C",
+      "name": "Log Error",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Message",
+          "type": "Simple",
+          "value": "IMG_SHOW_CAMERA"
+        }
+      ],
+      "signature": "B0A5DD03-E38E-410C-97CB-1B7A6EAC2DDD"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "f96a0c92-e6b1-4660-8489-5b20dc51bcfd",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 264,
+        "y": 964,
+        "zindex": 1000
+      },
+      "id": "5dc33e33-0864-44e6-9fd4-1a9fc723cd0f",
+      "methodId": "bb9a39e6-319b-4df1-884e-0a65f74b86c2",
+      "name": "Display Value",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Binding",
+          "type": "Simple",
+          "value": "HomePage:LblUltimaAtual"
+        },
+        {
+          "bind": {
+            "variableName": "curr_time_str"
+          },
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Value",
+          "type": "Variable"
+        }
+      ],
+      "signature": "b6205626-d7e6-419f-b80f-64ca2ff3c048"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "5dc33e33-0864-44e6-9fd4-1a9fc723cd0f",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 168,
+        "y": 923,
+        "zindex": 1000
+      },
+      "id": "e9f69d95-571b-40a1-8754-440fb67eccbc",
+      "methodId": "37385e7f-4858-4dd7-b1f4-64b0b73e2f06",
+      "name": "Format",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Date Format",
+          "type": "Simple",
+          "value": "{:%d/%B/%Y %H:%M:%S}"
+        },
+        {
+          "bind": {
+            "variableName": "curr_time_str"
+          },
+          "dataType": "NeaSTRING",
+          "io": "Output",
+          "name": "String",
+          "type": "Variable"
+        },
+        {
+          "bind": {
+            "variableName": "last_exec"
+          },
+          "dataType": "NeaTIME",
+          "io": "Input",
+          "name": "Time",
+          "type": "Variable"
+        }
+      ],
+      "signature": "3e489762-d35a-4e8d-ad19-9e3bcc545806"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "a3fc7f55-8fdb-408a-ab97-63d89129e3c9",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 682,
+        "y": -25,
+        "zindex": 1000
+      },
+      "id": "621c4c9b-13cb-48c7-8631-5b8508a30451",
+      "methodId": "bb9a39e6-319b-4df1-884e-0a65f74b86c2",
+      "name": "Display Value",
+      "parameterValues": [
+        {
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "Value",
+          "type": "Simple",
+          "value": "0"
+        },
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Binding",
+          "type": "Simple",
+          "value": "HomePage:LblIDCamara"
+        }
+      ],
+      "signature": "b6205626-d7e6-419f-b80f-64ca2ff3c048"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "fce9c041-2444-4865-a5a9-dda4a7894609",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 683,
+        "y": 35,
+        "zindex": 1000
+      },
+      "id": "a3fc7f55-8fdb-408a-ab97-63d89129e3c9",
+      "methodId": "bb9a39e6-319b-4df1-884e-0a65f74b86c2",
+      "name": "Display Value",
+      "parameterValues": [
+        {
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "Value",
+          "type": "Simple",
+          "value": "0"
+        },
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Binding",
+          "type": "Simple",
+          "value": "HomePage:LblPessoasContadas"
+        }
+      ],
+      "signature": "b6205626-d7e6-419f-b80f-64ca2ff3c048"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "20438207-6f7d-473e-bf18-e446e1ef6e01",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 683,
+        "y": 105,
+        "zindex": 1000
+      },
+      "id": "fce9c041-2444-4865-a5a9-dda4a7894609",
+      "methodId": "bb9a39e6-319b-4df1-884e-0a65f74b86c2",
+      "name": "Display Value",
+      "parameterValues": [
+        {
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "Value",
+          "type": "Simple",
+          "value": "0"
+        },
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Binding",
+          "type": "Simple",
+          "value": "HomePage:LblUltimaAtual"
+        }
+      ],
+      "signature": "b6205626-d7e6-419f-b80f-64ca2ff3c048"
     }
   ],
   "parameters": [],
@@ -2631,6 +3133,11 @@
       "name": "curr_time"
     },
     {
+      "dataType": "NeaSTRING",
+      "description": "",
+      "name": "curr_time_str"
+    },
+    {
       "dataType": "NeaINT",
       "description": "",
       "name": "elap_time"
@@ -2638,7 +3145,17 @@
     {
       "dataType": "NeaINT",
       "description": "",
+      "name": "HMIErr"
+    },
+    {
+      "dataType": "NeaINT",
+      "description": "",
       "name": "ident_camera"
+    },
+    {
+      "dataType": "NeaIMAGE",
+      "description": "",
+      "name": "imgProcessada"
     },
     {
       "dataType": "NeaJSON",

@@ -1,0 +1,184 @@
+<HMIPage Title="HomePage" Width="Auto" Height="Auto" AllowDrop="True" xmlns="clr-namespace:NeaHMI;assembly=niop HMI" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <av:Grid ShowGridLines="False" Background="#00FFFFFF" AllowDrop="True">
+    <av:Grid.ColumnDefinitions>
+      <av:ColumnDefinition Width="0.5*" />
+    </av:Grid.ColumnDefinitions>
+    <av:Grid.RowDefinitions>
+      <av:RowDefinition Height="0.5*" />
+    </av:Grid.RowDefinitions>
+    <av:Grid ShowGridLines="False" Background="{x:Null}" MinWidth="40" MinHeight="40" AllowDrop="True" RenderTransformOrigin="0,0" Effect="{x:Null}" av:TextElement.Foreground="#FFFFFFFF" av:ToolTipService.InitialShowDelay="400" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0" av:Grid.ColumnSpan="1" av:Grid.RowSpan="1">
+      <av:Grid.ColumnDefinitions>
+        <av:ColumnDefinition Width="2*" />
+        <av:ColumnDefinition Width="*" />
+      </av:Grid.ColumnDefinitions>
+      <av:Grid.RowDefinitions>
+        <av:RowDefinition Height="*" />
+      </av:Grid.RowDefinitions>
+      <av:Grid.RenderTransform>
+        <av:RotateTransform Angle="0" />
+      </av:Grid.RenderTransform>
+      <av:Grid ShowGridLines="False" Background="{x:Null}" MinWidth="40" MinHeight="40" AllowDrop="True" av:TextElement.Foreground="#FFFFFFFF" av:Panel.ZIndex="1" av:Grid.Column="1" av:Grid.Row="0">
+        <av:Grid.ColumnDefinitions>
+          <av:ColumnDefinition Width="*" />
+        </av:Grid.ColumnDefinitions>
+        <av:Grid.RowDefinitions>
+          <av:RowDefinition Height="0.2*" />
+          <av:RowDefinition Height="*" />
+          <av:RowDefinition Height="*" />
+          <av:RowDefinition Height="0.2*" />
+          <av:RowDefinition Height="*" />
+          <av:RowDefinition Height="*" />
+          <av:RowDefinition Height="0.2*" />
+          <av:RowDefinition Height="*" />
+          <av:RowDefinition Height="*" />
+          <av:RowDefinition Height="0.2*" />
+        </av:Grid.RowDefinitions>
+        <av:Grid.RenderTransform>
+          <av:RotateTransform Angle="0" />
+        </av:Grid.RenderTransform>
+        <av:Grid.Effect>
+          <av:DropShadowEffect ShadowDepth="0" Color="#FFFFFFFF" BlurRadius="10" />
+        </av:Grid.Effect>
+        <av:Label Background="{x:Null}" Foreground="#FF000000" FontSize="48" FontWeight="Bold" Name="LblIDCamaraTitulo" HorizontalAlignment="Center" VerticalAlignment="Center" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="1">
+          <av:Label.Style>
+            <av:Style TargetType="av:Label">
+              <av:Style.Resources>
+                <av:ResourceDictionary />
+              </av:Style.Resources>
+              <av:Setter Property="av:ContentControl.ContentTemplate">
+                <av:Setter.Value>
+                  <av:DataTemplate>
+                    <av:TextBlock Text="ID da Câmara" TextWrapping="NoWrap" />
+                  </av:DataTemplate>
+                </av:Setter.Value>
+              </av:Setter>
+            </av:Style>
+          </av:Label.Style>
+          <av:Label.RenderTransform>
+            <av:RotateTransform Angle="0" />
+          </av:Label.RenderTransform>
+          <av:Label.Effect>
+            <av:DropShadowEffect ShadowDepth="0" Color="#FFFFFFFF" BlurRadius="10" />
+          </av:Label.Effect>ID da Câmara</av:Label>
+        <av:Label Content="{av:Binding Path=LblIDCamara, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Background="{x:Null}" Foreground="#FF000000" FontSize="48" Name="LblIDCamara" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="2" av:Grid.Column="0" av:Grid.Row="2">
+          <av:Label.Style>
+            <av:Style TargetType="av:Label">
+              <av:Style.Resources>
+                <av:ResourceDictionary />
+              </av:Style.Resources>
+            </av:Style>
+          </av:Label.Style>
+          <av:Label.RenderTransform>
+            <av:RotateTransform Angle="0" />
+          </av:Label.RenderTransform>
+        </av:Label>
+        <av:Label Content="{av:Binding Path=LblPessoasContadas, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Background="{x:Null}" Foreground="#FF000000" FontSize="48" Name="LblPessoasContadas" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" av:Panel.ZIndex="2" av:Grid.Column="0" av:Grid.Row="5">
+          <av:Label.Style>
+            <av:Style TargetType="av:Label">
+              <av:Style.Resources>
+                <av:ResourceDictionary />
+              </av:Style.Resources>
+            </av:Style>
+          </av:Label.Style>
+          <av:Label.RenderTransform>
+            <av:RotateTransform Angle="0" />
+          </av:Label.RenderTransform>
+          <av:Label.Effect>
+            <av:DropShadowEffect ShadowDepth="0" Color="#FFFFFFFF" BlurRadius="10" />
+          </av:Label.Effect>
+        </av:Label>
+        <av:Label Background="{x:Null}" Foreground="#FF000000" FontSize="48" FontWeight="Bold" Name="LblPessoasContadasTitulo" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" av:Panel.ZIndex="2" av:Grid.Column="0" av:Grid.Row="4">
+          <av:Label.Style>
+            <av:Style TargetType="av:Label">
+              <av:Style.Resources>
+                <av:ResourceDictionary />
+              </av:Style.Resources>
+              <av:Setter Property="av:ContentControl.ContentTemplate">
+                <av:Setter.Value>
+                  <av:DataTemplate>
+                    <av:TextBlock Text="Pessoas Contadas" TextWrapping="NoWrap" />
+                  </av:DataTemplate>
+                </av:Setter.Value>
+              </av:Setter>
+            </av:Style>
+          </av:Label.Style>
+          <av:Label.RenderTransform>
+            <av:RotateTransform Angle="0" />
+          </av:Label.RenderTransform>
+          <av:Label.Effect>
+            <av:DropShadowEffect ShadowDepth="0" Color="#FFFFFFFF" BlurRadius="10" />
+          </av:Label.Effect>Pessoas Contadas</av:Label>
+        <av:Label Background="{x:Null}" Foreground="#FF000000" FontSize="48" FontWeight="Bold" Name="LblUltimaAtualTitulo" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="2" av:Grid.Column="0" av:Grid.Row="7">
+          <av:Label.Style>
+            <av:Style TargetType="av:Label">
+              <av:Style.Resources>
+                <av:ResourceDictionary />
+              </av:Style.Resources>
+              <av:Setter Property="av:ContentControl.ContentTemplate">
+                <av:Setter.Value>
+                  <av:DataTemplate>
+                    <av:TextBlock Text="Última Atualização" TextWrapping="NoWrap" />
+                  </av:DataTemplate>
+                </av:Setter.Value>
+              </av:Setter>
+            </av:Style>
+          </av:Label.Style>
+          <av:Label.RenderTransform>
+            <av:RotateTransform Angle="0" />
+          </av:Label.RenderTransform>Última Atualização</av:Label>
+        <av:Label Content="{av:Binding Path=LblUltimaAtual, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Background="{x:Null}" Foreground="#FF000000" FontSize="48" Name="LblUltimaAtual" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="2" av:Grid.Column="0" av:Grid.Row="8">
+          <av:Label.Style>
+            <av:Style TargetType="av:Label">
+              <av:Style.Resources>
+                <av:ResourceDictionary />
+              </av:Style.Resources>
+            </av:Style>
+          </av:Label.Style>
+          <av:Label.RenderTransform>
+            <av:RotateTransform Angle="0" />
+          </av:Label.RenderTransform>
+        </av:Label>
+      </av:Grid>
+      <av:Grid ShowGridLines="False" Background="{x:Null}" MinWidth="40" MinHeight="40" AllowDrop="True" Effect="{x:Null}" av:TextElement.Foreground="#FF000000" av:Panel.ZIndex="2" av:Grid.Column="0" av:Grid.Row="0">
+        <av:Grid.ColumnDefinitions>
+          <av:ColumnDefinition Width="*" />
+        </av:Grid.ColumnDefinitions>
+        <av:Grid.RowDefinitions>
+          <av:RowDefinition Height="0.05*" />
+          <av:RowDefinition Height="0.15*" />
+          <av:RowDefinition Height="*" />
+          <av:RowDefinition Height="0.05*" />
+        </av:Grid.RowDefinitions>
+        <av:Grid.RenderTransform>
+          <av:RotateTransform Angle="0" />
+        </av:Grid.RenderTransform>
+        <av:Image Stretch="Uniform" Name="ImgCamera" HorizontalAlignment="Center" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="2">
+          <av:Image.RenderTransform>
+            <av:RotateTransform Angle="0" />
+          </av:Image.RenderTransform>
+        </av:Image>
+        <av:Label Background="{x:Null}" Foreground="#FF000000" FontSize="48" FontWeight="Bold" Name="LblImagemAtualTitulo" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" av:Panel.ZIndex="3" av:Grid.Column="0" av:Grid.Row="1">
+          <av:Label.Style>
+            <av:Style TargetType="av:Label">
+              <av:Style.Resources>
+                <av:ResourceDictionary />
+              </av:Style.Resources>
+              <av:Setter Property="av:ContentControl.ContentTemplate">
+                <av:Setter.Value>
+                  <av:DataTemplate>
+                    <av:TextBlock Text="Imagem Analizada" TextWrapping="NoWrap" />
+                  </av:DataTemplate>
+                </av:Setter.Value>
+              </av:Setter>
+            </av:Style>
+          </av:Label.Style>
+          <av:Label.RenderTransform>
+            <av:RotateTransform Angle="0" />
+          </av:Label.RenderTransform>
+          <av:Label.Effect>
+            <av:DropShadowEffect ShadowDepth="0" Color="#FFFFFFFF" BlurRadius="10" />
+          </av:Label.Effect>Imagem Analizada</av:Label>
+      </av:Grid>
+    </av:Grid>
+  </av:Grid>
+</HMIPage>
