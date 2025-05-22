@@ -282,6 +282,6 @@ if __name__ == "__main__":
     if args.server:
         if args.verbose:
             print("Executando em modo servidor.")
-        uvicorn.run(app, host="127.0.0.1", port=8000, log_level="critical")
+        uvicorn.run(app, host="127.0.0.1", port=8000)
     else:
         main()

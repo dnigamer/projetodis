@@ -11,6 +11,7 @@
         <av:ColumnDefinition Width="200" />
         <av:ColumnDefinition Width="*" />
         <av:ColumnDefinition Width="200" />
+        <av:ColumnDefinition Width="200" />
       </av:Grid.ColumnDefinitions>
       <av:Grid.RowDefinitions>
         <av:RowDefinition Height="*" />
@@ -41,6 +42,90 @@
         <av:Label.RenderTransform>
           <av:RotateTransform Angle="0" />
         </av:Label.RenderTransform>Projeto DIS - Contagem de Pessoas em Paragens - Sistema Câmara</av:Label>
+      <av:Grid ShowGridLines="False" Background="{x:Null}" MinWidth="40" MinHeight="40" AllowDrop="True" Effect="{x:Null}" av:TextElement.Foreground="#FF000000" av:Panel.ZIndex="1" av:Grid.Column="2" av:Grid.Row="0">
+        <av:Grid.ColumnDefinitions>
+          <av:ColumnDefinition Width="*" />
+        </av:Grid.ColumnDefinitions>
+        <av:Grid.RowDefinitions>
+          <av:RowDefinition Height="*" />
+          <av:RowDefinition Height="*" />
+        </av:Grid.RowDefinitions>
+        <av:Grid.RenderTransform>
+          <av:RotateTransform Angle="0" />
+        </av:Grid.RenderTransform>
+        <av:Label Background="{x:Null}" Foreground="#FF000000" FontSize="20" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="2" av:Grid.Column="0" av:Grid.Row="0">
+          <av:Label.Style>
+            <av:Style TargetType="av:Label">
+              <av:Style.Resources>
+                <av:ResourceDictionary />
+              </av:Style.Resources>
+              <av:Setter Property="av:ContentControl.ContentTemplate">
+                <av:Setter.Value>
+                  <av:DataTemplate>
+                    <av:TextBlock Text="Tempo de captura" TextWrapping="NoWrap" />
+                  </av:DataTemplate>
+                </av:Setter.Value>
+              </av:Setter>
+            </av:Style>
+          </av:Label.Style>
+          <av:Label.RenderTransform>
+            <av:RotateTransform Angle="0" />
+          </av:Label.RenderTransform>Tempo de captura</av:Label>
+        <av:Label Content="{av:Binding Path=LblTempoCaptura, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Background="{x:Null}" Foreground="#FF000000" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="LblTempoCaptura" HorizontalAlignment="Center" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="1">
+          <av:Label.Style>
+            <av:Style TargetType="av:Label">
+              <av:Style.Resources>
+                <av:ResourceDictionary />
+              </av:Style.Resources>
+            </av:Style>
+          </av:Label.Style>
+          <av:Label.RenderTransform>
+            <av:RotateTransform Angle="0" />
+          </av:Label.RenderTransform>
+        </av:Label>
+      </av:Grid>
+      <av:Grid ShowGridLines="False" Background="{x:Null}" MinWidth="40" MinHeight="40" AllowDrop="True" Effect="{x:Null}" av:TextElement.Foreground="#FF000000" av:Panel.ZIndex="1" av:Grid.Column="3" av:Grid.Row="0">
+        <av:Grid.ColumnDefinitions>
+          <av:ColumnDefinition Width="*" />
+        </av:Grid.ColumnDefinitions>
+        <av:Grid.RowDefinitions>
+          <av:RowDefinition Height="*" />
+          <av:RowDefinition Height="*" />
+        </av:Grid.RowDefinitions>
+        <av:Grid.RenderTransform>
+          <av:RotateTransform Angle="0" />
+        </av:Grid.RenderTransform>
+        <av:Label Background="{x:Null}" Foreground="#FF000000" FontSize="20" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="1" av:Grid.Column="0" av:Grid.Row="0">
+          <av:Label.Style>
+            <av:Style TargetType="av:Label">
+              <av:Style.Resources>
+                <av:ResourceDictionary />
+              </av:Style.Resources>
+              <av:Setter Property="av:ContentControl.ContentTemplate">
+                <av:Setter.Value>
+                  <av:DataTemplate>
+                    <av:TextBlock Text="Intervalo captura" TextWrapping="NoWrap" />
+                  </av:DataTemplate>
+                </av:Setter.Value>
+              </av:Setter>
+            </av:Style>
+          </av:Label.Style>
+          <av:Label.RenderTransform>
+            <av:RotateTransform Angle="0" />
+          </av:Label.RenderTransform>Intervalo captura</av:Label>
+        <av:Label Content="{av:Binding Path=LblIntervaloCaptura, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Background="{x:Null}" Foreground="#FF000000" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="LblIntervaloCaptura" HorizontalAlignment="Center" VerticalAlignment="Center" Effect="{x:Null}" av:Panel.ZIndex="2" av:Grid.Column="0" av:Grid.Row="1">
+          <av:Label.Style>
+            <av:Style TargetType="av:Label">
+              <av:Style.Resources>
+                <av:ResourceDictionary />
+              </av:Style.Resources>
+            </av:Style>
+          </av:Label.Style>
+          <av:Label.RenderTransform>
+            <av:RotateTransform Angle="0" />
+          </av:Label.RenderTransform>
+        </av:Label>
+      </av:Grid>
     </av:Grid>
   </av:Grid>
 </HMIPage>

@@ -12,8 +12,8 @@
       ],
       "displayData": {
         "color": "b-start",
-        "x": 332,
-        "y": -148,
+        "x": 330,
+        "y": -204,
         "zindex": -1
       },
       "id": "6d431142-d1e9-4789-bfcd-429c80ba3b1d",
@@ -27,8 +27,8 @@
       "connections": [],
       "displayData": {
         "color": "b-finish",
-        "x": 784,
-        "y": 482,
+        "x": 577,
+        "y": 135,
         "zindex": 1000
       },
       "id": "ff714a5b-3c5d-44b4-90d0-661267fb0700",
@@ -36,66 +36,6 @@
       "name": "End",
       "parameterValues": [],
       "signature": "15FD0C1B-6C84-456D-BFCC-5A8701B92AFA"
-    },
-    {
-      "active": true,
-      "connections": [
-        {
-          "instructionId": "ff714a5b-3c5d-44b4-90d0-661267fb0700",
-          "name": "next"
-        }
-      ],
-      "displayData": {
-        "color": "b-system",
-        "x": 485,
-        "y": 205,
-        "zindex": 1000
-      },
-      "id": "3b463f70-03a3-4882-97e2-b35fc43f4e62",
-      "methodId": "BB1D4B60-D074-44D3-9844-81F38F461F2C",
-      "name": "Log Error",
-      "parameterValues": [
-        {
-          "dataType": "NeaSTRING",
-          "io": "Input",
-          "name": "Message",
-          "type": "Simple",
-          "value": "ERR_MISSING_CAMERA-PY"
-        }
-      ],
-      "signature": "B0A5DD03-E38E-410C-97CB-1B7A6EAC2DDD"
-    },
-    {
-      "active": true,
-      "connections": [
-        {
-          "instructionId": "3b463f70-03a3-4882-97e2-b35fc43f4e62",
-          "name": "error"
-        },
-        {
-          "instructionId": "2cb95f58-e2f8-4208-84ac-1a8e4b23fee9",
-          "name": "next"
-        }
-      ],
-      "displayData": {
-        "color": "b-file",
-        "x": 325,
-        "y": 205,
-        "zindex": 1000
-      },
-      "id": "656273db-aef9-4d4f-a3b4-0c94786283d2",
-      "methodId": "234aa231-7747-4f9c-963c-079f2feab092",
-      "name": "Exists",
-      "parameterValues": [
-        {
-          "dataType": "NeaSTRING",
-          "io": "Input",
-          "name": "Directory",
-          "type": "Simple",
-          "value": "main.exe"
-        }
-      ],
-      "signature": "40ee5f31-092a-4050-a9a7-297e1ea733ac"
     },
     {
       "active": true,
@@ -111,8 +51,8 @@
       ],
       "displayData": {
         "color": "b-hardware",
-        "x": 323,
-        "y": 288,
+        "x": 316,
+        "y": 344,
         "zindex": 1000
       },
       "id": "2cb95f58-e2f8-4208-84ac-1a8e4b23fee9",
@@ -159,8 +99,8 @@
       ],
       "displayData": {
         "color": "b-hardware",
-        "x": 323,
-        "y": 345,
+        "x": 316,
+        "y": 401,
         "zindex": 1000
       },
       "id": "19027b25-8775-4b87-ab61-676c24297241",
@@ -189,8 +129,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": 487,
-        "y": 316,
+        "x": 480,
+        "y": 372,
         "zindex": 1000
       },
       "id": "9e5ded5b-1a4b-46d2-a469-3984268fa94d",
@@ -221,8 +161,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": 218,
-        "y": 1040,
+        "x": 158,
+        "y": 1038,
         "zindex": 1000
       },
       "id": "24b70101-430a-4935-b7f7-f4989229409c",
@@ -267,8 +207,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": 277,
-        "y": 1158,
+        "x": 217,
+        "y": 1156,
         "zindex": 1000
       },
       "id": "8310fe21-0a78-4093-a7b7-a7f1931f4bdd",
@@ -322,8 +262,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": 285,
-        "y": 1094,
+        "x": 225,
+        "y": 1092,
         "zindex": 1000
       },
       "id": "b1bb7c47-82c9-426b-b873-7642c83ef034",
@@ -346,14 +286,14 @@
       "active": true,
       "connections": [
         {
-          "instructionId": "b3f3b717-74f7-457d-a5a9-8aa7ec1280c9",
+          "instructionId": "d58facc0-fd60-4a17-9271-cda236862728",
           "name": "next"
         }
       ],
       "displayData": {
         "color": "b-system",
-        "x": 325,
-        "y": 408,
+        "x": 318,
+        "y": 464,
         "zindex": 1001
       },
       "id": "c3daa242-ab40-4a6f-aef3-967f93136bbd",
@@ -376,342 +316,14 @@
       "active": true,
       "connections": [
         {
-          "instructionId": "99f54c04-f41b-4648-ba57-01cea014372c",
-          "name": "error"
-        },
-        {
-          "instructionId": "f239c03a-45e8-44bb-82bd-a665f8eac350",
-          "name": "next"
-        }
-      ],
-      "displayData": {
-        "color": "b-system",
-        "x": 313,
-        "y": 588,
-        "zindex": 1002
-      },
-      "id": "11e4e03f-f156-42b1-ad46-a680d17ad2b7",
-      "methodId": "714782e0-7a3c-435f-8899-2aa040c75bfe",
-      "name": "Create Process",
-      "parameterValues": [
-        {
-          "dataType": "NeaBOOL",
-          "io": "Input",
-          "name": "Wait Until Finish",
-          "type": "Simple",
-          "value": "true"
-        },
-        {
-          "dataType": "NeaBOOL",
-          "io": "Input",
-          "name": "Terminate After Engine Ends",
-          "type": "Simple",
-          "value": "false"
-        },
-        {
-          "dataType": "NeaBOOL",
-          "io": "Input",
-          "name": "Read Output",
-          "type": "Simple",
-          "value": "true"
-        },
-        {
-          "dataType": "NeaBOOL",
-          "io": "Input",
-          "name": "Open Console Window",
-          "type": "Simple",
-          "value": "false"
-        },
-        {
-          "bind": {
-            "variableName": "procID"
-          },
-          "dataType": "NeaINT",
-          "io": "Output",
-          "name": "Process ID",
-          "type": "Variable"
-        },
-        {
-          "bind": {
-            "variableName": "command_camera_py"
-          },
-          "dataType": "NeaSTRING",
-          "io": "Input",
-          "name": "Command",
-          "type": "Variable"
-        }
-      ],
-      "signature": "18d55a4b-ca0f-42bc-8d97-dea31d90fa76"
-    },
-    {
-      "active": true,
-      "connections": [
-        {
-          "instructionId": "ff714a5b-3c5d-44b4-90d0-661267fb0700",
-          "name": "next"
-        }
-      ],
-      "displayData": {
-        "color": "b-system",
-        "x": 512,
-        "y": 591,
-        "zindex": 1002
-      },
-      "id": "99f54c04-f41b-4648-ba57-01cea014372c",
-      "methodId": "BB1D4B60-D074-44D3-9844-81F38F461F2C",
-      "name": "Log Error",
-      "parameterValues": [
-        {
-          "dataType": "NeaSTRING",
-          "io": "Input",
-          "name": "Message",
-          "type": "Simple",
-          "value": "ERR_CREATE_PROCESS"
-        }
-      ],
-      "signature": "B0A5DD03-E38E-410C-97CB-1B7A6EAC2DDD"
-    },
-    {
-      "active": true,
-      "connections": [
-        {
-          "instructionId": "c13abd44-5ea6-40cb-b61e-7adc26db2b2c",
-          "name": "next"
-        },
-        {
-          "instructionId": "76cf6b78-e4b2-4530-84c1-0a395c7699b0",
-          "name": "error"
-        }
-      ],
-      "displayData": {
-        "color": "b-system",
-        "x": 305,
-        "y": 822,
-        "zindex": 1002
-      },
-      "id": "d437dd58-7726-4b67-b6d4-0e0d0ef78a9c",
-      "methodId": "8bb2f2f6-b8af-4fe8-b35d-2775232591a9",
-      "name": "Read From Process",
-      "parameterValues": [
-        {
-          "bind": {
-            "variableName": "campy_out_str"
-          },
-          "dataType": "NeaSTRING",
-          "io": "Output",
-          "name": "Output",
-          "type": "Variable"
-        },
-        {
-          "bind": {
-            "variableName": "procID"
-          },
-          "dataType": "NeaINT",
-          "io": "Input",
-          "name": "Process ID",
-          "type": "Variable"
-        }
-      ],
-      "signature": "dbbd21c2-aeda-4efb-bf91-b3516a7af7e9"
-    },
-    {
-      "active": true,
-      "connections": [
-        {
-          "instructionId": "ff714a5b-3c5d-44b4-90d0-661267fb0700",
-          "name": "next"
-        }
-      ],
-      "displayData": {
-        "color": "b-system",
-        "x": 514,
-        "y": 821,
-        "zindex": 1002
-      },
-      "id": "76cf6b78-e4b2-4530-84c1-0a395c7699b0",
-      "methodId": "BB1D4B60-D074-44D3-9844-81F38F461F2C",
-      "name": "Log Error",
-      "parameterValues": [
-        {
-          "dataType": "NeaSTRING",
-          "io": "Input",
-          "name": "Message",
-          "type": "Simple",
-          "value": "ERR_READ_PROCESS"
-        }
-      ],
-      "signature": "B0A5DD03-E38E-410C-97CB-1B7A6EAC2DDD"
-    },
-    {
-      "active": true,
-      "connections": [
-        {
-          "instructionId": "83b4db95-8272-43ca-a02d-c2536c9844bf",
-          "name": "next"
-        }
-      ],
-      "displayData": {
-        "color": "b-system",
-        "x": 330,
-        "y": 906,
-        "zindex": 1002
-      },
-      "id": "c13abd44-5ea6-40cb-b61e-7adc26db2b2c",
-      "methodId": "b011ba45-adbe-4113-9c7d-ed6f3152cbf8",
-      "name": "Convert",
-      "parameterValues": [
-        {
-          "bind": {
-            "variableName": "campy_out_parsed"
-          },
-          "dataType": "NeaINT",
-          "io": "Output",
-          "name": "Output",
-          "type": "Variable"
-        },
-        {
-          "bind": {
-            "variableName": "campy_out_str"
-          },
-          "dataType": "NeaSTRING",
-          "io": "Input",
-          "name": "Input",
-          "type": "Variable"
-        }
-      ],
-      "signature": "7828F07D-C631-4076-829F-678EFFEE61AA"
-    },
-    {
-      "active": true,
-      "connections": [
-        {
-          "instructionId": "e2e4f0b7-655a-4ebe-825a-45255ac8d89d",
-          "name": "next"
-        },
-        {
-          "instructionId": "777986e9-e937-4fe4-9a29-e6d3e9a88e12",
-          "name": "error"
-        }
-      ],
-      "displayData": {
-        "color": "b-system",
-        "x": 326,
-        "y": 671,
-        "zindex": 1002
-      },
-      "id": "f239c03a-45e8-44bb-82bd-a665f8eac350",
-      "methodId": "6ffe1126-9598-449e-8978-e9e079d50dec",
-      "name": "Get Status",
-      "parameterValues": [
-        {
-          "bind": {
-            "variableName": "procID"
-          },
-          "dataType": "NeaINT",
-          "io": "Input",
-          "name": "Process ID",
-          "type": "Variable"
-        },
-        {
-          "bind": {
-            "variableName": "campy_status"
-          },
-          "dataType": "NeaINT",
-          "io": "Output",
-          "name": "Status",
-          "type": "Variable"
-        }
-      ],
-      "signature": "aad849d2-3226-4a65-9a87-b61e913e58ac"
-    },
-    {
-      "active": true,
-      "connections": [
-        {
-          "instructionId": "d437dd58-7726-4b67-b6d4-0e0d0ef78a9c",
-          "name": "false"
-        },
-        {
-          "instructionId": "777986e9-e937-4fe4-9a29-e6d3e9a88e12",
-          "name": "true"
-        }
-      ],
-      "displayData": {
-        "color": "b-system",
-        "x": 327,
-        "y": 747,
-        "zindex": 1002
-      },
-      "id": "e2e4f0b7-655a-4ebe-825a-45255ac8d89d",
-      "methodId": "c5f091b1-c0d1-4d01-bacc-72bc87be9947",
-      "name": "If",
-      "parameterValues": [
-        {
-          "dataType": "NeaSTRING",
-          "io": "Input",
-          "name": "Operator",
-          "type": "Simple",
-          "value": "<="
-        },
-        {
-          "dataType": "NeaINT",
-          "io": "Input",
-          "name": "Value 2",
-          "type": "Simple",
-          "value": "-1"
-        },
-        {
-          "bind": {
-            "variableName": "campy_status"
-          },
-          "dataType": "NeaINT",
-          "io": "Input",
-          "name": "Value 1",
-          "type": "Variable"
-        }
-      ],
-      "signature": "7585deb3-c2dd-4381-a2fc-48ad39077d49"
-    },
-    {
-      "active": true,
-      "connections": [
-        {
-          "instructionId": "ff714a5b-3c5d-44b4-90d0-661267fb0700",
-          "name": "next"
-        }
-      ],
-      "displayData": {
-        "color": "b-system",
-        "x": 512,
-        "y": 721,
-        "zindex": 1002
-      },
-      "id": "777986e9-e937-4fe4-9a29-e6d3e9a88e12",
-      "methodId": "BB1D4B60-D074-44D3-9844-81F38F461F2C",
-      "name": "Log Error",
-      "parameterValues": [
-        {
-          "dataType": "NeaSTRING",
-          "io": "Input",
-          "name": "Message",
-          "type": "Simple",
-          "value": "ERR_CAMERAPY_EXEC"
-        }
-      ],
-      "signature": "B0A5DD03-E38E-410C-97CB-1B7A6EAC2DDD"
-    },
-    {
-      "active": true,
-      "connections": [
-        {
           "instructionId": "24b70101-430a-4935-b7f7-f4989229409c",
           "name": "next"
         }
       ],
       "displayData": {
         "color": "b-system",
-        "x": 354,
-        "y": 1041,
+        "x": 294,
+        "y": 1039,
         "zindex": 1003
       },
       "id": "93031486-d633-443f-8031-8e2c60efe43b",
@@ -1320,8 +932,8 @@
       ],
       "displayData": {
         "color": "b-file",
-        "x": 326,
-        "y": 51,
+        "x": 337,
+        "y": -23,
         "zindex": 1003
       },
       "id": "20438207-6f7d-473e-bf18-e446e1ef6e01",
@@ -1352,8 +964,8 @@
       ],
       "displayData": {
         "color": "b-file",
-        "x": 101,
-        "y": 50,
+        "x": 81,
+        "y": -72,
         "zindex": 1003
       },
       "id": "2b9eb9ab-1555-4115-a8cf-6c649501cf82",
@@ -1389,8 +1001,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": -36,
-        "y": 49,
+        "x": -55,
+        "y": -73,
         "zindex": 1003
       },
       "id": "94eed3e6-bcc2-4531-ac71-6fea705287e5",
@@ -1421,8 +1033,8 @@
       ],
       "displayData": {
         "color": "b-file",
-        "x": 101,
-        "y": 130,
+        "x": 81,
+        "y": 7,
         "zindex": 1003
       },
       "id": "706159d2-4a97-4ed7-885f-85db9fc42f86",
@@ -1507,18 +1119,18 @@
       "active": true,
       "connections": [
         {
-          "instructionId": "e521b0de-d4cb-483a-8e2e-f281b1988b75",
-          "name": "next"
-        },
-        {
           "instructionId": "ecdc57dd-1625-4fa2-8396-8747b6b62e0d",
           "name": "error"
+        },
+        {
+          "instructionId": "e017dbd9-372c-4d73-8747-027000de6c55",
+          "name": "next"
         }
       ],
       "displayData": {
         "color": "b-file",
-        "x": 102,
-        "y": 213,
+        "x": 82,
+        "y": 90,
         "zindex": 1004
       },
       "id": "c38a1410-d199-4d8e-924f-442d47db99ab",
@@ -1563,8 +1175,8 @@
       ],
       "displayData": {
         "color": "b-file",
-        "x": 519,
-        "y": 987,
+        "x": 505,
+        "y": 981,
         "zindex": 1004
       },
       "id": "9541f47b-28a6-42c2-a6a6-815057d966e3",
@@ -1609,8 +1221,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": 519,
-        "y": 1064,
+        "x": 505,
+        "y": 1058,
         "zindex": 1004
       },
       "id": "ec4c0529-29b4-46db-98e6-0cd6f1d4a1e9",
@@ -1639,8 +1251,8 @@
       ],
       "displayData": {
         "color": "b-file",
-        "x": 519,
-        "y": 1144,
+        "x": 505,
+        "y": 1138,
         "zindex": 1005
       },
       "id": "a4c9aef2-96e9-429f-a1d3-bce7363f548b",
@@ -1686,8 +1298,8 @@
       ],
       "displayData": {
         "color": "b-file",
-        "x": 518,
-        "y": 906,
+        "x": 504,
+        "y": 900,
         "zindex": 1005
       },
       "id": "f96a0c92-e6b1-4660-8489-5b20dc51bcfd",
@@ -1732,8 +1344,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": 146,
-        "y": 1101,
+        "x": 86,
+        "y": 1099,
         "zindex": 1005
       },
       "id": "f91e6b84-a43b-4a56-bbb7-0cd2e5edeb9a",
@@ -1918,8 +1530,8 @@
       ],
       "displayData": {
         "color": "b-file",
-        "x": 520,
-        "y": 1229,
+        "x": 506,
+        "y": 1223,
         "zindex": 1005
       },
       "id": "4b195a9f-e124-498b-8397-5943cace58fc",
@@ -1995,130 +1607,18 @@
       "active": true,
       "connections": [
         {
-          "instructionId": "656273db-aef9-4d4f-a3b4-0c94786283d2",
-          "name": "next"
-        },
-        {
-          "instructionId": "85786fb0-c316-4ee7-b1ba-f79e9b4f26e1",
-          "name": "error"
-        }
-      ],
-      "displayData": {
-        "color": "b-file",
-        "x": 326,
-        "y": 118,
-        "zindex": 1006
-      },
-      "id": "a0b01e97-8fb1-44c4-aea5-0b28682f36ec",
-      "methodId": "234aa231-7747-4f9c-963c-079f2feab092",
-      "name": "Exists",
-      "parameterValues": [
-        {
-          "bind": {
-            "variableName": "modelo_path"
-          },
-          "dataType": "NeaSTRING",
-          "io": "Input",
-          "name": "Directory",
-          "type": "Variable"
-        }
-      ],
-      "signature": "40ee5f31-092a-4050-a9a7-297e1ea733ac"
-    },
-    {
-      "active": true,
-      "connections": [
-        {
-          "instructionId": "e017dbd9-372c-4d73-8747-027000de6c55",
-          "name": "next"
-        },
-        {
-          "instructionId": "2cb3132f-2a42-4ebf-9c4f-0bece985eead",
-          "name": "error"
-        }
-      ],
-      "displayData": {
-        "color": "b-file",
-        "x": 104,
-        "y": 294,
-        "zindex": 1007
-      },
-      "id": "e521b0de-d4cb-483a-8e2e-f281b1988b75",
-      "methodId": "079CB3E4-D6E4-4CA8-908B-F6438215D3C7",
-      "name": "Get Value",
-      "parameterValues": [
-        {
-          "dataType": "NeaSTRING",
-          "io": "Input",
-          "name": "Field Name",
-          "type": "Simple",
-          "value": "modelo"
-        },
-        {
-          "bind": {
-            "variableName": "info_content"
-          },
-          "dataType": "NeaJSON",
-          "io": "Input",
-          "name": "JSON",
-          "type": "Variable"
-        },
-        {
-          "bind": {
-            "variableName": "modelo_path"
-          },
-          "dataType": "NeaSTRING",
-          "io": "Output",
-          "name": "Output Value",
-          "type": "Variable"
-        }
-      ],
-      "signature": "821239D8-3EB6-4E69-9B11-6F9021A8C8E2"
-    },
-    {
-      "active": true,
-      "connections": [
-        {
-          "instructionId": "ff714a5b-3c5d-44b4-90d0-661267fb0700",
-          "name": "next"
-        }
-      ],
-      "displayData": {
-        "color": "b-system",
-        "x": 486,
-        "y": 117,
-        "zindex": 1008
-      },
-      "id": "85786fb0-c316-4ee7-b1ba-f79e9b4f26e1",
-      "methodId": "BB1D4B60-D074-44D3-9844-81F38F461F2C",
-      "name": "Log Error",
-      "parameterValues": [
-        {
-          "dataType": "NeaSTRING",
-          "io": "Input",
-          "name": "Message",
-          "type": "Simple",
-          "value": "ERR_MISSING_MODEL"
-        }
-      ],
-      "signature": "B0A5DD03-E38E-410C-97CB-1B7A6EAC2DDD"
-    },
-    {
-      "active": true,
-      "connections": [
-        {
           "instructionId": "5b33f588-8556-4d01-8d1e-71a05e669f2d",
           "name": "error"
         },
         {
-          "instructionId": "47baeb58-9ebd-41ec-8775-68ea49e8903b",
+          "instructionId": "2929ae5a-67ee-4bde-b379-3cc71755fbb6",
           "name": "next"
         }
       ],
       "displayData": {
         "color": "b-file",
-        "x": 104,
-        "y": 378,
+        "x": 84,
+        "y": 185,
         "zindex": 1009
       },
       "id": "e017dbd9-372c-4d73-8747-027000de6c55",
@@ -2163,8 +1663,8 @@
       ],
       "displayData": {
         "color": "b-file",
-        "x": -35,
-        "y": 130,
+        "x": -54,
+        "y": 7,
         "zindex": 1010
       },
       "id": "e268229f-34e2-433b-8ed8-d33aadb16eb5",
@@ -2207,8 +1707,8 @@
       ],
       "displayData": {
         "color": "b-file",
-        "x": -39,
-        "y": 214,
+        "x": -58,
+        "y": 91,
         "zindex": 1011
       },
       "id": "ecdc57dd-1625-4fa2-8396-8747b6b62e0d",
@@ -2251,52 +1751,8 @@
       ],
       "displayData": {
         "color": "b-file",
-        "x": -40,
-        "y": 294,
-        "zindex": 1012
-      },
-      "id": "2cb3132f-2a42-4ebf-9c4f-0bece985eead",
-      "methodId": "D05E1F94-F77C-46D3-8962-1A2F8F7C8D6C",
-      "name": "Add Value",
-      "parameterValues": [
-        {
-          "dataType": "NeaSTRING",
-          "io": "Input",
-          "name": "Field Name",
-          "type": "Simple",
-          "value": "modelo"
-        },
-        {
-          "dataType": "NeaSTRING",
-          "io": "Input",
-          "name": "Value",
-          "type": "Simple",
-          "value": "yolov5su.pt"
-        },
-        {
-          "bind": {
-            "variableName": "info_content"
-          },
-          "dataType": "NeaJSON",
-          "io": "Output",
-          "name": "Output JSON",
-          "type": "Variable"
-        }
-      ],
-      "signature": "09CEB5B0-5345-4092-95F1-CA5CD1BD1DF6"
-    },
-    {
-      "active": true,
-      "connections": [
-        {
-          "instructionId": "c28741da-c708-4d09-8998-3da773348248",
-          "name": "next"
-        }
-      ],
-      "displayData": {
-        "color": "b-file",
-        "x": -42,
-        "y": 378,
+        "x": -61,
+        "y": 185,
         "zindex": 1013
       },
       "id": "5b33f588-8556-4d01-8d1e-71a05e669f2d",
@@ -2343,8 +1799,8 @@
       ],
       "displayData": {
         "color": "b-file",
-        "x": -40,
-        "y": 546,
+        "x": -59,
+        "y": 275,
         "zindex": 1014
       },
       "id": "c28741da-c708-4d09-8998-3da773348248",
@@ -2380,8 +1836,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": 115,
-        "y": 546,
+        "x": 86,
+        "y": 276,
         "zindex": 1014
       },
       "id": "9659b7f3-b649-440a-8b76-2cfa87de60a7",
@@ -2402,194 +1858,6 @@
       "active": true,
       "connections": [
         {
-          "instructionId": "cd6257a0-d5a8-43fc-88df-a31f9097b434",
-          "name": "error"
-        },
-        {
-          "instructionId": "2929ae5a-67ee-4bde-b379-3cc71755fbb6",
-          "name": "next"
-        }
-      ],
-      "displayData": {
-        "color": "b-file",
-        "x": 105,
-        "y": 468,
-        "zindex": 1015
-      },
-      "id": "47baeb58-9ebd-41ec-8775-68ea49e8903b",
-      "methodId": "079CB3E4-D6E4-4CA8-908B-F6438215D3C7",
-      "name": "Get Value",
-      "parameterValues": [
-        {
-          "dataType": "NeaSTRING",
-          "io": "Input",
-          "name": "Field Name",
-          "type": "Simple",
-          "value": "comando"
-        },
-        {
-          "bind": {
-            "variableName": "info_content"
-          },
-          "dataType": "NeaJSON",
-          "io": "Input",
-          "name": "JSON",
-          "type": "Variable"
-        },
-        {
-          "bind": {
-            "variableName": "command_camera_py"
-          },
-          "dataType": "NeaSTRING",
-          "io": "Output",
-          "name": "Output Value",
-          "type": "Variable"
-        }
-      ],
-      "signature": "821239D8-3EB6-4E69-9B11-6F9021A8C8E2"
-    },
-    {
-      "active": true,
-      "connections": [
-        {
-          "instructionId": "c28741da-c708-4d09-8998-3da773348248",
-          "name": "next"
-        }
-      ],
-      "displayData": {
-        "color": "b-file",
-        "x": -39,
-        "y": 466,
-        "zindex": 1016
-      },
-      "id": "cd6257a0-d5a8-43fc-88df-a31f9097b434",
-      "methodId": "D05E1F94-F77C-46D3-8962-1A2F8F7C8D6C",
-      "name": "Add Value",
-      "parameterValues": [
-        {
-          "dataType": "NeaSTRING",
-          "io": "Input",
-          "name": "Field Name",
-          "type": "Simple",
-          "value": "comando"
-        },
-        {
-          "dataType": "NeaSTRING",
-          "io": "Input",
-          "name": "Value",
-          "type": "Simple",
-          "value": "main.exe"
-        },
-        {
-          "bind": {
-            "variableName": "info_content"
-          },
-          "dataType": "NeaJSON",
-          "io": "Output",
-          "name": "Output JSON",
-          "type": "Variable"
-        }
-      ],
-      "signature": "09CEB5B0-5345-4092-95F1-CA5CD1BD1DF6"
-    },
-    {
-      "active": true,
-      "connections": [
-        {
-          "instructionId": "1ac32216-7dac-45cc-a13c-1db04ace2d4c",
-          "name": "next"
-        }
-      ],
-      "displayData": {
-        "color": "b-operations",
-        "x": 325,
-        "y": 470,
-        "zindex": 1016
-      },
-      "id": "b3f3b717-74f7-457d-a5a9-8aa7ec1280c9",
-      "methodId": "74ef8b37-6800-4e35-a74c-f03dacca6560",
-      "name": "Concat",
-      "parameterValues": [
-        {
-          "dataType": "NeaSTRING",
-          "io": "Input",
-          "name": "String 2",
-          "type": "Simple",
-          "value": " -m "
-        },
-        {
-          "bind": {
-            "variableName": "command_camera_py"
-          },
-          "dataType": "NeaSTRING",
-          "io": "Input",
-          "name": "String 1",
-          "type": "Variable"
-        },
-        {
-          "bind": {
-            "variableName": "command_camera_py"
-          },
-          "dataType": "NeaSTRING",
-          "io": "Output",
-          "name": "Output String",
-          "type": "Variable"
-        }
-      ],
-      "signature": "dcad1ea6-dd19-4c96-85aa-e794d643640c"
-    },
-    {
-      "active": true,
-      "connections": [
-        {
-          "instructionId": "11e4e03f-f156-42b1-ad46-a680d17ad2b7",
-          "name": "next"
-        }
-      ],
-      "displayData": {
-        "color": "b-operations",
-        "x": 325,
-        "y": 532,
-        "zindex": 1017
-      },
-      "id": "1ac32216-7dac-45cc-a13c-1db04ace2d4c",
-      "methodId": "74ef8b37-6800-4e35-a74c-f03dacca6560",
-      "name": "Concat",
-      "parameterValues": [
-        {
-          "bind": {
-            "variableName": "command_camera_py"
-          },
-          "dataType": "NeaSTRING",
-          "io": "Input",
-          "name": "String 1",
-          "type": "Variable"
-        },
-        {
-          "bind": {
-            "variableName": "command_camera_py"
-          },
-          "dataType": "NeaSTRING",
-          "io": "Output",
-          "name": "Output String",
-          "type": "Variable"
-        },
-        {
-          "bind": {
-            "variableName": "modelo_path"
-          },
-          "dataType": "NeaSTRING",
-          "io": "Input",
-          "name": "String 2",
-          "type": "Variable"
-        }
-      ],
-      "signature": "dcad1ea6-dd19-4c96-85aa-e794d643640c"
-    },
-    {
-      "active": true,
-      "connections": [
-        {
           "instructionId": "72d24204-53e2-4ad2-bef4-d1fc4990f77a",
           "name": "error"
         },
@@ -2600,8 +1868,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": 328,
-        "y": -47,
+        "x": 326,
+        "y": -103,
         "zindex": 1001
       },
       "id": "eaf0409a-4a7b-4c5a-90d8-94eab0b8ef42",
@@ -2648,8 +1916,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": 334,
-        "y": -96,
+        "x": 332,
+        "y": -152,
         "zindex": 1002
       },
       "id": "e2e85f7f-b7ce-4d0c-8da9-cfe021540627",
@@ -2679,14 +1947,14 @@
       "active": true,
       "connections": [
         {
-          "instructionId": "ff714a5b-3c5d-44b4-90d0-661267fb0700",
+          "instructionId": "20438207-6f7d-473e-bf18-e446e1ef6e01",
           "name": "next"
         }
       ],
       "displayData": {
         "color": "b-system",
-        "x": 453,
-        "y": -38,
+        "x": 439,
+        "y": -130,
         "zindex": 1003
       },
       "id": "72d24204-53e2-4ad2-bef4-d1fc4990f77a",
@@ -2707,14 +1975,14 @@
       "active": true,
       "connections": [
         {
-          "instructionId": "a0b01e97-8fb1-44c4-aea5-0b28682f36ec",
+          "instructionId": "10422fa3-2728-41c2-9720-e06a2cd8f7f7",
           "name": "next"
         }
       ],
       "displayData": {
         "color": "b-system",
-        "x": 105,
-        "y": 618,
+        "x": 313,
+        "y": 186,
         "zindex": 1000
       },
       "id": "2929ae5a-67ee-4bde-b379-3cc71755fbb6",
@@ -2750,8 +2018,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": 44,
-        "y": 813,
+        "x": -70,
+        "y": 741,
         "zindex": 1000
       },
       "id": "83b4db95-8272-43ca-a02d-c2536c9844bf",
@@ -2791,21 +2059,14 @@
       ],
       "displayData": {
         "color": "b-file",
-        "x": 45,
-        "y": 887,
+        "x": -70,
+        "y": 815,
         "zindex": 1000
       },
       "id": "cf3757cb-12f0-45c4-80a2-d2bddb494571",
       "methodId": "9E4ACE44-276E-4EB6-991E-8AD7555223C0",
       "name": "Read File",
       "parameterValues": [
-        {
-          "dataType": "NeaSTRING",
-          "io": "Input",
-          "name": "Filename",
-          "type": "Simple",
-          "value": "output.png"
-        },
         {
           "dataType": "NeaINT",
           "io": "Input",
@@ -2821,6 +2082,15 @@
           "io": "Output",
           "name": "Image",
           "type": "Variable"
+        },
+        {
+          "bind": {
+            "variableName": "camerapy_image_path"
+          },
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Filename",
+          "type": "Variable"
         }
       ],
       "signature": "19D06B95-365F-4771-9A19-F3F2E5A782DB"
@@ -2835,8 +2105,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": 37,
-        "y": 960,
+        "x": -77,
+        "y": 888,
         "zindex": 1000
       },
       "id": "fd6f909f-86f9-4bf0-bc3c-7a4517cf819a",
@@ -2876,14 +2146,14 @@
       "active": true,
       "connections": [
         {
-          "instructionId": "ff714a5b-3c5d-44b4-90d0-661267fb0700",
+          "instructionId": "e9f69d95-571b-40a1-8754-440fb67eccbc",
           "name": "next"
         }
       ],
       "displayData": {
         "color": "b-system",
-        "x": -100,
-        "y": 887,
+        "x": -204,
+        "y": 860,
         "zindex": 1000
       },
       "id": "ba05a74b-d7da-4df1-883f-3a2e0632361f",
@@ -2910,8 +2180,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": 264,
-        "y": 964,
+        "x": -72,
+        "y": 1042,
         "zindex": 1000
       },
       "id": "5dc33e33-0864-44e6-9fd4-1a9fc723cd0f",
@@ -2947,8 +2217,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": 168,
-        "y": 923,
+        "x": -68,
+        "y": 961,
         "zindex": 1000
       },
       "id": "e9f69d95-571b-40a1-8754-440fb67eccbc",
@@ -2993,8 +2263,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": 682,
-        "y": -25,
+        "x": 568,
+        "y": -99,
         "zindex": 1000
       },
       "id": "621c4c9b-13cb-48c7-8631-5b8508a30451",
@@ -3028,8 +2298,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": 683,
-        "y": 35,
+        "x": 569,
+        "y": -39,
         "zindex": 1000
       },
       "id": "a3fc7f55-8fdb-408a-ab97-63d89129e3c9",
@@ -3063,8 +2333,8 @@
       ],
       "displayData": {
         "color": "b-system",
-        "x": 683,
-        "y": 105,
+        "x": 569,
+        "y": 31,
         "zindex": 1000
       },
       "id": "fce9c041-2444-4865-a5a9-dda4a7894609",
@@ -3087,6 +2357,479 @@
         }
       ],
       "signature": "b6205626-d7e6-419f-b80f-64ca2ff3c048"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "321f88e4-a9fd-41a7-ab41-c73c0fb89905",
+          "name": "error"
+        },
+        {
+          "instructionId": "728637f6-cafb-44cd-8532-1d864af14869",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-communication",
+        "x": 126,
+        "y": 461,
+        "zindex": 1000
+      },
+      "id": "d58facc0-fd60-4a17-9271-cda236862728",
+      "methodId": "390f93bb-77ef-4c30-afe6-606035b06405",
+      "name": "Get",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "URL",
+          "type": "Simple",
+          "value": "127.0.0.1:8000/detect"
+        },
+        {
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "HTTP Version",
+          "type": "Simple",
+          "value": "0"
+        },
+        {
+          "bind": {
+            "variableName": "camerapy_response"
+          },
+          "dataType": "NeaJSON",
+          "io": "Output",
+          "name": "Server Response Body",
+          "type": "Variable"
+        },
+        {
+          "bind": {
+            "variableName": "camerapy_http_status"
+          },
+          "dataType": "NeaINT",
+          "io": "Output",
+          "name": "HTTP Status",
+          "type": "Variable"
+        },
+        {
+          "dataType": "NeaVECTOR<NeaSTRING>",
+          "io": "Input",
+          "name": "Headers",
+          "type": "Array",
+          "values": [
+            {
+              "dataType": "NeaSTRING",
+              "io": "Input",
+              "name": "Item 1",
+              "type": "Simple",
+              "value": "API"
+            }
+          ]
+        },
+        {
+          "bind": {
+            "variableName": "camerapy_response_headers"
+          },
+          "dataType": "NeaSTRING",
+          "io": "Output",
+          "name": "Server Response Headers",
+          "type": "Variable"
+        }
+      ],
+      "signature": "d7a34286-bb6c-4d0a-91be-b520219283ff"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "ff714a5b-3c5d-44b4-90d0-661267fb0700",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": -46,
+        "y": 468,
+        "zindex": 1000
+      },
+      "id": "321f88e4-a9fd-41a7-ab41-c73c0fb89905",
+      "methodId": "BB1D4B60-D074-44D3-9844-81F38F461F2C",
+      "name": "Log Error",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Message",
+          "type": "Simple",
+          "value": "ERR_CAMERAPY_HTTP"
+        }
+      ],
+      "signature": "B0A5DD03-E38E-410C-97CB-1B7A6EAC2DDD"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "321f88e4-a9fd-41a7-ab41-c73c0fb89905",
+          "name": "error"
+        },
+        {
+          "instructionId": "4601a6bb-9246-4df1-963c-71cc5220bdec",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-file",
+        "x": 127,
+        "y": 594,
+        "zindex": 1000
+      },
+      "id": "7f7e5a64-5844-475c-a9a6-666de4edfb10",
+      "methodId": "079CB3E4-D6E4-4CA8-908B-F6438215D3C7",
+      "name": "Get Value",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Field Name",
+          "type": "Simple",
+          "value": "num_pessoas"
+        },
+        {
+          "bind": {
+            "variableName": "camerapy_response"
+          },
+          "dataType": "NeaJSON",
+          "io": "Input",
+          "name": "JSON",
+          "type": "Variable"
+        },
+        {
+          "bind": {
+            "variableName": "campy_out_parsed"
+          },
+          "dataType": "NeaINT",
+          "io": "Output",
+          "name": "Output Value",
+          "type": "Variable"
+        }
+      ],
+      "signature": "821239D8-3EB6-4E69-9B11-6F9021A8C8E2"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "7f7e5a64-5844-475c-a9a6-666de4edfb10",
+          "name": "true"
+        },
+        {
+          "instructionId": "321f88e4-a9fd-41a7-ab41-c73c0fb89905",
+          "name": "false"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 126,
+        "y": 526,
+        "zindex": 1000
+      },
+      "id": "728637f6-cafb-44cd-8532-1d864af14869",
+      "methodId": "c5f091b1-c0d1-4d01-bacc-72bc87be9947",
+      "name": "If",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Operator",
+          "type": "Simple",
+          "value": "=="
+        },
+        {
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "Value 2",
+          "type": "Simple",
+          "value": "200"
+        },
+        {
+          "bind": {
+            "variableName": "camerapy_http_status"
+          },
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "Value 1",
+          "type": "Variable"
+        }
+      ],
+      "signature": "7585deb3-c2dd-4381-a2fc-48ad39077d49"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "321f88e4-a9fd-41a7-ab41-c73c0fb89905",
+          "name": "error"
+        },
+        {
+          "instructionId": "33fe7df7-5da1-45e6-906c-cd65b2a642ca",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-file",
+        "x": 127,
+        "y": 668,
+        "zindex": 1000
+      },
+      "id": "4601a6bb-9246-4df1-963c-71cc5220bdec",
+      "methodId": "079CB3E4-D6E4-4CA8-908B-F6438215D3C7",
+      "name": "Get Value",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Field Name",
+          "type": "Simple",
+          "value": "output_path"
+        },
+        {
+          "bind": {
+            "variableName": "camerapy_response"
+          },
+          "dataType": "NeaJSON",
+          "io": "Input",
+          "name": "JSON",
+          "type": "Variable"
+        },
+        {
+          "bind": {
+            "variableName": "camerapy_image_path"
+          },
+          "dataType": "NeaSTRING",
+          "io": "Output",
+          "name": "Output Value",
+          "type": "Variable"
+        }
+      ],
+      "signature": "821239D8-3EB6-4E69-9B11-6F9021A8C8E2"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "321f88e4-a9fd-41a7-ab41-c73c0fb89905",
+          "name": "error"
+        },
+        {
+          "instructionId": "17ef07ea-bcde-45ae-8fa0-2043f1eca003",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-file",
+        "x": 129,
+        "y": 747,
+        "zindex": 1001
+      },
+      "id": "33fe7df7-5da1-45e6-906c-cd65b2a642ca",
+      "methodId": "079CB3E4-D6E4-4CA8-908B-F6438215D3C7",
+      "name": "Get Value",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Field Name",
+          "type": "Simple",
+          "value": "tempo"
+        },
+        {
+          "bind": {
+            "variableName": "camerapy_response"
+          },
+          "dataType": "NeaJSON",
+          "io": "Input",
+          "name": "JSON",
+          "type": "Variable"
+        },
+        {
+          "bind": {
+            "variableName": "camerapy_capture_time"
+          },
+          "dataType": "NeaINT",
+          "io": "Output",
+          "name": "Output Value",
+          "type": "Variable"
+        }
+      ],
+      "signature": "821239D8-3EB6-4E69-9B11-6F9021A8C8E2"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "83b4db95-8272-43ca-a02d-c2536c9844bf",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": -72,
+        "y": 665,
+        "zindex": 1001
+      },
+      "id": "9a57a328-54e8-4940-b816-93c6b93d3a87",
+      "methodId": "bb9a39e6-319b-4df1-884e-0a65f74b86c2",
+      "name": "Display Value",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Binding",
+          "type": "Simple",
+          "value": "Header:LblTempoCaptura"
+        },
+        {
+          "bind": {
+            "variableName": "camerapy_capture_time_concat"
+          },
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Value",
+          "type": "Variable"
+        }
+      ],
+      "signature": "b6205626-d7e6-419f-b80f-64ca2ff3c048"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "9a57a328-54e8-4940-b816-93c6b93d3a87",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-operations",
+        "x": -59,
+        "y": 590,
+        "zindex": 1001
+      },
+      "id": "17ef07ea-bcde-45ae-8fa0-2043f1eca003",
+      "methodId": "74ef8b37-6800-4e35-a74c-f03dacca6560",
+      "name": "Concat",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "String 2",
+          "type": "Simple",
+          "value": " ms"
+        },
+        {
+          "bind": {
+            "variableName": "camerapy_capture_time"
+          },
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "String 1",
+          "type": "Variable"
+        },
+        {
+          "bind": {
+            "variableName": "camerapy_capture_time_concat"
+          },
+          "dataType": "NeaSTRING",
+          "io": "Output",
+          "name": "Output String",
+          "type": "Variable"
+        }
+      ],
+      "signature": "dcad1ea6-dd19-4c96-85aa-e794d643640c"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "2cb95f58-e2f8-4208-84ac-1a8e4b23fee9",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-system",
+        "x": 313,
+        "y": 279,
+        "zindex": 1000
+      },
+      "id": "e7eede93-c881-479c-a89b-7e8fdaa58b9b",
+      "methodId": "f0d365c0-e287-46aa-b5a7-910d4843e805",
+      "name": "Display Text",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Binding",
+          "type": "Simple",
+          "value": "Header:LblIntervaloCaptura"
+        },
+        {
+          "bind": {
+            "variableName": "capture_time_str"
+          },
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "Text",
+          "type": "Variable"
+        }
+      ],
+      "signature": "5c152ae9-8091-42fd-95b2-8e64a9b6925e"
+    },
+    {
+      "active": true,
+      "connections": [
+        {
+          "instructionId": "e7eede93-c881-479c-a89b-7e8fdaa58b9b",
+          "name": "next"
+        }
+      ],
+      "displayData": {
+        "color": "b-operations",
+        "x": 319,
+        "y": 230,
+        "zindex": 1000
+      },
+      "id": "10422fa3-2728-41c2-9720-e06a2cd8f7f7",
+      "methodId": "74ef8b37-6800-4e35-a74c-f03dacca6560",
+      "name": "Concat",
+      "parameterValues": [
+        {
+          "dataType": "NeaSTRING",
+          "io": "Input",
+          "name": "String 2",
+          "type": "Simple",
+          "value": " segundos"
+        },
+        {
+          "bind": {
+            "variableName": "capture_time"
+          },
+          "dataType": "NeaINT",
+          "io": "Input",
+          "name": "String 1",
+          "type": "Variable"
+        },
+        {
+          "bind": {
+            "variableName": "capture_time_str"
+          },
+          "dataType": "NeaSTRING",
+          "io": "Output",
+          "name": "Output String",
+          "type": "Variable"
+        }
+      ],
+      "signature": "dcad1ea6-dd19-4c96-85aa-e794d643640c"
     }
   ],
   "parameters": [],
@@ -3101,6 +2844,36 @@
       "dataType": "NeaHANDLE",
       "description": "",
       "name": "camera"
+    },
+    {
+      "dataType": "NeaINT",
+      "description": "",
+      "name": "camerapy_capture_time"
+    },
+    {
+      "dataType": "NeaSTRING",
+      "description": "",
+      "name": "camerapy_capture_time_concat"
+    },
+    {
+      "dataType": "NeaINT",
+      "description": "",
+      "name": "camerapy_http_status"
+    },
+    {
+      "dataType": "NeaSTRING",
+      "description": "",
+      "name": "camerapy_image_path"
+    },
+    {
+      "dataType": "NeaJSON",
+      "description": "",
+      "name": "camerapy_response"
+    },
+    {
+      "dataType": "NeaSTRING",
+      "description": "",
+      "name": "camerapy_response_headers"
     },
     {
       "dataType": "NeaINT",
@@ -3121,6 +2894,11 @@
       "dataType": "NeaINT",
       "description": "",
       "name": "capture_time"
+    },
+    {
+      "dataType": "NeaSTRING",
+      "description": "",
+      "name": "capture_time_str"
     },
     {
       "dataType": "NeaSTRING",
