@@ -34,15 +34,30 @@ Sem qualquer argumento passado, o programa vai automaticamente tirar uma imagem 
 #### --image, -i
 
 O argumento `--image` ou `-i` permite especificar o caminho para uma imagem de entrada. Se não for fornecido, o programa irá utilizar a webcam como fonte de imagem.
+
 #### --verbose, -v
 
 O argumento `--verbose` ou `-v` ativa a saída detalhada do programa. Isso pode incluir informações adicionais sobre o processamento da imagem e os resultados da deteção.
+
 #### --output, -o
 
 O argumento `--output` ou `-o` permite especificar o caminho para salvar a imagem de saída. Se não for fornecido, a imagem de saída não será salva.
+
 #### --model, -m
 
 O argumento `--model` ou `-m` permite especificar o caminho para o arquivo de pesos do modelo YOLOv5. O valor padrão é `yolov5su.pt`, que é um modelo pré-treinado. Se quiser utilizar outro modelo, deve especificar o caminho para o arquivo de pesos correspondente.
+
+#### --server, -s
+
+O argumento `--server` ou `-s` ativa o modo de execução como um servidor FastAPI. Isso permite que o programa seja executado como uma API REST, onde pode ser chamado para processar imagens e retornar os resultados em formato JSON.
+
+#### --camera, -c
+
+O argumento `--camera` ou `-c` permite especificar o ID da câmara a utilizar como fonte de imagem. O ID da câmara é o número da câmara que pode ser utilizado para selecionar a câmara a utilizar como imagem de entrada. Se não for fornecido, o programa irá utilizar a câmara padrão do sistema de ID 0.
+
+#### --help
+
+O argumento `--help` exibe a ajuda do programa, mostrando todos os argumentos disponíveis e suas descrições.
 
 **NOTA:** Reforçando, se não for fornecido nenhum argumento, o programa irá utilizar o modelo pré-treinado `yolov5su.pt` como padrão e imprimirá apenas os resultados na consola sem qualquer outra informação ou output.
 
@@ -70,6 +85,37 @@ E como imagem de saída, foi esta a imagem processada:
 ![](assets/image_out.jpg)
 
 Como é possível observar, o programa conseguiu detetar 9 pessoas na imagem capturada. Nem sempre o número de pessoas detetadas corresponde ao número real de pessoas na imagem, uma vez que o modelo YOLOv5 pode ter dificuldades em detetar pessoas em determinadas condições de iluminação ou ângulos de visão. No entanto, o modelo é bastante preciso e consegue detetar a maioria das pessoas presentes na imagem.
+
+## Exemplo de execução em modo REST API
+
+Para executar o projeto em modo REST API, é necessário ter o fastapi instalado. Para tal, execute o seguinte comando no terminal:
+```bash
+pip install fastapi
+```
+
+Após a instalação do fastapi, só é necessário executar o seguinte comando no terminal para iniciar o servidor:
+```bash
+python main.py --server
+```
+
+Isto irá iniciar o servidor FastAPI na porta 8000. O servidor irá expor um endpoint `/detect` que pode ser utilizado para analizar a imagem da webcam sempre que for chamado. O endpoint irá retornar um JSON com o número de pessoas detetadas na imagem capturada, dentro do seguinte formato:
+```json
+{
+    "num_pessoas":0,
+    "tempo":327.0,
+    "output_path":"...\\camara-py\\output.jpg"
+}
+```
+O campo `num_pessoas` indica o número de pessoas detetadas na imagem, o campo `tempo` indica o tempo que demorou a processar a imagem e o campo `output_path` indica o caminho para a imagem de saída.
+
+## Endpoints REST API
+O servidor FastAPI irá expor os seguintes endpoints:
+
+### GET `/detect`
+Este endpoint irá capturar uma imagem da webcam, processá-la e retornar o número de pessoas detetadas na imagem. O tempo que demorou a processar a imagem e o caminho para a imagem de saída também serão retornados.
+
+### GET `/camaras`
+Este endpoint irá retornar uma lista com os IDs das câmaras disponíveis no sistema. O ID da câmara é o número da câmara que pode ser utilizado para selecionar a câmara a utilizar como imagem de entrada.
 
 ## Compilação para um ficheiro executável
 
