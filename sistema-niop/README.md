@@ -118,3 +118,7 @@ Essa página foi projetada para fornecer relatórios detalhados sobre o sistema,
 
 Imagem:
 ![relatorios](assets/relatorios.png)
+
+## Licença
+
+MIT License. Veja o ficheiro [LICENSE](LICENSE) para mais detalhes.

@@ -43,3 +43,7 @@ Contém páginas para a geração de relatórios:
 Contém recursos estáticos, como ficheiros CSS:
 - **css/style.css**: Folha de estilos para ecrãs maiores.
 - **css/style-small.css**: Folha de estilos para ecrãs menores.
+
+## Licença
+
+MIT License. Veja o ficheiro [LICENSE](LICENSE) para mais detalhes.
