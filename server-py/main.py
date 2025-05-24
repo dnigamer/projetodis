@@ -238,9 +238,10 @@ async def listar_camaras(camera_id: int = None):
 
 
 @app.get("/api/camaras/{camera_id}/lotacao")
-async def lotacao_camara_specific_get(camera_id: int):
+@app.get("/api/camaras/{camera_id}/lotacao/{limit}")
+async def lotacao_camara_specific_get(camera_id: int, limit: int = 100):
     """
-    Retorna a lotação de uma câmara com ID específico.
+    Retorna a lotação de uma câmara com ID específico, limitado ao número de registos especificado.
     """
 
     try:
@@ -251,14 +252,25 @@ async def lotacao_camara_specific_get(camera_id: int):
                 status_code=404, content={"message": "Câmara não encontrada"}
             )
 
+        if limit <= 0:
+            return JSONResponse(
+                status_code=400, content={"message": "Limite deve ser maior que zero"}
+            )
+        if limit > 100:
+            return JSONResponse(
+                status_code=400,
+                content={"message": "Limite deve ser menor ou igual a 100"},
+            )
+
         cursor.execute(
             """
             SELECT rl.camera_id, rl.data_registo, rl.lotacao
             FROM registo_lotacao rl
             WHERE rl.camera_id = %s
             ORDER BY rl.data_registo DESC
+            LIMIT %s
         """,
-            (camera_id,),
+            (camera_id, limit),
         )
         result = cursor.fetchall()
         if not result:
@@ -283,8 +295,8 @@ async def lotacao_camara_specific_get(camera_id: int):
         )
 
 
-@app.post("/api/camaras/{camera_id}/lotacao/{limit}")
-async def lotacao_camara_specific_post(camera_id: int, limit: int, request: Request):
+@app.post("/api/camaras/{camera_id}/lotacao")
+async def lotacao_camara_specific_post(camera_id: int, request: Request):
     """
     Adiciona uma nova lotação para uma câmara com ID específico.
     """
@@ -295,16 +307,6 @@ async def lotacao_camara_specific_post(camera_id: int, limit: int, request: Requ
         if result is None:
             return JSONResponse(
                 status_code=404, content={"message": "Câmara não encontrada"}
-            )
-
-        if limit <= 0:
-            return JSONResponse(
-                status_code=400, content={"message": "Limite deve ser maior que zero"}
-            )
-        if limit > 100:
-            return JSONResponse(
-                status_code=400,
-                content={"message": "Limite deve ser menor ou igual a 100"},
             )
 
         data = await request.json()
@@ -325,27 +327,9 @@ async def lotacao_camara_specific_post(camera_id: int, limit: int, request: Requ
         )
         conn.commit()
 
-        # Retorna os últimos 'limit' registos de lotação para esta câmara
-        cursor.execute(
-            """
-            SELECT camera_id, data_registo, lotacao
-            FROM registo_lotacao
-            WHERE camera_id = %s
-            ORDER BY data_registo DESC
-            LIMIT %s
-            """,
-            (camera_id, limit),
+        return JSONResponse(
+            status_code=201, content={"message": "Lotação adicionada com sucesso"}
         )
-        result = cursor.fetchall()
-        lotacao_list = [
-            {
-                "camera_id": row[0],
-                "data_registo": row[1].isoformat() if row[1] is not None else None,
-                "lotacao": row[2],
-            }
-            for row in result
-        ]
-        return JSONResponse(status_code=200, content=lotacao_list)
     except mysql.connector.Error as e:
         print(f"Database error: {e}")
         return JSONResponse(
