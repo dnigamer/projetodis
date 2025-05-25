@@ -18,6 +18,7 @@ from fastapi import FastAPI, Request, Path, Body
 from fastapi.responses import JSONResponse
 import uvicorn
 import mysql.connector
+from typing import Optional
 
 app = FastAPI()
 conn = mysql.connector.connect(
@@ -198,7 +199,7 @@ async def adicionar_camara(data: dict):
 
 @app.get("/api/camaras")
 @app.get("/api/camaras/{camera_id}")
-async def listar_camaras(camera_id: int = None):
+async def listar_camaras(camera_id: Optional[int] = None):
     """
     Retorna todas as câmaras ou uma câmara específica com ID.
     """
@@ -570,17 +571,18 @@ async def listar_paragens_favoritas():
         cursor.execute("SELECT * FROM paragens WHERE favorita = 'S'")
         result = cursor.fetchall()
         favoritas = []
-        for row in result:
-            favoritas.append(
-                {
-                    "id": row[0],
-                    "nome": row[1],
-                    "localizacao": row[2],
-                    "estado": row[3],
-                    "lotacao": row[4],
-                    "favorita": row[5],
-                }
-            )
+        if result:
+            for row in result:
+                favoritas.append(
+                    {
+                        "id": row[0],
+                        "nome": row[1],
+                        "localizacao": row[2],
+                        "estado": row[3],
+                        "lotacao": row[4],
+                        "favorita": row[5],
+                    }
+                )
         return JSONResponse(status_code=200, content=favoritas)
     except mysql.connector.Error as e:
         print(f"Database error: {e}")
@@ -667,7 +669,7 @@ async def atualizar_favorita(paragem_id: int = Path(...), data: dict = Body(...)
         # Verifica se a paragem já é favorita
         cursor.execute("SELECT favorita FROM paragens WHERE id = %s", (paragem_id,))
         row = cursor.fetchone()
-        if row[0] == "S":
+        if row is not None and row[0] == "S":
             return JSONResponse(
                 status_code=400, content={"message": "Paragem já é favorita"}
             )
@@ -788,20 +790,21 @@ async def listar_alertas():
         cursor.execute("SELECT * FROM alertas")
         result = cursor.fetchall()
         alertas = []
-        for row in result:
-            alertas.append(
-                {
-                    "id": row[0],
-                    "paragem_id": row[1],
-                    "camera_id": row[2],
-                    "data_alerta": row[3].isoformat() if row[3] else None,
-                    "data_resolucao": row[4].isoformat() if row[4] else None,
-                    "tipo_alerta": row[5],
-                    "descricao": row[6],
-                    "gravidade": row[7],
-                    "estado": row[8],
-                }
-            )
+        if result:
+            for row in result:
+                alertas.append(
+                    {
+                        "id": row[0],
+                        "paragem_id": row[1],
+                        "camera_id": row[2],
+                        "data_alerta": row[3].isoformat() if row[3] else None,
+                        "data_resolucao": row[4].isoformat() if row[4] else None,
+                        "tipo_alerta": row[5],
+                        "descricao": row[6],
+                        "gravidade": row[7],
+                        "estado": row[8],
+                    }
+                )
         return JSONResponse(status_code=200, content=alertas)
     except mysql.connector.Error as e:
         print(f"Database error: {e}")
@@ -1067,22 +1070,23 @@ async def alertas_recentes():
         cursor.execute("SELECT * FROM alertas_recentes")
         result = cursor.fetchall()
         alertas = []
-        for row in result:
-            alertas.append(
-                {
-                    "id": row[0],
-                    "paragem_id": row[1],
-                    "camera_id": row[2],
-                    "data_alerta": row[3].isoformat() if row[3] else None,
-                    "data_resolucao": row[4].isoformat() if row[4] else None,
-                    "tipo_alerta": row[5],
-                    "descricao": row[6],
-                    "gravidade": row[7],
-                    "estado": row[8],
-                    "paragem_nome": row[9],
-                    "camera_modelo": row[10],
-                }
-            )
+        if result:
+            for row in result:
+                alertas.append(
+                    {
+                        "id": row[0],
+                        "paragem_id": row[1],
+                        "camera_id": row[2],
+                        "data_alerta": row[3].isoformat() if row[3] else None,
+                        "data_resolucao": row[4].isoformat() if row[4] else None,
+                        "tipo_alerta": row[5],
+                        "descricao": row[6],
+                        "gravidade": row[7],
+                        "estado": row[8],
+                        "paragem_nome": row[9],
+                        "camera_modelo": row[10],
+                    }
+                )
         return JSONResponse(status_code=200, content=alertas)
     except mysql.connector.Error as e:
         print(f"Database error: {e}")
@@ -1123,29 +1127,32 @@ async def relatorio_fluxo_passageiros():
         )
         result = cursor.fetchall()
         fluxo = {}
-        for row in result:
-            (
-                paragem_id,
-                paragem_nome,
-                camera_id,
-                camera_modelo,
-                data_registo,
-                lotacao,
-            ) = row
-            if paragem_id not in fluxo:
-                fluxo[paragem_id] = {
-                    "paragem_id": paragem_id,
-                    "nome": paragem_nome,
-                    "registos": [],
-                }
-            fluxo[paragem_id]["registos"].append(
-                {
-                    "camera_id": camera_id,
-                    "camera_modelo": camera_modelo,
-                    "data_registo": data_registo.isoformat() if data_registo else None,
-                    "lotacao": lotacao,
-                }
-            )
+        if result:
+            for row in result:
+                (
+                    paragem_id,
+                    paragem_nome,
+                    camera_id,
+                    camera_modelo,
+                    data_registo,
+                    lotacao,
+                ) = row
+                if paragem_id not in fluxo:
+                    fluxo[paragem_id] = {
+                        "paragem_id": paragem_id,
+                        "nome": paragem_nome,
+                        "registos": [],
+                    }
+                fluxo[paragem_id]["registos"].append(
+                    {
+                        "camera_id": camera_id,
+                        "camera_modelo": camera_modelo,
+                        "data_registo": (
+                            data_registo.isoformat() if data_registo else None
+                        ),
+                        "lotacao": lotacao,
+                    }
+                )
         return JSONResponse(status_code=200, content=list(fluxo.values()))
     except mysql.connector.Error as e:
         print(f"Database error: {e}")
@@ -1178,14 +1185,15 @@ async def relatorio_lotacao_media():
         )
         result = cursor.fetchall()
         medias = []
-        for row in result:
-            medias.append(
-                {
-                    "paragem_id": row[0],
-                    "nome": row[1],
-                    "lotacao_media": float(row[2]) if row[2] is not None else 0.0,
-                }
-            )
+        if result:
+            for row in result:
+                medias.append(
+                    {
+                        "paragem_id": row[0],
+                        "nome": row[1],
+                        "lotacao_media": float(row[2]) if row[2] is not None else 0.0,
+                    }
+                )
         return JSONResponse(status_code=200, content=medias)
     except mysql.connector.Error as e:
         print(f"Database error: {e}")
@@ -1218,14 +1226,15 @@ async def relatorio_pico_lotacao():
         )
         result = cursor.fetchall()
         picos = []
-        for row in result:
-            picos.append(
-                {
-                    "paragem_id": row[0],
-                    "nome": row[1],
-                    "pico_lotacao": int(row[2]) if row[2] is not None else 0,
-                }
-            )
+        if result:
+            for row in result:
+                picos.append(
+                    {
+                        "paragem_id": row[0],
+                        "nome": row[1],
+                        "pico_lotacao": int(row[2]) if row[2] is not None else 0,
+                    }
+                )
         return JSONResponse(status_code=200, content=picos)
     except mysql.connector.Error as e:
         print(f"Database error: {e}")
@@ -1258,17 +1267,18 @@ async def relatorio_taxa_alertas():
         )
         result = cursor.fetchall()
         taxas = []
-        for row in result:
-            taxas.append(
-                {
-                    "paragem_id": row[0],
-                    "nome": row[1],
-                    "total_alertas": int(row[2]),
-                    "alertas_baixa": int(row[3]),
-                    "alertas_media": int(row[4]),
-                    "alertas_alta": int(row[5]),
-                }
-            )
+        if result:
+            for row in result:
+                taxas.append(
+                    {
+                        "paragem_id": row[0],
+                        "nome": row[1],
+                        "total_alertas": int(row[2]),
+                        "alertas_baixa": int(row[3]),
+                        "alertas_media": int(row[4]),
+                        "alertas_alta": int(row[5]),
+                    }
+                )
         return JSONResponse(status_code=200, content=taxas)
     except mysql.connector.Error as e:
         print(f"Database error: {e}")
