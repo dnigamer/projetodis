@@ -309,6 +309,15 @@ async def lotacao_camara_specific_post(camera_id: int, request: Request):
             return JSONResponse(
                 status_code=404, content={"message": "Câmara não encontrada"}
             )
+            
+        # get the paragem_id from the camera
+        cursor.execute("SELECT paragem_id FROM camaras WHERE id = %s", (camera_id,))
+        result = cursor.fetchone()
+        if result is None:
+            return JSONResponse(
+                status_code=404, content={"message": "Câmara não adicionada à paragem"}
+            )
+        paragem_id = result[0]
 
         data = await request.json()
         required_fields = ["lotacao", "timestamp"]
@@ -323,8 +332,8 @@ async def lotacao_camara_specific_post(camera_id: int, request: Request):
         data_registo = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(timestamp))
 
         cursor.execute(
-            "INSERT INTO registo_lotacao (camera_id, data_registo, lotacao) VALUES (%s, %s, %s)",
-            (camera_id, data_registo, lotacao),
+            "INSERT INTO registo_lotacao (paragem_id, camera_id, data_registo, lotacao) VALUES (%s, %s, %s, %s)",
+            (paragem_id, camera_id, data_registo, lotacao)
         )
         conn.commit()
 
