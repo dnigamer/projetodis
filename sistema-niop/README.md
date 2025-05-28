@@ -1,7 +1,97 @@
 # sistema-niop
 
-# Introdução
-Esta pasta contém o código total do sistema que apresenta os dados registados na base de dados do sistema de contagem de pessoas nas paragens. Esta aplicação foi desenvolvida utilizando a ferramenta de low-code niop. O sistema consiste numa aplicação contendo diferentes páginas, cada uma com um propósito específico. Abaixo, apresentamos uma breve descrição de cada página e suas funcionalidades.
+## Introdução
+Esta pasta contém o código total do sistema que apresenta os dados registados na base de dados do sistema de contagem de pessoas nas paragens. Esta aplicação foi desenvolvida utilizando a ferramenta de low-code niop. 
+
+O sistema consiste numa aplicação contendo diferentes páginas, cada uma com um propósito específico. Abaixo, apresentamos uma breve descrição de cada página e suas funcionalidades.
+
+## Execução do projeto
+Para executar o projeto, é necessário ter o niop instalado, tal como uma base de dados MySQL e um servidor web (Apache, Nginx, etc.) configurado para servir os ficheiros PHP do projeto.
+
+1. **Instalar o niop**: Siga as instruções de instalação do niop studio e do niop HMI.
+2. **Configurar a base de dados**: Certifique-se de que a base de dados MySQL está configurada corretamente e que as tabelas necessárias estão criadas. Para informações sobre a estrutura da base de dados, consulte o script de criação da base de dados incluído no projeto.
+3. **Configurar o servidor web**: Configure o servidor web para apontar para a pasta onde os ficheiros do projeto estão localizados (ex. `http://localhost/`).
+4. **Executar o projeto**: Após verificar que tudo está configurado corretamente, abra o niop HMI, niop Studio e inicie o projeto. A aplicação deve carregar e apresentar as páginas que compõem o sistema.
+
+## Requisitos
+- **niop**: Ferramenta de desenvolvimento low-code/no-code.
+- **PHP**: Versão 7.4 ou superior.
+- **MySQL**: Versão 5.7 ou superior.
+- **Servidor Web**: Apache, Nginx ou outro servidor compatível com PHP.
+
+## Instalação
+
+Para instalar a parte do sistema que carrega as páginas PHP, siga os seguintes passos:
+1. **Instale o XAMPP**: O XAMPP é um pacote que inclui o Apache, MySQL e PHP. Pode ser descarregado a partir do site oficial do XAMPP (https://www.apachefriends.org/index.html).
+2. **Descarregue o projeto**: Faça o download do código do projeto a partir do repositório GitHub ou do local onde o código está hospedado.
+3. **Coloque os ficheiros na pasta do XAMPP**: Copie os conteúdos da pasta html-pages do projeto diretamente para a pasta `htdocs` do XAMPP. Normalmente, esta pasta está localizada em `C:\xampp\htdocs` no Windows ou `/opt/lampp/htdocs` no Linux.
+   - Exemplo: Se o nome do projeto for `sistema-niop`, a estrutura de pastas deve ser `C:\xampp\htdocs\` ou `/opt/lampp/htdocs/` tendo todos os subdiretórios e ficheiros do projeto dentro dessa pasta.
+      ```
+      C:\xampp\htdocs\
+        ├── alertas
+            ├── adicionar.php
+            ├── desativar.php
+            ├── editar.php
+            ├── enviar.php
+            ├── lista.php
+            ├── recentes.php
+            └── remover.php
+        ├── camaras
+            ├── adicionar.php
+            ├── contagem.php
+            ├── editar.php
+            ├── lista.php
+            └── remover.php
+        ├── paragens
+            ├── adicionar.php
+            ├── editar.php
+            ├── estado.php
+            ├── favoritas.php
+            ├── lista.php
+            ├── lotacao.php
+            └── remover.php
+        ├── relatorios
+            ├── fluxo_passageiros.php
+            ├── geral.php
+            ├── lotacao_media.php
+            ├── pico_lotacao.php
+            └── taxa_alertas.php
+        ├── static
+            └── css
+                ├── style-small.css
+                └── style.css
+        └── config.php
+      ```
+4. **Configurar o XAMPP**: Certifique-se de que o XAMPP está configurado corretamente para servir ficheiros PHP. Normalmente, isso já está configurado por padrão.
+   - Para além disso, verifique o ficheiro `config.php` na raiz do projeto para garantir que as configurações de conexão com a base de dados estão corretas (nome do utilizador, palavra-passe, nome da base de dados).
+      ```php
+      <?php
+      $host = 'ip-do-servidor';    // Exemplo: 'localhost' ou '127.0.0.1'
+      $dbname = 'bd_sistema_niop'; // Nome da base de dados
+      $username = 'user';          // Nome de utilizador da base de dados
+      $password = 'palavra-passe'; // Palavra-passe da base de dados
+      ...
+      ```
+
+4. **Inicie o XAMPP**: Abra o painel de controlo do XAMPP e inicie os serviços do Apache e MySQL.
+5. **Aceda ao servidor XAMPP**: Abra um navegador web e digite `http://localhost`, onde `nome-do-projeto` é o nome da pasta que você copiou para a pasta `htdocs` (de preferência, `http://localhost/` pois o projeto é carregado diretamente na raiz do servidor). 
+
+Ao aceder a esta URL, deverá ver o conteúdo da pasta `htdocs`, incluindo os ficheiros do projeto.
+
+## Explicação do projeto
+
+Devido ao facto que o projeto é "low-code/no-code", não é possível explicar o projeto a partir de linhas de código. 
+
+Este projeto pode conter bastantes linhas a ir de um lado para o outro, mas a explicação do projeto é bastante simples, pois o projeto somente apresenta interfaces gráficas e não contém lógica de operações complexas.
+
+O sistema é composto por uma interface gráfica (HMI) que permite ao utilizador interagir com as diferentes funcionalidades do sistema. A lógica de funcionamento do sistema é dividida em duas partes principais: a parte direita e a parte esquerda. 
+
+Assim, o código do projeto é composto por pelo menos 2 partes principais:
+![sistema-niop](assets/niop.png)
+
+**Parte esquerda**: Contém a lógica que verifica se o HMI está ONLINE ou OFFLINE, e funcional, verificando se houve algum input do utilizador, alterando a página atual.
+
+**Parte direita**: Contém a lógica de mudança de paginas, onde cada página é uma entidade que contém os componentes e a lógica para realizaar operações específicas (ex. Câmaras, Paragens, Alertas, Relatórios).
 
 ## Página Inicial
 
@@ -105,7 +195,6 @@ A página de **Relatórios** permite gerar e visualizar relatórios baseados nos
 - **Obter Pico Lotação**: Identificar o pico de lotação em cada paragem.
 - **Obter Fluxo Passageiros**: Analisar o fluxo de passageiros em diferentes paragens.
 - **Obter Taxa de Alertas**: Calcular a taxa de alertas gerados em relação ao total de paragens ou câmaras.
-- **Gerar Relatório**: Criar relatórios personalizados com base nos dados selecionados.
 
 Além disso, a página exibe uma tabela com a lista de paragens, contendo as seguintes informações:
 - **ID**: Identificador único da paragem.
