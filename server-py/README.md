@@ -2,11 +2,11 @@
 
 ## Introdução
 
-Este projeto implementa uma API RESTful desenvolvida em Python com FastAPI, responsável por gerir e disponibilizar dados de um sistema de contagem de pessoas em paragens de autocarro. O backend integra-se com uma base de dados MySQL e permite a gestão de câmaras, paragens, alertas, registos de lotação e relatórios estatísticos.
+Este projeto implementa uma API RESTful desenvolvida em Python com FastAPI, responsável por gerir e disponibilizar dados de um sistema de contagem de pessoas em paragens de autocarro. 
+
+O backend integra-se com uma base de dados MySQL e permite a gestão de câmaras, paragens, alertas, registos de lotação e relatórios estatísticos.
 
 A API serve como backend para aplicações de monitorização, gestão e análise de dados de ocupação e alertas em tempo real, permitindo a integração com sistemas de frontend, dashboards ou outras aplicações.
-
----
 
 ## Funcionalidades Principais
 
@@ -14,8 +14,6 @@ A API serve como backend para aplicações de monitorização, gestão e anális
 - **Gestão de Paragens**: Adicionar, listar, atualizar, remover, marcar/desmarcar como favorita e consultar dados de paragens.
 - **Gestão de Alertas**: Adicionar, listar, atualizar, remover, ativar/desativar, enviar e consultar alertas, incluindo alertas recentes.
 - **Relatórios**: Obter relatórios de fluxo de passageiros, lotação média, pico de lotação e taxa de alertas por paragem.
-
----
 
 ## Instalação
 
@@ -129,19 +127,22 @@ curl -X POST http://localhost:8080/api/camaras \
 curl http://localhost:8080/api/relatorios/lotacaomedia
 ```
 
----
-
 ## Estrutura da Base de Dados
 
-- **paragens**: id, nome, localizacao, estado, lotacao, favorita
-- **camaras**: id, paragem_id, modelo, fabricante, latitude, longitude, data_instalacao, estado
-- **alertas**: id, paragem_id, camera_id, data_alerta, data_resolucao, tipo_alerta, descricao, gravidade, estado
-- **registo_lotacao**: id, paragem_id, camera_id, data_registo, lotacao
+A base de dados é composta por quatro tabelas principais: `paragens`, `camaras`, `alertas` e `registo_lotacao`. Também inclui várias views para relatórios (alertas recentes, lotação média, pico de lotação, taxa de alertas e fluxo de lotação) e uma trigger que mantém a lotação atualizada em cada paragem após novos registos.
 
----
+**Resumo das tabelas:**
+- **paragens**: Dados das paragens de autocarro (nome, localização, estado, lotação, favorita).
+- **camaras**: Informações das câmaras instaladas em cada paragem.
+- **alertas**: Registo de alertas gerados pelo sistema, associados a paragens e câmaras.
+- **registo_lotacao**: Histórico de contagem de pessoas por câmara e paragem.
+
+**Views e trigger:**
+- Views para relatórios de alertas, lotação média/pico, taxa de alertas e fluxo de passageiros.
+- Trigger para atualizar automaticamente a lotação da paragem após novo registo.
+
+O script SQL completo encontra-se no ficheiro `scriptDB.sql` no diretório do projeto.
 
 ## Licença
 
 MIT License. Consulte o ficheiro [LICENSE](LICENSE) para mais detalhes.
-
----
