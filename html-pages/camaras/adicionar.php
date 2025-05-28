@@ -129,8 +129,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <td><label for="estado">Estado</label></td>
                     <td>
                         <select id="estado" name="estado">
-                            <option value="ativo">Ativo</option>
-                            <option value="inativo">Inativo</option>
+                            <option value="Ativo">Ativo</option>
+                            <option value="Inativo">Inativo</option>
                         </select>
                     </td>
                 </tr>

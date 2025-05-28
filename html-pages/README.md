@@ -34,7 +34,6 @@ Contém páginas para a gestão de paragens de autocarro:
 Contém páginas para a geração de relatórios:
 - **fluxo_passageiros.php**: Relatório sobre o fluxo de passageiros ao longo do tempo.
 - **geral.php**: Relatório geral sobre as paragens.
-- **gerar_relatorio.php**: Placeholder para geração de relatórios (não implementado).
 - **lotacao_media.php**: Relatório sobre a lotação média das paragens.
 - **pico_lotacao.php**: Relatório sobre o pico de lotação das paragens.
 - **taxa_alertas.php**: Relatório sobre a taxa de alertas por gravidade.

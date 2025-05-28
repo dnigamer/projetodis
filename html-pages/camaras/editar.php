@@ -86,8 +86,8 @@
                 echo "<td><input type='text' id='data_instalacao' name='data_instalacao' value='" . htmlspecialchars($row['data_instalacao']) . "' placeholder='DD/MM/AAAA' required></td></tr>";
                 echo "<tr><td><label for='estado'>Estado</label></td>";
                 echo "<td><select id='estado' name='estado'>";
-                echo "<option value='ativo'" . ($row['estado'] == 'ativo' ? ' selected' : '') . ">Ativo</option>";
-                echo "<option value='inativo'" . ($row['estado'] == 'inativo' ? ' selected' : '') . ">Inativo</option>";
+                echo "<option value='Ativo'" . ($row['estado'] == 'Ativo' ? ' selected' : '') . ">Ativo</option>";
+                echo "<option value='Inativo'" . ($row['estado'] == 'Inativo' ? ' selected' : '') . ">Inativo</option>";
                 echo "</select></td></tr>";
                 echo '</tbody>';
                 echo '</table>';
