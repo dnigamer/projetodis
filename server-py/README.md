@@ -28,12 +28,20 @@ A API serve como backend para aplicações de monitorização, gestão e anális
 2. **Configuração da Base de Dados**:
     - Para configurar a base de dados, é necessário criar uma base de dados MySQL e executar o script SQL disponível no diretório raiz do projeto com o nome `scriptDB.sql`. Este script irá criar as tabelas necessárias para o funcionamento da API.
 
-3. **Execução do Servidor**:
-    ```bash
-    python main.py
-    ```
+## Execução
+Para iniciar o servidor FastAPI, execute o seguinte comando no terminal:
 
----
+```bash
+python main.py
+```
+
+O servidor estará disponível em `http://localhost:8000`, a não ser que tenha configurado uma porta diferente.
+
+## Documentação da API
+A documentação interativa da API pode ser acessada em `http://localhost:8000/docs` após iniciar o servidor. Esta documentação permite explorar os endpoints disponíveis, testar as requisições e visualizar os modelos de dados utilizados.
+
+Imagem da documentação:
+![Documentação da API](assets/openapi.png)
 
 ## Endpoints Disponíveis
 
@@ -108,8 +116,6 @@ A API serve como backend para aplicações de monitorização, gestão e anális
   Retorna o pico de lotação para cada paragem.
 - `GET /api/relatorios/taxaalertas`  
   Retorna a taxa de alertas por paragem.
-
----
 
 ## Exemplo de Utilização
 
