@@ -1,4 +1,4 @@
-# Projeto de Desenvolvimento Integrado de Software
+# Projeto de Desenvolvimento Integrado de Software - FleetVision
 ## Grupo 3 - 2024/25
 
 ## Introdução
@@ -9,26 +9,59 @@ O projeto é realizado em parceria com os Transportes Urbanos de Braga (TUB), em
 Para resolver este problema, o sistema desenvolvido permitirá a análise automatizada da ocupação das paragens a partir de câmaras CCTV instaladas nos pontos de espera. Através do processamento de imagens em tempo real, será possível estimar o número de passageiros presentes em cada paragem e fornecer dados estatísticos detalhados para os TUB. Com estas informações, a empresa poderá tomar decisões mais
 informadas sobre a gestão da frota, melhorando a eficiência do serviço e garantindo um transporte mais adequado às necessidades da cidade.
 
-## Componentes deste repositório
-### [camara-niop](camara-niop/README.md)
+## Estrutura do Repositório
 
-Este diretório contém o código-fonte do projeto desenvolvido no niop Studio. Esta parte do projeto é responsável pela execução do algoritmo de deteção de pessoas em imagens e pelo envio dos dados para o servidor. 
+O repositório está organizado em múltiplos diretórios, cada um responsável por uma componente do sistema:
 
-Feito inteiramente utilizando a plataforma niop Studio, não há qualquer código associado ao mesmo, uma vez que a plataforma baseia-se em "low-code" e "no-code".
+### [`camara-niop`](camara-niop/README.md)
 
-### [camara-py](camara-py/README.md)
+Projeto desenvolvido na plataforma low-code NIOP. Responsável pela captura de imagens das câmaras instaladas nas paragens, integração com a interface gráfica (HMI) e envio dos dados de contagem para o backend via WebSocket. A configuração é feita através do ficheiro `info.json`.
 
-Este diretório contém o código-fonte do projeto desenvolvido fora do niop Studio. Esta parte do projeto é responsável pela captura de imagens da webcam, pela execução do algoritmo de deteção de pessoas, utilizando o modelo YOLOv5, e pela contagem de pessoas e geração de estatísticas finais. 
+### [`camara-py`](camara-py/README.md)
 
-Feito inteiramente em Python, o código é dividido em várias funções, cada uma responsável por uma parte específica do processo. O código utiliza as bibliotecas OpenCV, Ultralytics e NumPy para a execução do algoritmo de deteção de pessoas e para a contagem de pessoas. O código é modular e fácil de entender, permitindo a sua adaptação a diferentes necessidades.
+Implementação em Python para captura de imagens da webcam, deteção de pessoas utilizando o modelo YOLOv5 (Ultralytics), contagem de passageiros e geração de estatísticas. Utiliza as bibliotecas OpenCV, Ultralytics e NumPy. O código é modular, facilitando adaptações futuras.
 
-### [server-py](server-py/README.md)
+### [`server-py`](server-py/README.md)
 
-Este diretório contém o código-fonte do servidor de backend desenvolvido em Python. Este servidor é responsável por receber os dados enviados pelo projeto camara-niop e por armazenar os dados na base de dados.
+Backend desenvolvido em Python com FastAPI, responsável por receber os dados das câmaras, gerir a base de dados MySQL e disponibilizar uma API RESTful para consulta e gestão dos dados (câmaras, paragens, alertas, relatórios). Inclui endpoints para todas as operações principais e documentação automática via OpenAPI.
 
-O servidor é desenvolvido em Python e utiliza as bibliotecas websockets, asyncio e sqlite3 para a execução do servidor WebSocket e para a comunicação com a base de dados. O código é modular e fácil de entender, permitindo a sua adaptação a diferentes necessidades.
+### [`html-pages`](html-pages/README.md)
 
-Como ainda haverão alterações a serem feitas, o código ainda não está completamente documentado nem na sua melhor versão possível, sendo que a ideia final seria utilizar outras tecnologias de base de dados, como o MariaDB ou o MongoDB, para melhorar a performance e a escalabilidade do sistema. Neste momento, o servidor está a correr numa base de dados SQLite, que é uma base de dados leve e fácil de usar, mas que não é adequada para aplicações em produção.
+Conjunto de páginas PHP organizadas em subdiretórios para gestão do sistema via interface web. Inclui páginas para gestão de alertas, câmaras, paragens, relatórios e recursos estáticos (CSS). Deve ser colocado na pasta `htdocs` do XAMPP ou servidor web equivalente.
+
+### [`sistema-niop`](sistema-niop/README.md)
+
+Projeto principal desenvolvido em NIOP, integrando todas as funcionalidades do sistema numa aplicação gráfica (HMI). Permite visualizar e gerir câmaras, paragens, alertas e relatórios, comunicando com o backend e apresentando os dados recolhidos.
+
+### [`scriptDB.sql`](scriptDB.sql)
+
+Script SQL para criação da base de dados MySQL necessária para o funcionamento do sistema. Contém as definições das tabelas, views e procedimentos armazenados utilizados pelo backend.
+
+## Instalação e Execução
+
+### Requisitos Gerais
+
+- **niop Studio & HMI** (para componentes NIOP)
+- **Python 3.8+** (para backend e camara-py)
+- **MySQL Server** (base de dados)
+- **XAMPP/Apache/Nginx** (para servir as páginas PHP)
+- **Bibliotecas Python**: `fastapi`, `uvicorn`, `mysql-connector-python`, `opencv-python`, `ultralytics`, `numpy`
+
+### Passos Gerais
+
+1. **Base de Dados**: Execute o script [`scriptDB.sql`](scriptDB.sql) para criar as tabelas e views necessárias.
+2. **Backend**: Configure e execute o servidor FastAPI em [`server-py`](server-py/README.md).
+3. **Câmaras**: Configure e execute os projetos [`camara-niop`](camara-niop/README.md) e/ou [`camara-py`](camara-py/README.md) conforme necessário.
+4. **Interface Web**: Copie o conteúdo de [`html-pages`](html-pages/README.md) para a pasta `htdocs` do XAMPP ou servidor web.
+5. **Sistema NIOP**: Abra e execute o projeto em [`sistema-niop`](sistema-niop/README.md) através do niop Studio/HMI.
+
+## Funcionalidades Principais
+
+- **Contagem automática de passageiros em paragens**
+- **Gestão de câmaras, paragens e alertas**
+- **Relatórios estatísticos (lotação média, pico, fluxo, taxa de alertas)**
+- **Interface gráfica intuitiva (web e HMI)**
+- **API RESTful documentada para integração com outros sistemas**
 
 ## Licença
 
